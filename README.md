@@ -78,3 +78,4 @@
  - http://pivotallabs.com/agile-inception_knowing-what-to-build-and-where-to-start/
  - http://pivotallabs.com/about/
  - http://consulting.bocoup.com/
+ - http://www.godynamo.com/en/story
