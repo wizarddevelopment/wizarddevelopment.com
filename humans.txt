@@ -1,0 +1,10 @@
+/* TEAM */
+  Francis Gulotta -- founder -- @reconbot
+
+/* THANKS */
+  Eric Collins
+  Sara Chippps
+  Sara Gorecki
+
+/* SITE */
+  Jekyll

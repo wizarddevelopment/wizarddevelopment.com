@@ -1,0 +1,9 @@
+name: Wizard Computing
+ga-tracking: 'UA-4116538-5'
+markdown: redcarpet
+pygments: true
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+permalink: none
