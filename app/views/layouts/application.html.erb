@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
-  <title>WizardcomputingCom</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Wizard Computing</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= csrf_meta_tags %>
+
+    <%= javascript_include_tag "shims/modernizr-2.6.2-respond-1.1.0.min" %>
 </head>
 <body>
 
-<%= yield %>
+  <div class="header-container">
+    <header class="wrapper clearfix">
+      <h1 class="title">Wizard Computing</h1>
+      <nav>
+        <ul>
+          <li><a href="#vision">What We do</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 
+  <div class="main-container">
+    <div class="main wrapper clearfix">
+
+    <%= yield %>
+
+    </div>
+  </div>
+
+  <div class="footer-container">
+    <footer class="wrapper">
+      <h3>footer</h3>
+    </footer>
+  </div>
+
+  <%= javascript_include_tag "application" %>
 </body>
 </html>
