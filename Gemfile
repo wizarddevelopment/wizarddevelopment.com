@@ -10,6 +10,7 @@ gem 'therubyracer'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'dalli'
 
 # =>  Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
@@ -34,6 +35,8 @@ group :test do
   gem 'fuubar'
 end
 
-group :staging, :production do
+# Heroku
+group :production do
   gem 'rails_12factor'
+  gem 'memcachier'
 end

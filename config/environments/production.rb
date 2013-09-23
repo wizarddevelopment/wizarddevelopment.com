@@ -88,4 +88,6 @@ WizardcomputingCom::Application.configure do
     :enable_starttls_auto => true
   }
 
+  config.cache_store = :dalli_store
+
 end
