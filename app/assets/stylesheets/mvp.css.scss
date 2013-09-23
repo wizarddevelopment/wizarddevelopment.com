@@ -1,4 +1,23 @@
 #mvp {
-  padding: 40px 0;
+  padding: 60px 60px;
+}
+
+.ctr {
   text-align: center;
 }
+
+#contact-form {
+  width: 400px;
+  margin: 40px auto;
+
+
+  html, button, input, select, textarea {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  textarea{
+
+  }
+}
+

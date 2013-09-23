@@ -16,12 +16,12 @@ describe HomeController do
         message: 'do you do things?',
         reason: "I need things"
       }
-      xhr :post, :contact, info: info
-      expect(response).to be_success
+      post :contact, info: info
+      expect(response).to be_redirect
     end
 
     it "rejects no data" do
-      xhr :post, :contact
+      post :contact
       expect(response).to_not be_success
     end
 

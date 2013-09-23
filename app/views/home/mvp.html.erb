@@ -1,12 +1,41 @@
 <article id="mvp">
-  <header id="name">
+  <header id="name" class="ctr">
     <h1>Wizard Computing, LLC</h1>
     <h3>Software development, Agile Consulting</h3>
-    <tel>(718) 360-8816 / <%= mail_to 'Francis@wizardcomputing.com' %></tel>
   </header>
-  <section id="contact">
-    <form>
 
-    </form>
-  </section>
+  <% if flash[:contact_info] %>
+    <section>
+      <%= flash[:contact_info] %>
+    </section>
+  <% else %>
+    <section id="contact-form">
+      <p class="ctr">We enjoy talking about possible projects and new ideas. Drop us a line and we'd explore what's next.</p>
+      <%= form_for :info, url: {action: 'contact'} do |f| %>
+      <div>
+        <%= f.label :name, "Your Full Name" %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div>
+        <%= f.label :email, "Your Email" %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div>
+        <%= f.label :message, "Your Idea" %><br>
+        <%= f.text_area :message %>
+      </div>
+      <div>
+        <%= f.submit "Send Message" %>
+      </div>
+      <% end %>
+
+    </section>
+
+    <section id="contact-info" class="ctr">
+      Or send a message a conventional way.
+      <div><tel>(718) 360-8816</tel> <%= mail_to 'projects@wizardcomputing.com' %></div>
+    </section>
+
+  <% end %>
+
 </article>
