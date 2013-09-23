@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  layout "minimal", only: :mvp
+  layout "minimal", only: [:mvp, :contact]
 
   # def index; end;
   # def mvp;end;
