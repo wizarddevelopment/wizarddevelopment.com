@@ -25,6 +25,7 @@ gem 'unicorn', require: false
 group :development do
   gem 'growl'
   gem "guard"
+  gem "guard-rspec"
 end
 
 group :test do
