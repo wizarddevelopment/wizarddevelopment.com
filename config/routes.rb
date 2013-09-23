@@ -1,6 +1,7 @@
 WizardcomputingCom::Application.routes.draw do
   root 'home#mvp'
 
+  post 'contact' => 'home#contact'
   get 'beta' => 'home#index'
 
   # Example of regular route:
