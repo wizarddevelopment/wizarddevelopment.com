@@ -1,5 +1,7 @@
 WizardcomputingCom::Application.routes.draw do
-  root 'home#index'
+  root 'home#mvp'
+
+  get 'beta' => 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
