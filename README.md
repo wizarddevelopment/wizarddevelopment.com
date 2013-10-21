@@ -1,30 +1,17 @@
 # Wizard Computing
 
+
+### Wizard Computing makes products strong. We're a team of product managers, developers, and designers. We have trained in the agile ways, forged ourselves in the fires of NYC startups, we deliver fast, we analyze everything, and we help you get value from your software.
+
+## Businesses
+ - bulletpoints listing each service you do for these two audiences - if you have an introductory paragraph for each audience which comes before the bullet points
+
+## Development Teams
+ - bulletpoints listing each service you do for these two audiences - if you have an introductory paragraph for each audience which comes before the bullet points
+
+# Contact Forms
+
 ```
-1) Mission statement (3 lines.. 35-40 Words minimum)
-
-Wizard Computing makes good software. We're a team of product managers, developers, and designers. We have trained in the agile ways, forged ourselves in the fires of NYC startups, we deliver fast, we analyze everything, and teach you how to get value from software.
-
-
-2) one title for each of the two target audiences (e.g. Businesses // Agile Teams)
-
-Businesses / Development Team
-
-
-3) bulletpoints listing each service you do for these two audiences
-        --> if you have an introductory paragraph for each audience which comes before the bullet points
-
-Businesses
-  
-
-
-Development Teams
-
-
-
-4) the fields for each of the two contact forms.
-* is required
-
 Business
   Your Name *
   Your Email *
