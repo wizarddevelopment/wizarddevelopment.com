@@ -1,5 +1,72 @@
 # Wizard Computing
 
+```
+1) Mission statement (3 lines.. 35-40 Words minimum)
+
+Wizard Computing makes good software. We're a team of product managers, developers, and designers. We have trained in the agile ways, forged ourselves in the fires of NYC startups, we deliver fast, we analyze everything, and teach you how to get value from software.
+
+
+2) one title for each of the two target audiences (e.g. Businesses // Agile Teams)
+
+Businesses / Development Team
+
+
+3) bulletpoints listing each service you do for these two audiences
+        --> if you have an introductory paragraph for each audience which comes before the bullet points
+
+Businesses
+  
+
+
+Development Teams
+
+
+
+4) the fields for each of the two contact forms.
+* is required
+
+Business
+  Your Name *
+  Your Email *
+  Your Business's Name
+  Who is the software for? (checkboxes)
+    [ ] - My company
+    [ ] - My customers or clients
+  Do you have a development team? (Pick one)
+   - Not right now, I need some help.
+   - Yes I have my own team.
+   - I've hired teams or contractors in the past.
+  What stage is your product? (pick one)
+    - Inception (We have an idea, but we need to figure out how to make it a product.)
+    - MVP (We've started making our product, and have the begining launched.)
+    - Mid Stage (We've launched our proudct, and need help making sense of our data for new features.)
+    - Mature (We need help growing our product, every % performance increase is money in the bank.)
+    - Stalled (We've been developing for months and I worry we'll never launch!)
+  Tell us about your product. (textarea)
+
+Development Team
+  Your Name *
+  Your Email *
+  Your Business's Name
+  How large is your team?
+  Please check all that apply. (checkboxes)
+    We have a realiable test suite with good coverage.
+    We have a continues integration server.
+    We keep master deployable.
+    We have a one step deploy.
+    Bugs are not a problem.
+    Releases are not a problem.
+    Infrastructure is not a problem.
+    We break down features into deployable testable units of work.
+    We have one week sprints.
+    We have weekly retrospectives.
+    We use analyticts when planning new features.
+  What can we help you with? (textarea)
+
+```
+
+
+
 ## What We do
 ###Product Management
   Understanding the busines goals and the value of what's being built
