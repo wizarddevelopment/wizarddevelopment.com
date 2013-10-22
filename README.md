@@ -1,7 +1,7 @@
 # Wizard Computing
 
 
-### Wizard Computing makes products strong. We're a team of product managers, developers, and designers. We have trained in the agile ways, forged ourselves in the fires of NYC startups, we deliver fast, we analyze everything, and we help you get value from your software.
+### Wizard Computing makes products strong. We're a team of product managers, developers, and designers. Our principle is teaching you how to get the most value from your software. We have trained in the agile ways, forged ourselves in the fires of NYC startups, we deliver fast, we analyze everything.
 
 ## Businesses
  - bulletpoints listing each service you do for these two audiences - if you have an introductory paragraph for each audience which comes before the bullet points
