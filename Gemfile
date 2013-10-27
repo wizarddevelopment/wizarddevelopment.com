@@ -33,6 +33,7 @@ group :test do
   gem "rspec-rails", "~> 2.10"
   gem "factory_girl_rails"
   gem 'fuubar'
+  gem 'rake'
 end
 
 # Heroku
