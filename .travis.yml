@@ -7,7 +7,8 @@ before_script:
   - cp config/travis_database.yml config/database.yml
 deploy:
   provider: heroku
-  api_key: "UO/QGpNdgi74cdpUARxT+N8TqPykGwK6pL9vxqkDcEwQNSxF3w0ivkur8oezvJ8F81X65ZczlojmluoMBAgP5vla0u8Mo5Cs05nefL8aMsupdsB5oRjPMNqsnaBPjkeWewJkwVQAUq9PctJKUHqyWD/V/PsyVmYmupkhRmtdvLI="
+  api_key:
+    secure: QmGm4JCqYtKlY1V/TPBj8rhXKQU3vUqGZbIj7ZtPAmecwy+AdV+0JEuxO3HESpTapxais+qFAGl9PifZKtOYQvIku8I5dn/noywvzy0FIvtZL0e9tPh7vc/Ue2CeZqbE+0NUlFPa6JVoW+v9brzIHMMuMWrhR7sq2aTC0rmpaCQ=
   app: wizardcomputing
   run:
     - "maintenance:on"
