@@ -1,5 +1,10 @@
 language: ruby
 rvm: 2.0.0
+services:
+  - postgres
+before_script:
+  - psql -c 'create database wizard_computing_test;' -U postgres
+  - cp config/travis_database.yml config/database.yml
 deploy:
   provider: heroku
   api_key: "UO/QGpNdgi74cdpUARxT+N8TqPykGwK6pL9vxqkDcEwQNSxF3w0ivkur8oezvJ8F81X65ZczlojmluoMBAgP5vla0u8Mo5Cs05nefL8aMsupdsB5oRjPMNqsnaBPjkeWewJkwVQAUq9PctJKUHqyWD/V/PsyVmYmupkhRmtdvLI="
