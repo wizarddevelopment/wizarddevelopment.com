@@ -3,4 +3,4 @@ test:
   encoding: unicode
   database: wizard_computing_test
   pool: 2
-  username: postgresql
+  username: postgres
