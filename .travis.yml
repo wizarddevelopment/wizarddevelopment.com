@@ -12,7 +12,5 @@ deploy:
   app: wizardcomputing
   strategy: git
   run:
-    - "heroku maintenance:on"
     - "rake db:migrate"
     - restart
-    - "heroku maintenance:off"
