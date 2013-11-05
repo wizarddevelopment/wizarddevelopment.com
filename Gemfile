@@ -27,6 +27,7 @@ group :development do
   gem 'growl'
   gem "guard"
   gem "guard-rspec"
+  gem "travis"
 end
 
 group :test do

@@ -8,7 +8,7 @@ before_script:
 deploy:
   provider: heroku
   api_key:
-    secure: QmGm4JCqYtKlY1V/TPBj8rhXKQU3vUqGZbIj7ZtPAmecwy+AdV+0JEuxO3HESpTapxais+qFAGl9PifZKtOYQvIku8I5dn/noywvzy0FIvtZL0e9tPh7vc/Ue2CeZqbE+0NUlFPa6JVoW+v9brzIHMMuMWrhR7sq2aTC0rmpaCQ=
+    secure: getPXV27W51yfDvyOnMntZFJy4wE/12Qrgg3YZP05RBUyb0lSlCBC2cLrIswtJFg7NX58+WOELeVK8y61vwGxiFHD06+4A2fa1aPtgHYT2Y6hUOiVA/sbeEHp0XBCAqgx8nsDK+2FVA0CxgrkCrLzuCAXC9e2Hztq91fgDy+loQ=
   app: wizardcomputing
   run:
     - "maintenance:on"
