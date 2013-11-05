@@ -1,5 +1,5 @@
 WizardcomputingCom::Application.routes.draw do
-  root 'home#mvp'
+  root 'home#index'
 
   post 'contact' => 'home#contact'
   get 'beta' => 'home#index'
