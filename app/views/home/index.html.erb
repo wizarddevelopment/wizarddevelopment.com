@@ -14,7 +14,7 @@
     <p class="description">
       Good software is our business.<br />We can help your to be, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:
     </p>
-    <ul class="services ">
+    <ul class="services">
       <li>need to style this - depending on content</li>
       <li>consectetur incididunt</li>
       <li>sed do eiusmod tempor incididunt ut</li>
@@ -27,11 +27,11 @@
       <li>non proident, sunt in culpa qui officia</li>
       <li>deserunt mollit anim id est laborum</li>
     </ul>
-    <form action="">
+    <%= form_for :info, url: {action: 'contact'} do%>
       <p>Interested? – Let us know how we can work with you!</p>
-      <input class="text" type="text" id="xxxxx" name="xxxxx" value="your name"><div class="required"></div>
-      <input class="text error" type="email" id="xxxxx" name="xxxxx" value="your email"><div class="required"></div>
-      <input class="text active" type="text" id="xxxxx" name="xxxxx" value="your business name"><div class="required"></div>
+      <input class="text" type="text" name="name" placeholder="your name"><div class="required"></div>
+      <input class="text error" type="email" name="email" placeholder="your email"><div class="required"></div>
+      <input class="text active" type="text" name="business_name" placeholder="your business name"><div class="required"></div>
       <p class="small">Who is the project primarily for?</p>
             <input type="radio" id="r1" name="rr" />
             <label for="r1"><span></span>my company</label>
@@ -52,17 +52,18 @@
         <option value="option5">Mature (We need help growing our product, every % performance increase is money in the bank.)</option>
         <option value="option6">Stalled (We've been developing for months and I worry we'll never launch!)</option>
       </select>
-        <p class="small">Tell us about your product:</p>
-        <textarea class="textarea" name="xxxxx" rows="8" cols="40"></textarea>
-        <input class="submit" type="submit" id="xxxxx" name="xxxxx" value="send your message">
+        <label for="business-message" class="small">Tell us about your product:</label>
+        <textarea class="textarea" id="business-message" name="message" rows="8" cols="40"></textarea>
+        <input class="submit" type="submit" value="send your message">
       </select>
-    </form>
+    <% end %>
   </div><!--//business-services-content -->
+
   <div id="dev-teams-content">
     <p class="description">
       Good software is our business.<br />We can help your to be, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:
     </p>
-    <ul class="services ">
+    <ul class="services">
       <li>need to style this - depending on content</li>
       <li>consectetur</li>
       <li>sed do eiusmod tempor incididunt ut</li>
@@ -75,41 +76,41 @@
       <li>non proident, sunt in culpa qui officia</li>
       <li>deserunt mollit anim id est laborum</li>
     </ul>
-    <form action="">
+    <%= form_for :info, url: {action: 'contact'} do%>
       <p>Interested? – Let us know how we can work with you!</p>
-      <input class="text" type="text" id="xxxxx" name="xxxxx" value="your name"><div class="required"></div>
-      <input class="text" type="email" id="xxxxx" name="xxxxx" value="your email"><div class="required"></div>
-      <input class="text" type="text" id="xxxxx" name="xxxxx" value="your business name">
+      <input class="text" type="text" name="name" placeholder="your name"><div class="required"></div>
+      <input class="text" type="email" name="email" placeholder="your email"><div class="required"></div>
+      <input class="text" type="text" name="business_name" placeholder="your business name">
       <p class="small">How large is your team?</p>
-      <input class="text" type="number" id="xxxxx" name="xxxxx" value="12">
+      <input class="text" type="number" name="team_size" value="8">
       <p class="small">Please check all that apply:</p>
-      <input type="checkbox" id="c1" name="xxxxx" />
-            <label for="c1"><span></span>We have a reliable test suite with good coverage.</label>
-      <input type="checkbox" id="c2" name="xxxxx" />
-            <label for="c2"><span></span>We have a continues integration server.</label>
-      <input type="checkbox" id="c3" name="xxxxx" />
-            <label for="c3"><span></span>We keep master deployable.</label>
-      <input type="checkbox" id="c4" name="xxxxx" />
-            <label for="c4"><span></span>We have a one step deploy.</label>
-      <input type="checkbox" id="c5" name="xxxxx" />
-            <label for="c5"><span></span>Bugs are not a problem.</label>
-      <input type="checkbox" id="c6" name="xxxxx" />
-            <label for="c6"><span></span>Releases are not a problem.</label>
-      <input type="checkbox" id="c7" name="xxxxx" />
-            <label for="c7"><span></span>Infrastructure is not a problem.</label>
-      <input type="checkbox" id="c8" name="xxxxx" />
-            <label for="c8"><span></span>We break down features into deployable testable units of work.</label>
-      <input type="checkbox" id="c9" name="xxxxx" />
-            <label for="c9"><span></span>We have one week sprints.</label>
-      <input type="checkbox" id="c10" name="xxxxx" />
-            <label for="c10"><span></span>We have weekly retrospectives.</label>
-      <input type="checkbox" id="c11" name="xxxxx" />
-            <label for="c11"><span></span>We use analytics when planning new features.</label>
-      <p class="small">What can we help you with?</p>
-        <textarea class="textarea" name="xxxxx" rows="8" cols="40"></textarea>
-        <input class="submit" type="submit" id="xxxxx" name="xxxxx" value="send your message">
+      <input type="checkbox" id="c1" name="test_suit" />
+      <label for="c1"><span></span>We have a reliable test suite with good coverage.</label>
+      <input type="checkbox" id="c2" name="ci_server" />
+      <label for="c2"><span></span>We have a continues integration server.</label>
+      <input type="checkbox" id="c3" name="deploy_master" />
+      <label for="c3"><span></span>We keep master deployable.</label>
+      <input type="checkbox" id="c4" name="onestep_deploy" />
+      <label for="c4"><span></span>We have a one step deploy.</label>
+      <input type="checkbox" id="c5" name="bugs_not_issue" />
+      <label for="c5"><span></span>Bugs are not a problem.</label>
+      <input type="checkbox" id="c6" name="releases_not_issue" />
+      <label for="c6"><span></span>Releases are not a problem.</label>
+      <input type="checkbox" id="c7" name="infrastructure_not_issue" />
+      <label for="c7"><span></span>Infrastructure is not a problem.</label>
+      <input type="checkbox" id="c8" name="agile_product" />
+      <label for="c8"><span></span>We break down features into deployable testable units of work.</label>
+      <input type="checkbox" id="c9" name="week_sprints" />
+      <label for="c9"><span></span>We have one week sprints.</label>
+      <input type="checkbox" id="c10" name="weekly_retros" />
+      <label for="c10"><span></span>We have weekly retrospectives.</label>
+      <input type="checkbox" id="c11" name="analytics" />
+      <label for="c11"><span></span>We use analytics when planning new features.</label>
+      <label for="dev-message" class="small">What can we help you with?</p>
+        <textarea class="textarea" id="dev-message" name="message" rows="8" cols="40"></textarea>
+        <input class="submit" type="submit" placeholder="send your message">
       </select>
-    </form>
+    <% end %>
   </div><!--//dev-teams-content -->
   <footer></footer>
 </div><!--//site_container -->
