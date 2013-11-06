@@ -10,7 +10,7 @@ Theme Name: 131025__FRA-001__v.1.0
 	height: 100px;
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
-	background: url();
+	// background: image-url();
 
 	font-style: normal;
 	font-weight: 300;
@@ -257,7 +257,7 @@ a.business-services span, a.dev-teams span {
 	overflow: hidden;
 
 	background-color: rgb(192,63,33);
-	background-image: url(bg_grid.png);
+	background-image: image-url("bg_grid.png");
 
 }
 
@@ -270,7 +270,7 @@ a.business-services span, a.dev-teams span {
 	margin: 0px 0px 0px 0px;
 
 	background-color: rgb(40,81,102);
-	background-image: url(bg_grid.png);
+	background-image: image-url("bg_grid.png");
 }
 #dev-teams-content {
 	display: block;
@@ -282,7 +282,7 @@ a.business-services span, a.dev-teams span {
 
 
 	background-color: rgb(81,81,89);
-	background-image: url(bg_grid.png);
+	background-image: image-url("bg_grid.png");
 }
 
 
@@ -439,11 +439,11 @@ input[type="radio"] + label span {
     height: 30px;
     margin: 0px 4px 0px 10px;
     vertical-align: middle;
-    background: url(bg_radio.png) 0px top no-repeat;
+    background: image-url("bg_radio.png") 0px top no-repeat;
     cursor: pointer;
 }
 input[type="radio"]:checked + label span {
-    background: url(bg_radio.png) -30px top no-repeat;
+    background: image-url("bg_radio.png") -30px top no-repeat;
 }
 input[type="radio"]:checked + label {
 	color: rgba(255,255,255,0.9);
@@ -465,11 +465,11 @@ input[type="checkbox"] + label span {
     height: 30px;
     margin: -2px 4px 0px 10px;
     vertical-align:middle;
-    background: url(bg_check.png) 0px top no-repeat;
+    background: image-url("bg_check.png") 0px top no-repeat;
     cursor:pointer;
 }
 input[type="checkbox"]:checked + label span {
-    background: url(bg_check.png) -30px top no-repeat;
+    background: image-url("bg_check.png") -30px top no-repeat;
 }
 input[type="checkbox"]:checked + label {
 	color: rgba(255,255,255,0.9);
@@ -483,7 +483,7 @@ input[type="checkbox"]:checked + label {
 	height: 50px;
 	padding: 0px 0px 0px 0px;
 	margin: 10px auto 0px auto;
-  	background: url('bg_select.png') right 0px;
+  	background: image-url('bg_select.png') right 0px;
 	background-color: rgba(255,255,255,0.2);
 
 	font-family: "museo-sans",sans-serif;
@@ -499,11 +499,11 @@ input[type="checkbox"]:checked + label {
 	cursor: hand;
 }
 .selectbox:hover {
-  	background: url('bg_select.png') right -50px;
+  	background: image-url('bg_select.png') right -50px;
 	background-color: rgba(255,255,255,0.3);
 }
 .selectbox:active {
-  	background: url('bg_select.png') right -100px;
+  	background: image-url('bg_select.png') right -100px;
 	background-color: rgba(255,255,255,0.3);
 }
 

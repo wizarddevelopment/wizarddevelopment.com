@@ -33,7 +33,14 @@ GEM
     builder (3.1.4)
     celluloid (0.15.2)
       timers (~> 1.1.0)
+    chunky_png (1.2.9)
     coderay (1.0.9)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     dalli (2.6.4)
     diff-lcs (1.2.4)
     erubis (2.7.0)
@@ -52,6 +59,7 @@ GEM
       faraday (>= 0.7.4, < 0.9)
     ffi (1.9.3)
     formatador (0.2.4)
+    fssm (0.2.10)
     fuubar (1.2.1)
       rspec (~> 2.0)
       rspec-instafail (~> 0.2.0)
@@ -216,6 +224,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
+  compass-rails
   dalli
   factory_girl_rails
   fuubar
