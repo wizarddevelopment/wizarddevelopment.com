@@ -13,10 +13,9 @@
     this.mobileView = $(window).width() < 767;
     this.missionStatementHeight = $(".mission_statement").height();
 
-    $("#service_1_content").css("display", "none");
-    $("#service_2_content").css("display", "none");
-    $('#select_1').selectbox();
-    $('#select_2').selectbox();
+    $("#business-services-content").css("display", "none");
+    $("#dev-teams-content").css("display", "none");
+    $('select').selectbox();
   };
 
   HomeNavigator.prototype.bindButtons = function () {
@@ -25,12 +24,12 @@
       thisNavigator.showHome();
     });
 
-    $(".service_1").click(function () {
-      thisNavigator.transitionTo("service_1");
+    $(".business-services").click(function () {
+      thisNavigator.transitionTo("business-services");
     });
 
-    $(".service_2").click(function () {
-      thisNavigator.transitionTo("service_2");
+    $(".dev-teams").click(function () {
+      thisNavigator.transitionTo("dev-teams");
     });
   };
 
@@ -52,7 +51,7 @@
         top: "easeInOutQuint"
       }
     });
-    $(".service_1, .service_2").animate({
+    $(".business-services, .dev-teams").animate({
       //-- slide up
       top: "-120px"
     }, {
@@ -82,7 +81,7 @@
   HomeNavigator.prototype.homeToBusiness = function () {
     var thisNavigator = this;
     this.setHeaderToServiceMode();
-    $("#service_1_content").css({
+    $("#business-services-content").css({
       "display": "block",
       "position": "absolute",
       "marginLeft": "-100%",
@@ -93,7 +92,7 @@
     if (!this.mobileView) {
       $(".buttons").animate({
         //-- move right
-        left: 260 - $(".service_1").width() + 28
+        left: 260 - $(".business-services").width() + 28
       }, {
         duration: 650,
         specialEasing: {
@@ -102,9 +101,9 @@
       });
     }
 
-    $(".service_1").addClass("active");
-    $(".service_2").removeClass("active");
-    $(".service_1").animate({
+    $(".business-services").addClass("active");
+    $(".dev-teams").removeClass("active");
+    $(".business-services").animate({
       //-- hide
       opacity: "1.0"
     }, {
@@ -114,7 +113,7 @@
       }
     });
 
-    $(".service_2").animate({
+    $(".dev-teams").animate({
       //-- hide
       opacity: "0.2"
     }, {
@@ -124,7 +123,7 @@
       }
     });
     //-- setp 3: animate .divs
-    $("#service_1_content").animate({
+    $("#business-services-content").animate({
       //-- slide in
       marginLeft: "-5%",
       opacity: "0.7"
@@ -157,7 +156,7 @@
   HomeNavigator.prototype.homeToDev = function () {
     var thisNavigator = this;
     this.setHeaderToServiceMode();
-    $("#service_2_content").css({
+    $("#dev-teams-content").css({
       "display": "block",
       "position": "absolute",
       "marginLeft": "100%",
@@ -168,7 +167,7 @@
     if (!this.mobileView) {
       $(".buttons").animate({
         //-- move left
-        left: -(260 - ($(".service_2").width() / 2) - 28)
+        left: -(260 - ($(".dev-teams").width() / 2) - 28)
       }, {
         duration: 650,
         specialEasing: {
@@ -177,9 +176,9 @@
       });
     }
 
-    $(".service_2").addClass("active");
-    $(".service_1").removeClass("active");
-    $(".service_1").animate({
+    $(".dev-teams").addClass("active");
+    $(".business-services").removeClass("active");
+    $(".business-services").animate({
       //-- hide
       opacity: "0.2"
     }, {
@@ -189,7 +188,7 @@
       }
     });
 
-    $(".service_2").animate({
+    $(".dev-teams").animate({
       //-- hide
       opacity: "1.0"
     }, {
@@ -199,7 +198,7 @@
       }
     });
     //-- setp 3: animate .divs
-    $("#service_2_content").animate({
+    $("#dev-teams-content").animate({
       //-- slide in
       marginLeft: "-5%",
       opacity: "0.7"
@@ -230,16 +229,16 @@
   };
 
   HomeNavigator.prototype.businessToDev = function () {
-    $("#service_1_content").css("display", "block");
-    $("#service_1_content").css("position", "absolute");
-    $("#service_1_content").css("top", "0px");
-    $("#service_1_content").css("marginLeft", "-100%");
-    $("#service_1_content").css("opacity", "1.0");
+    $("#business-services-content").css("display", "block");
+    $("#business-services-content").css("position", "absolute");
+    $("#business-services-content").css("top", "0px");
+    $("#business-services-content").css("marginLeft", "-100%");
+    $("#business-services-content").css("opacity", "1.0");
     //-- setp 2: animate .buttons
     if (!this.mobileView) {
       $(".buttons").animate({
         //-- move right
-        left: 260 - $(".service_1").width() + 28
+        left: 260 - $(".business-services").width() + 28
       }, {
         duration: 650,
         specialEasing: {
@@ -247,9 +246,9 @@
         }
       });
     }
-    $(".service_1").addClass("active");
-    $(".service_2").removeClass("active");
-    $(".service_1").animate({
+    $(".business-services").addClass("active");
+    $(".dev-teams").removeClass("active");
+    $(".business-services").animate({
       //-- hide
       opacity: "1.0"
     }, {
@@ -258,7 +257,7 @@
         opacity: "easeInOutQuint"
       }
     });
-    $(".service_2").animate({
+    $(".dev-teams").animate({
       //-- hide
       opacity: "0.2"
     }, {
@@ -268,7 +267,7 @@
       }
     });
     //-- setp 3: animate .divs
-    $("#service_1_content").animate({
+    $("#business-services-content").animate({
       //-- slide in
       marginLeft: "-5%"
     }, {
@@ -280,7 +279,7 @@
         $(this).css("position", "relative");
       }
     });
-    $("#service_2_content").animate({
+    $("#dev-teams-content").animate({
       //-- slide out
       marginLeft: "100%"
     }, {
@@ -295,17 +294,17 @@
   };
 
   HomeNavigator.prototype.devToBusiness = function () {
-    //-- step 1: reset and position div.service_1_content
-    $("#service_2_content").css("display", "block");
-    $("#service_2_content").css("position", "absolute");
-    $("#service_2_content").css("top", "0px");
-    $("#service_2_content").css("marginLeft", "100%");
-    $("#service_2_content").css("opacity", "1.0");
+    //-- step 1: reset and position div.business-services-content
+    $("#dev-teams-content").css("display", "block");
+    $("#dev-teams-content").css("position", "absolute");
+    $("#dev-teams-content").css("top", "0px");
+    $("#dev-teams-content").css("marginLeft", "100%");
+    $("#dev-teams-content").css("opacity", "1.0");
     //-- setp 2: animate .buttons
     if (!this.mobileView) {
       $(".buttons").animate({
         //-- move left
-        left: -(260 - ($(".service_2").width() / 2) - 28)
+        left: -(260 - ($(".dev-teams").width() / 2) - 28)
       }, {
         duration: 650,
         specialEasing: {
@@ -313,9 +312,9 @@
         }
       });
     }
-    $(".service_1").removeClass("active");
-    $(".service_2").addClass("active");
-    $(".service_1").animate({
+    $(".business-services").removeClass("active");
+    $(".dev-teams").addClass("active");
+    $(".business-services").animate({
       //-- hide
       opacity: "0.2"
     }, {
@@ -324,7 +323,7 @@
         opacity: "easeInOutQuint"
       }
     });
-    $(".service_2").animate({
+    $(".dev-teams").animate({
       //-- hide
       opacity: "1.0"
     }, {
@@ -334,7 +333,7 @@
       }
     });
     //-- setp 3: animate .divs
-    $("#service_2_content").animate({
+    $("#dev-teams-content").animate({
       //-- slide in
       marginLeft: "-5%"
     }, {
@@ -346,7 +345,7 @@
         $(this).css("position", "relative");
       }
     });
-    $("#service_1_content").animate({
+    $("#business-services-content").animate({
       //-- slide out
       marginLeft: "-100%"
     }, {
@@ -361,7 +360,7 @@
   };
 
   HomeNavigator.prototype.showHome = function () {
-    $("#service_1_content, #service_2_content").slideUp("slow", function () {
+    $("#business-services-content, #dev-teams-content").slideUp("slow", function () {
       $("header").css("position", "relative");
     });
 
@@ -391,13 +390,13 @@
   };
 
   HomeNavigator.prototype.transitionTo = function (target_state) {
-    if (target_state === "service_1" && this.state === "home") {
+    if (target_state === "business-services" && this.state === "home") {
       this.homeToBusiness();
-    } else if (target_state === "service_2" && this.state === "home") {
+    } else if (target_state === "dev-teams" && this.state === "home") {
       this.homeToDev();
-    } else if (target_state === "service_1" && this.state === "service_2") {
+    } else if (target_state === "business-services" && this.state === "dev-teams") {
       this.businessToDev();
-    } else if (target_state === "service_2" && this.state === "service_1") {
+    } else if (target_state === "dev-teams" && this.state === "business-services") {
       this.devToBusiness();
     }
     this.state = target_state;

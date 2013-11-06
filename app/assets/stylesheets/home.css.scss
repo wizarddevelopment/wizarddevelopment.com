@@ -143,7 +143,7 @@ div.buttons {
 	padding: 0px 0px 0px 0px;
 	margin: 0px auto 0px auto;
 }
-a.service_1, a.service_2 {
+a.business-services, a.dev-teams {
 	display: inline-block;
 	position: relative;
 	width: auto;
@@ -173,7 +173,7 @@ a.active {
 	         box-shadow: 0 0 0 0 black;
 	color: rgba(255,255,255, 1.0);
 }
-a.service_1:hover, a.service_2:hover {
+a.business-services:hover, a.dev-teams:hover {
 	background-color: rgba(255,255,255,0.1);
 	border: solid 4px rgba(255,255,255, 0.8);
 	 -webkit-box-shadow: 0 2px 1px -1px black;
@@ -182,13 +182,13 @@ a.service_1:hover, a.service_2:hover {
 
 	color: rgba(255,255,255, 1.0);
 }
-a.service_1 {
+a.business-services {
 	float: left;
 }
-a.service_2 {
+a.dev-teams {
 	float: right;
 }
-a.service_1 span, a.service_2 span {
+a.business-services span, a.dev-teams span {
 	display: block;
 	position: relative;
 	width: auto;
@@ -215,7 +215,7 @@ a.service_1 span, a.service_2 span {
 		padding: 0px 0px 100px 0px;
 		margin: 0px 0px 0px 0px;
 	}
-	a.service_1, a.service_2 {
+	a.business-services, a.dev-teams {
 		display: block;
 		position: relative;
 		float: none;
@@ -224,7 +224,7 @@ a.service_1 span, a.service_2 span {
 		padding: 10px 20px 10px 20px;
 		margin: 0px auto 20px auto;
 	}
-	a.service_1 span {
+	a.business-services span {
 		height: 20px;
 		padding: 0px 0px 0px 0px;
 		margin: -50px auto 30px auto;
@@ -239,7 +239,7 @@ a.service_1 span, a.service_2 span {
 		text-transform: lowercase;
 		text-decoration: none;
 	}
-	a.service_2 span {
+	a.dev-teams span {
 		display: none;
 	}
 }
@@ -261,7 +261,7 @@ a.service_1 span, a.service_2 span {
 
 }
 
-#service_1_content {
+#business-services-content {
 	display: block;
 	position: relative;
 	width: 110%;
@@ -272,7 +272,7 @@ a.service_1 span, a.service_2 span {
 	background-color: rgb(40,81,102);
 	background-image: url(bg_grid.png);
 }
-#service_2_content {
+#dev-teams-content {
 	display: block;
 	position: relative;
 	width: 110%;
@@ -287,7 +287,7 @@ a.service_1 span, a.service_2 span {
 
 
 /*--- services stuff ---*/
-#service_1_content p.description, #service_2_content p.description {
+#business-services-content p.description, #dev-teams-content p.description {
 	display: block;
 	position: relative;
 	width: 60%;
@@ -304,7 +304,7 @@ a.service_1 span, a.service_2 span {
 	letter-spacing: 0px;
 	color: rgba(255,255,255, 0.6);
 }
-#service_1_content ul.services , #service_2_content ul.services  {
+#business-services-content ul.services , #dev-teams-content ul.services  {
 	display: block;
 	position: relative;
 	width: 60%;
@@ -320,7 +320,7 @@ a.service_1 span, a.service_2 span {
 	letter-spacing: 0px;
 	color: rgba(255,255,255, 0.6);
 }
-#service_1_content ul.services  li, #service_2_content ul.services  li {}
+#business-services-content ul.services  li, #dev-teams-content ul.services  li {}
 
 
 /*--- form --------------------------------------------*/
