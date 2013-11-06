@@ -36,15 +36,20 @@
     $("header").css("position", "absolute");
     $("#service_1_content").css("display", "block");
     $("#service_1_content").css("position", "absolute");
-    $("#service_1_content").css("top", "400px");  if($(window).width()<767){$("#service_1_content").css("top", "480px");}
+    $("#service_1_content").css("top", "400px");
+    if ($(window).width() < 767) {
+      $("#service_1_content").css("top", "480px");
+    }
     $("#service_1_content").css("marginLeft", "-100%");
     $("#service_1_content").css("opacity", "0.0");
     //-- setp 2: animate .buttons
-    if($(window).width() > 767){
+    if ($(window).width() > 767) {
       $(".buttons").animate({
         //-- move right
         left: 260 - $(".service_1").width() + 28
-        }, { duration: 650, specialEasing: {
+      }, {
+        duration: 650,
+        specialEasing: {
           left: "easeInOutQuint"
         }
       });
@@ -55,7 +60,9 @@
     $(".service_1").animate({
       //-- hide
       opacity: "1.0"
-      }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         opacity: "easeInOutQuint"
       }
     });
@@ -63,7 +70,9 @@
     $(".service_2").animate({
       //-- hide
       opacity: "0.2"
-      }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         opacity: "easeInOutQuint"
       }
     });
@@ -72,17 +81,22 @@
       //-- slide in
       marginLeft: "-5%",
       opacity: "0.7"
-    }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         marginLeft: "easeInOutQuint",
         opacity: "easeInOutQuint"
-      }, complete: function() {
+      },
+      complete: function () {
 
         $(".mission_statement").animate({
           //-- slide up
           height: "0",
           opacity: "0.0",
           top: "200px"
-        }, { duration: 1000,  specialEasing: {
+        }, {
+          duration: 1000,
+          specialEasing: {
             height: "easeInOutQuint",
             opacity: "easeInOutQuint",
             top: "easeInOutQuint"
@@ -91,27 +105,34 @@
         $(".service_1").animate({
           //-- slide up
           top: "-120px"
-        }, { duration: 1000,  specialEasing: {
+        }, {
+          duration: 1000,
+          specialEasing: {
             top: "easeInOutQuint"
           }
         });
         $(".service_2").animate({
           //-- slide up
           top: "-120px"
-        }, { duration: 1000,  specialEasing: {
+        }, {
+          duration: 1000,
+          specialEasing: {
             top: "easeInOutQuint"
           }
         });
 
-        $( this ).animate({
+        $(this).animate({
           //-- slide up
           top: "0px",
           opacity: "1.0"
-        }, { duration: 1000,  specialEasing: {
+        }, {
+          duration: 1000,
+          specialEasing: {
             top: "easeInOutQuint",
             opacity: "easeInOutQuint"
-          }, complete: function() {
-            $( this ).css("position", "relative");
+          },
+          complete: function () {
+            $(this).css("position", "relative");
           }
         });
       }
@@ -124,17 +145,19 @@
     $("#service_2_content").css("display", "block");
     $("#service_2_content").css("position", "absolute");
     $("#service_2_content").css("top", "400px");
-    if($(window).width()<767){
+    if ($(window).width() < 767) {
       $("#service_2_content").css("top", "480px");
     }
     $("#service_2_content").css("marginLeft", "100%");
     $("#service_2_content").css("opacity", "0.0");
     //-- setp 2: .buttons
-    if($(window).width()>767){
+    if ($(window).width() > 767) {
       $(".buttons").animate({
         //-- move left
-        left: -(260 - ( $(".service_2").width() /2 ) - 28)
-        }, { duration: 650, specialEasing: {
+        left: -(260 - ($(".service_2").width() / 2) - 28)
+      }, {
+        duration: 650,
+        specialEasing: {
           left: "easeInOutQuint"
         }
       });
@@ -144,14 +167,18 @@
     $(".service_1").animate({
       //-- hide
       opacity: "0.2"
-      }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         opacity: "easeInOutQuint"
       }
     });
     $(".service_2").animate({
       //-- hide
       opacity: "1.0"
-      }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         opacity: "easeInOutQuint"
       }
     });
@@ -160,17 +187,22 @@
       //-- slide in
       marginLeft: "-5%",
       opacity: "0.7"
-    }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         marginLeft: "easeInOutQuint",
         opacity: "easeInOutQuint"
-      }, complete: function() {
+      },
+      complete: function () {
 
         $(".mission_statement").animate({
           //-- slide up
           height: "0",
           opacity: "0.0",
           top: "200px"
-        }, { duration: 1000,  specialEasing: {
+        }, {
+          duration: 1000,
+          specialEasing: {
             height: "easeInOutQuint",
             opacity: "easeInOutQuint",
             top: "easeInOutQuint"
@@ -179,27 +211,34 @@
         $(".service_1").animate({
           //-- slide up
           top: "-120px"
-        }, { duration: 1000,  specialEasing: {
+        }, {
+          duration: 1000,
+          specialEasing: {
             top: "easeInOutQuint"
           }
         });
         $(".service_2").animate({
           //-- slide up
           top: "-120px"
-        }, { duration: 1000,  specialEasing: {
+        }, {
+          duration: 1000,
+          specialEasing: {
             top: "easeInOutQuint"
           }
         });
 
-        $( this ).animate({
+        $(this).animate({
           //-- slide up
           top: "0px",
           opacity: "1.0"
-        }, { duration: 1000,  specialEasing: {
+        }, {
+          duration: 1000,
+          specialEasing: {
             top: "easeInOutQuint",
             opacity: "easeInOutQuint"
-          }, complete: function() {
-            $( this ).css("position", "relative");
+          },
+          complete: function () {
+            $(this).css("position", "relative");
           }
         });
       }
@@ -214,11 +253,13 @@
     $("#service_1_content").css("marginLeft", "-100%");
     $("#service_1_content").css("opacity", "1.0");
     //-- setp 2: animate .buttons
-    if($(window).width()>767){
+    if ($(window).width() > 767) {
       $(".buttons").animate({
         //-- move right
         left: 260 - $(".service_1").width() + 28
-        }, { duration: 650, specialEasing: {
+      }, {
+        duration: 650,
+        specialEasing: {
           left: "easeInOutQuint"
         }
       });
@@ -228,14 +269,18 @@
     $(".service_1").animate({
       //-- hide
       opacity: "1.0"
-      }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         opacity: "easeInOutQuint"
       }
     });
     $(".service_2").animate({
       //-- hide
       opacity: "0.2"
-      }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         opacity: "easeInOutQuint"
       }
     });
@@ -243,19 +288,25 @@
     $("#service_1_content").animate({
       //-- slide in
       marginLeft: "-5%"
-    }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         marginLeft: "easeInOutQuint"
-      }, complete: function() {
-        $( this ).css("position", "relative");
+      },
+      complete: function () {
+        $(this).css("position", "relative");
       }
     });
     $("#service_2_content").animate({
       //-- slide out
       marginLeft: "100%"
-    }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         marginLeft: "easeInOutQuint"
-      }, complete: function() {
-        $( this ).css("display", "none");
+      },
+      complete: function () {
+        $(this).css("display", "none");
       }
     });
   }
@@ -268,11 +319,13 @@
     $("#service_2_content").css("marginLeft", "100%");
     $("#service_2_content").css("opacity", "1.0");
     //-- setp 2: animate .buttons
-    if($(window).width()>767){
+    if ($(window).width() > 767) {
       $(".buttons").animate({
         //-- move left
-        left: -(260 - ( $(".service_2").width() /2 ) - 28)
-        }, { duration: 650, specialEasing: {
+        left: -(260 - ($(".service_2").width() / 2) - 28)
+      }, {
+        duration: 650,
+        specialEasing: {
           left: "easeInOutQuint"
         }
       });
@@ -282,14 +335,18 @@
     $(".service_1").animate({
       //-- hide
       opacity: "0.2"
-      }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         opacity: "easeInOutQuint"
       }
     });
     $(".service_2").animate({
       //-- hide
       opacity: "1.0"
-      }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         opacity: "easeInOutQuint"
       }
     });
@@ -297,29 +354,35 @@
     $("#service_2_content").animate({
       //-- slide in
       marginLeft: "-5%"
-    }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         marginLeft: "easeInOutQuint"
-      }, complete: function() {
-        $( this ).css("position", "relative");
+      },
+      complete: function () {
+        $(this).css("position", "relative");
       }
     });
     $("#service_1_content").animate({
       //-- slide out
       marginLeft: "-100%"
-    }, { duration: 750, specialEasing: {
+    }, {
+      duration: 750,
+      specialEasing: {
         marginLeft: "easeInOutQuint"
-      }, complete: function() {
-        $( this ).css("display", "none");
+      },
+      complete: function () {
+        $(this).css("display", "none");
       }
     });
   }
 
   HomeNavigator.prototype.showHome = function () {
-    $( "#service_1_content" ).slideUp( "slow", function() {
+    $("#service_1_content").slideUp("slow", function () {
       $("header").css("position", "relative");
     });
-    $( "#service_2_content" ).slideUp( "slow", function() {
-        $("header").css("position", "relative");
+    $("#service_2_content").slideUp("slow", function () {
+      $("header").css("position", "relative");
     });
     //-- setp 2: animate .buttons
     $(".service_1").removeClass("active");
@@ -327,7 +390,9 @@
     $(".buttons").animate({
       //-- move left
       left: "0px"
-      }, { duration: 650, specialEasing: {
+    }, {
+      duration: 650,
+      specialEasing: {
         left: "easeInOutQuint"
       }
     });
@@ -335,7 +400,9 @@
       //-- hide
       opacity: "1.0",
       top: "0px"
-      }, { duration: 1000,  specialEasing: {
+    }, {
+      duration: 1000,
+      specialEasing: {
         opacity: "easeInOutQuint",
         top: "easeInOutQuint"
       }
@@ -344,7 +411,9 @@
       //-- hide
       opacity: "1.0",
       top: "0px"
-      }, { duration: 1000,  specialEasing: {
+    }, {
+      duration: 1000,
+      specialEasing: {
         opacity: "easeInOutQuint",
         top: "easeInOutQuint"
       }
@@ -355,26 +424,28 @@
       height: "200px",
       opacity: "1.0",
       top: "0px"
-    }, { duration: 1000,  specialEasing: {
+    }, {
+      duration: 1000,
+      specialEasing: {
         height: "easeInOutQuint",
         opacity: "easeInOutQuint",
         top: "easeInOutQuint"
       }
     });
-  }
+  };
 
   HomeNavigator.prototype.transitionTo = function (target_state) {
     if (target_state === "service_1" && this.state === "home") {
       this.homeToBusiness();
-    } else if(target_state === "service_2" && this.state === "home") {
+    } else if (target_state === "service_2" && this.state === "home") {
       this.homeToDev();
     } else if (target_state === "service_1" && this.state === "service_2") {
       this.businessToDev();
-    } else if (target_state ==="service_2" && this.state === "service_1"){
+    } else if (target_state === "service_2" && this.state === "service_1") {
       this.devToBusiness();
     }
     this.state = target_state;
-  }
+  };
 
   // This is the same as $(document).on('ready')
   $(function () {
