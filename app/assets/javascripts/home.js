@@ -10,6 +10,9 @@
   var HomeNavigator = function () {
     this.state = 'home';
     this.bindButtons();
+    this.mobileView = $(window).width() < 767;
+    this.missionStatementHeight = $(".mission_statement").height();
+
     $("#service_1_content").css("display", "none");
     $("#service_2_content").css("display", "none");
     $('#select_1').selectbox();
@@ -31,19 +34,63 @@
     });
   };
 
-  HomeNavigator.prototype.homeToBusiness = function () {
-    //-- step 1: reset and position div.service_1_content
+  HomeNavigator.prototype.setHeaderToServiceMode = function () {
     $("header").css("position", "absolute");
-    $("#service_1_content").css("display", "block");
-    $("#service_1_content").css("position", "absolute");
-    $("#service_1_content").css("top", "400px");
-    if ($(window).width() < 767) {
-      $("#service_1_content").css("top", "480px");
-    }
-    $("#service_1_content").css("marginLeft", "-100%");
-    $("#service_1_content").css("opacity", "0.0");
+  };
+
+  HomeNavigator.prototype.hideMissionStatement = function () {
+    $(".mission_statement").animate({
+      //-- slide up
+      height: "0",
+      opacity: "0.0",
+      top: "200px"
+    }, {
+      duration: 1000,
+      specialEasing: {
+        height: "easeInOutQuint",
+        opacity: "easeInOutQuint",
+        top: "easeInOutQuint"
+      }
+    });
+    $(".service_1, .service_2").animate({
+      //-- slide up
+      top: "-120px"
+    }, {
+      duration: 1000,
+      specialEasing: {
+        top: "easeInOutQuint"
+      }
+    });
+  };
+
+  HomeNavigator.prototype.showMissionStatement = function () {
+    $(".mission_statement").animate({
+      //-- slide up
+      height: this.missionStatementHeight,
+      opacity: "1.0",
+      top: "0px"
+    }, {
+      duration: 1000,
+      specialEasing: {
+        height: "easeInOutQuint",
+        opacity: "easeInOutQuint",
+        top: "easeInOutQuint"
+      }
+    });
+  };
+
+  HomeNavigator.prototype.homeToBusiness = function () {
+    var thisNavigator = this;
+    this.setHeaderToServiceMode();
+    $("#service_1_content").css({
+      "display": "block",
+      "position": "absolute",
+      "marginLeft": "-100%",
+      "opacity": "0.0",
+      "top": (this.mobileView ? "480px" : "400px")
+    });
     //-- setp 2: animate .buttons
-    if ($(window).width() > 767) {
+    if (!this.mobileView) {
       $(".buttons").animate({
         //-- move right
         left: 260 - $(".service_1").width() + 28
@@ -88,39 +135,7 @@
         opacity: "easeInOutQuint"
       },
       complete: function () {
-
-        $(".mission_statement").animate({
-          //-- slide up
-          height: "0",
-          opacity: "0.0",
-          top: "200px"
-        }, {
-          duration: 1000,
-          specialEasing: {
-            height: "easeInOutQuint",
-            opacity: "easeInOutQuint",
-            top: "easeInOutQuint"
-          }
-        });
-        $(".service_1").animate({
-          //-- slide up
-          top: "-120px"
-        }, {
-          duration: 1000,
-          specialEasing: {
-            top: "easeInOutQuint"
-          }
-        });
-        $(".service_2").animate({
-          //-- slide up
-          top: "-120px"
-        }, {
-          duration: 1000,
-          specialEasing: {
-            top: "easeInOutQuint"
-          }
-        });
-
+        thisNavigator.hideMissionStatement();
         $(this).animate({
           //-- slide up
           top: "0px",
@@ -140,18 +155,17 @@
   };
 
   HomeNavigator.prototype.homeToDev = function () {
-    //-- step 1: reset and position div.service_1_content
-    $("header").css("position", "absolute");
-    $("#service_2_content").css("display", "block");
-    $("#service_2_content").css("position", "absolute");
-    $("#service_2_content").css("top", "400px");
-    if ($(window).width() < 767) {
-      $("#service_2_content").css("top", "480px");
-    }
-    $("#service_2_content").css("marginLeft", "100%");
-    $("#service_2_content").css("opacity", "0.0");
-    //-- setp 2: .buttons
-    if ($(window).width() > 767) {
+    var thisNavigator = this;
+    this.setHeaderToServiceMode();
+    $("#service_2_content").css({
+      "display": "block",
+      "position": "absolute",
+      "marginLeft": "100%",
+      "opacity": "0.0",
+      "top": (this.mobileView ? "480px" : "400px")
+    });
+
+    if (!this.mobileView) {
       $(".buttons").animate({
         //-- move left
         left: -(260 - ($(".service_2").width() / 2) - 28)
@@ -162,8 +176,9 @@
         }
       });
     }
-    $(".service_1").removeClass("active");
+
     $(".service_2").addClass("active");
+    $(".service_1").removeClass("active");
     $(".service_1").animate({
       //-- hide
       opacity: "0.2"
@@ -173,6 +188,7 @@
         opacity: "easeInOutQuint"
       }
     });
+
     $(".service_2").animate({
       //-- hide
       opacity: "1.0"
@@ -194,39 +210,7 @@
         opacity: "easeInOutQuint"
       },
       complete: function () {
-
-        $(".mission_statement").animate({
-          //-- slide up
-          height: "0",
-          opacity: "0.0",
-          top: "200px"
-        }, {
-          duration: 1000,
-          specialEasing: {
-            height: "easeInOutQuint",
-            opacity: "easeInOutQuint",
-            top: "easeInOutQuint"
-          }
-        });
-        $(".service_1").animate({
-          //-- slide up
-          top: "-120px"
-        }, {
-          duration: 1000,
-          specialEasing: {
-            top: "easeInOutQuint"
-          }
-        });
-        $(".service_2").animate({
-          //-- slide up
-          top: "-120px"
-        }, {
-          duration: 1000,
-          specialEasing: {
-            top: "easeInOutQuint"
-          }
-        });
-
+        thisNavigator.hideMissionStatement();
         $(this).animate({
           //-- slide up
           top: "0px",
@@ -243,17 +227,16 @@
         });
       }
     });
-  }
+  };
 
   HomeNavigator.prototype.businessToDev = function () {
-    //-- step 1: reset and position div.service_1_content
     $("#service_1_content").css("display", "block");
     $("#service_1_content").css("position", "absolute");
     $("#service_1_content").css("top", "0px");
     $("#service_1_content").css("marginLeft", "-100%");
     $("#service_1_content").css("opacity", "1.0");
     //-- setp 2: animate .buttons
-    if ($(window).width() > 767) {
+    if (!this.mobileView) {
       $(".buttons").animate({
         //-- move right
         left: 260 - $(".service_1").width() + 28
@@ -309,7 +292,7 @@
         $(this).css("display", "none");
       }
     });
-  }
+  };
 
   HomeNavigator.prototype.devToBusiness = function () {
     //-- step 1: reset and position div.service_1_content
@@ -319,7 +302,7 @@
     $("#service_2_content").css("marginLeft", "100%");
     $("#service_2_content").css("opacity", "1.0");
     //-- setp 2: animate .buttons
-    if ($(window).width() > 767) {
+    if (!this.mobileView) {
       $(".buttons").animate({
         //-- move left
         left: -(260 - ($(".service_2").width() / 2) - 28)
@@ -375,39 +358,23 @@
         $(this).css("display", "none");
       }
     });
-  }
+  };
 
   HomeNavigator.prototype.showHome = function () {
-    $("#service_1_content").slideUp("slow", function () {
+    $("#service_1_content, #service_2_content").slideUp("slow", function () {
       $("header").css("position", "relative");
     });
-    $("#service_2_content").slideUp("slow", function () {
-      $("header").css("position", "relative");
-    });
-    //-- setp 2: animate .buttons
-    $(".service_1").removeClass("active");
-    $(".service_2").removeClass("active");
+
     $(".buttons").animate({
       //-- move left
-      left: "0px"
+      left: "0px",
+      top: 0
     }, {
       duration: 650,
-      specialEasing: {
-        left: "easeInOutQuint"
-      }
+      specialEasing: { left: "easeInOutQuint" }
     });
-    $(".service_1").animate({
-      //-- hide
-      opacity: "1.0",
-      top: "0px"
-    }, {
-      duration: 1000,
-      specialEasing: {
-        opacity: "easeInOutQuint",
-        top: "easeInOutQuint"
-      }
-    });
-    $(".service_2").animate({
+
+    $(".buttons > a").removeClass("active").animate({
       //-- hide
       opacity: "1.0",
       top: "0px"
@@ -419,19 +386,8 @@
       }
     });
 
-    $(".mission_statement").animate({
-      //-- slide up
-      height: "200px",
-      opacity: "1.0",
-      top: "0px"
-    }, {
-      duration: 1000,
-      specialEasing: {
-        height: "easeInOutQuint",
-        opacity: "easeInOutQuint",
-        top: "easeInOutQuint"
-      }
-    });
+    this.showMissionStatement();
+    this.state = "home";
   };
 
   HomeNavigator.prototype.transitionTo = function (target_state) {
