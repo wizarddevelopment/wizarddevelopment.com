@@ -7,15 +7,19 @@
   // All dom manipulation or binding should happen after the dom has finished loading,
   // We call this function in the jquery document ready binding
 
-  function HomeNavigator() {
+  var HomeNavigator = function () {
     this.state = 'home';
     this.bindButtons();
-  }
+    $("#service_1_content").css("display", "none");
+    $("#service_2_content").css("display", "none");
+    $('#select_1').selectbox();
+    $('#select_2').selectbox();
+  };
 
   HomeNavigator.prototype.bindButtons = function () {
     var thisNavigator = this;
     $(".home").on('click', function () {
-      thisNavigator.transitionTo("home");
+      thisNavigator.showHome();
     });
 
     $(".service_1").click(function () {
@@ -112,9 +116,9 @@
         });
       }
     });
-  }
+  };
 
-  function homeToDev() {
+  HomeNavigator.prototype.homeToDev = function () {
     //-- step 1: reset and position div.service_1_content
     $("header").css("position", "absolute");
     $("#service_2_content").css("display", "block");
@@ -202,7 +206,7 @@
     });
   }
 
-  function businessToDev() {
+  HomeNavigator.prototype.businessToDev = function () {
     //-- step 1: reset and position div.service_1_content
     $("#service_1_content").css("display", "block");
     $("#service_1_content").css("position", "absolute");
@@ -256,7 +260,7 @@
     });
   }
 
-  function devToBusiness() {
+  HomeNavigator.prototype.devToBusiness = function () {
     //-- step 1: reset and position div.service_1_content
     $("#service_2_content").css("display", "block");
     $("#service_2_content").css("position", "absolute");
@@ -310,7 +314,7 @@
     });
   }
 
-  function showHome() {
+  HomeNavigator.prototype.showHome = function () {
     $( "#service_1_content" ).slideUp( "slow", function() {
       $("header").css("position", "relative");
     });
@@ -359,30 +363,22 @@
     });
   }
 
-  function transitionTo(target_state) {
-    if (target_state === "service_1" && current_state === "home") {
-      homeToBusiness();
-    } else if(target_state === "service_2" && current_state === "home") {
-      homeToDev();
-    } else if (target_state === "service_1" && current_state === "service_2") {
-      businessToDev();
-    } else if (target_state ==="service_2" && current_state === "service_1"){
-      devToBusiness();
-    } else if (target_state === "home") {
-      showHome();
+  HomeNavigator.prototype.transitionTo = function (target_state) {
+    if (target_state === "service_1" && this.state === "home") {
+      this.homeToBusiness();
+    } else if(target_state === "service_2" && this.state === "home") {
+      this.homeToDev();
+    } else if (target_state === "service_1" && this.state === "service_2") {
+      this.businessToDev();
+    } else if (target_state ==="service_2" && this.state === "service_1"){
+      this.devToBusiness();
     }
-
-    //-- step 4: update current state
-    current_state = target_state;
+    this.state = target_state;
   }
 
   // This is the same as $(document).on('ready')
-  $(function(){
-    bindButtons();
-    $("#service_1_content").css("display", "none");
-    $("#service_2_content").css("display", "none");
-    $('#select_1').selectbox();
-    $('#select_2').selectbox();
+  $(function () {
+    window.home = new HomeNavigator();
   });
 
 })();
