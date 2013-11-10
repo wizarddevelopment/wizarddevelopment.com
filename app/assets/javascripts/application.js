@@ -11,4 +11,5 @@
 // about supported directives.
 //
 //= require_tree ./lib
-//= require_tree ./
+//= require ./app/app.js
+//= require_tree ./app

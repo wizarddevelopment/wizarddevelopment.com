@@ -19,6 +19,7 @@
 <body>
   <%= yield %>
   <%= javascript_include_tag "application" %>
+  <%= yield :js %>
   <%= render partial: 'shared/ga' %>
 </body>
 </html>
