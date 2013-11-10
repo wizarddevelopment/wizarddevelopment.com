@@ -8,7 +8,8 @@
   // All dom manipulation or binding should happen after the dom has finished loading,
   // We call this function in the jquery document ready binding
 
-  var HomeNavigator = function () {
+  var HomeNavigator = function (router) {
+    this.router = router;
     this.state = 'home';
     this.bindButtons();
     this.mobileView = $(window).width() < 767;
@@ -22,15 +23,15 @@
   HomeNavigator.prototype.bindButtons = function () {
     var thisNavigator = this;
     $(".home").on('click', function () {
-      thisNavigator.showHome();
+      thisNavigator.router.navigate('', {trigger:true});
     });
 
     $(".business-services").click(function () {
-      thisNavigator.transitionTo("business-services");
+      thisNavigator.router.navigate('business', {trigger:true});
     });
 
     $(".dev-teams").click(function () {
-      thisNavigator.transitionTo("dev-teams");
+      thisNavigator.router.navigate('devteam', {trigger:true});
     });
   };
 

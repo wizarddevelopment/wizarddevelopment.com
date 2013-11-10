@@ -1,8 +1,8 @@
 WizardcomputingCom::Application.routes.draw do
   root 'home#index'
-
+  get 'business' => 'home#index'
+  get 'devteam' => 'home#index'
   post 'contact' => 'home#contact'
-  get 'beta' => 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
