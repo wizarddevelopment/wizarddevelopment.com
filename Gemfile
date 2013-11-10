@@ -5,7 +5,6 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
-gem 'compass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer'
 gem 'jquery-rails'
@@ -19,6 +18,10 @@ gem 'dalli'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :assets do
+  gem 'compass-rails' #, github: 'Compass/compass-rails', branch: 'rails4'
 end
 
 # Use unicorn as the app server
