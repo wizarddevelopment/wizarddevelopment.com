@@ -1,41 +1,13 @@
-/*
-Theme Name: 131025__FRA-001__v.1.0
-*/
+// breakpoints
+$break-mobile: "max-width: 767px";
 
-/* @fold - sample ---- */
-#dummy {
-	display: block;
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-	// background: image-url();
 
-	font-style: normal;
-	font-weight: 300;
-	font-size: 12px;
-	line-height: 21px;
-	letter-spacing: 0px;
-	color: rgb(255,255,25);
-	text-transform: capitalize/uppercase/lowercase;
-	text-align: left/right/center/justify;
-	text-decoration: none/underline/overline/line-through/blink;
-	text-indent: 10px;
-}
-/* @end */
-@media (max-width: 768px) {}
-
-/*------------------------------------------------------------------------------*/
-/** --- DESKTOP - default size over 1023px --- */
-/*------------------------------------------------------------------------------*/
-
-/* @fold --------- SITE --------------- */
 html {
 	width: 100%;
 	height: 100%;
 	font-size: 100%;
 }
+
 body {
 	width: 100%;
 	height: 100%;
@@ -47,12 +19,7 @@ body {
 	color: rgb(255,255,255);
 	text-align: center;
 }
-.clear {
-	clear: both;
-}
 
-
-/* @end */
 /* @fold --------- HEADER ------------- */
 header {
 	display: block;
@@ -61,11 +28,10 @@ header {
 	height: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0px auto 0px auto;
-
 	z-index: 999;
 }
 
-h1.logo {
+.logo {
 	display: block;
 	position: relative;
 	width: auto;
@@ -83,15 +49,17 @@ h1.logo {
 	text-transform: uppercase;
 	text-decoration: none;
 }
-@media screen and (max-width: 767px) {
-	h1.logo {
-		padding: 56px 20px 0px 20px;
 
+@media ($break-mobile) {
+	.logo{
+		padding: 56px 20px 0px 20px;
 		font-size: 30px;
 		line-height: 30px;
 		letter-spacing: 3px;
 	}
+
 }
+
 h2.tagline {
 	display: block;
 	position: relative;
@@ -110,6 +78,7 @@ h2.tagline {
 	text-transform: uppercase;
 	text-decoration: none;
 }
+
 p.mission_statement {
 	display: block;
 	position: relative;
@@ -129,11 +98,6 @@ p.mission_statement {
 	text-transform: none;
 	text-decoration: none;
 }
-
-@media screen and (max-width: 767px) {
-	p.mission_statement {}
-}
-
 
 div.buttons {
 	display: block;
@@ -206,7 +170,8 @@ a.business-services span, a.dev-teams span {
 	text-transform: lowercase;
 	text-decoration: none;
 }
-@media screen and (max-width: 767px) {
+
+@media ($break-mobile) {
 	div.buttons {
 		display: block;
 		position: relative;
@@ -304,6 +269,7 @@ a.business-services span, a.dev-teams span {
 	letter-spacing: 0px;
 	color: rgba(255,255,255, 0.6);
 }
+
 #business-services-content ul.services , #dev-teams-content ul.services  {
 	display: block;
 	position: relative;
@@ -320,7 +286,6 @@ a.business-services span, a.dev-teams span {
 	letter-spacing: 0px;
 	color: rgba(255,255,255, 0.6);
 }
-#business-services-content ul.services  li, #dev-teams-content ul.services  li {}
 
 
 /*--- form --------------------------------------------*/
@@ -597,20 +562,10 @@ form input.submit {
 
 	color: rgb(255,255,255);
 }
+
 form input.submit:hover {
 	background-color: rgba(192,63,33,0.7);
 	 -webkit-box-shadow: 0 2px 1px -1px black;
 		-moz-box-shadow: 0 2px 1px -1px black;
 	         box-shadow: 0 2px 1px -1px black;
 }
-
-
-/* @end */
-/* @fold --------- FOOTER ------------- */
-
-
-/* @end */
-
-
-
-
