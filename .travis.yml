@@ -11,7 +11,7 @@ deploy:
   api_key:
     secure: getPXV27W51yfDvyOnMntZFJy4wE/12Qrgg3YZP05RBUyb0lSlCBC2cLrIswtJFg7NX58+WOELeVK8y61vwGxiFHD06+4A2fa1aPtgHYT2Y6hUOiVA/sbeEHp0XBCAqgx8nsDK+2FVA0CxgrkCrLzuCAXC9e2Hztq91fgDy+loQ=
   app: wizardcomputing
-  # strategy: git
+  strategy: git
   run:
     - "rake db:migrate"
     - restart
