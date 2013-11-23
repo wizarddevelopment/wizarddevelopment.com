@@ -38,10 +38,11 @@
       <li>New Features or improvements to existing features.</li>
       <li>New tool or product. (eg. E-Commerce, CMS, integration of existing tools, etc.)</li>
     </ul>
-    <%= form_for :info, url: {action: 'contact'} do%>
+    <%= form_for ContactRequest.new do |f|%>
       <p>Interested? – Let us know how we can work with you!</p>
       <input class="text" type="text" name="name" placeholder="your name"><div class="required"></div>
       <input class="text error" type="email" name="email" placeholder="your email"><div class="required"></div>
+      <input class="text error" type="phone" name="phone" placeholder="your phone number"></div>
       <input class="text active" type="text" name="business_name" placeholder="your business name"><div class="required"></div>
       <p class="small">Who is the project primarily for?</p>
             <input type="radio" id="r1" name="rr" />
@@ -72,7 +73,7 @@
 
   <div id="dev-teams-content">
     <p class="description">
-      Good software is our business.<br />We can help your to be, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:
+      Agile is our philsopy.<br>Getting value from software is yours.
     </p>
     <ul class="services">
       <li>need to style this - depending on content</li>
@@ -87,7 +88,7 @@
       <li>non proident, sunt in culpa qui officia</li>
       <li>deserunt mollit anim id est laborum</li>
     </ul>
-    <%= form_for :info, url: {action: 'contact'} do%>
+    <%= form_for ContactRequest.new do |f| %>
       <p>Interested? – Let us know how we can work with you!</p>
       <input class="text" type="text" name="name" placeholder="your name"><div class="required"></div>
       <input class="text" type="email" name="email" placeholder="your email"><div class="required"></div>
