@@ -10,29 +10,22 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'dalli'
+gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
 
 # =>  Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
+
+gem 'unicorn', require: false # Use unicorn as the app server
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-group :assets do
-  gem 'sass-rails', '~> 4.0.0'
-  # gem 'compass-rails', "~> 2.0.alpha.0"
-  # gem 'breakpoint'
-end
-
-# Use unicorn as the app server
-gem 'unicorn', require: false
-
 group :development do
   gem 'growl'
   gem "guard"
   gem "guard-rspec"
-  gem "travis"
 end
 
 group :test do
