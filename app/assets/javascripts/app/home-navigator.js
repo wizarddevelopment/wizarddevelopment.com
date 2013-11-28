@@ -23,15 +23,15 @@
   HomeNavigator.prototype.bindButtons = function () {
     var thisNavigator = this;
     $(".home").on('click', function () {
-      thisNavigator.router.navigate('', {trigger:true});
+      thisNavigator.router.navigate('', {trigger: true});
     });
 
     $(".business-services").click(function () {
-      thisNavigator.router.navigate('business', {trigger:true});
+      thisNavigator.router.navigate('business', {trigger: true});
     });
 
     $(".dev-teams").click(function () {
-      thisNavigator.router.navigate('devteam', {trigger:true});
+      thisNavigator.router.navigate('devteam', {trigger: true});
     });
   };
 
