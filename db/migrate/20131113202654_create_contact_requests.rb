@@ -6,7 +6,6 @@ class CreateContactRequests < ActiveRecord::Migration
       t.string :phone
       t.string :business_name
       t.text :message
-      t.text :project_info
       t.timestamps
     end
   end

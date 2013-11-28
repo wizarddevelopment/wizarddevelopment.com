@@ -1,13 +1,21 @@
 class ContactRequestsController < ApplicationController
 
   def create
-    raise "no info!" unless params[:info]
-    ContactMailer.contact_request(params[:info]).deliver
-    flash[:contact_info] = "Thanks for the message, we'll contact you soon."
-    redirect_to root_path
-  rescue
-    flash.now[:contact_error] = "Please fill out the contact form"
-    return render 'mvp', status: 400
-  end
+    contact = params.require(:contact_request).permit(
+      :name,
+      :email,
+      :phone,
+      :business_name,
+      :message,
+      :dev_team,
+      :product_status
+    )
 
+    @contact_request = ContactRequest.new(contact)
+    if @contact_request.save
+      redirect_to root_path, notice: "thanks!"
+    else
+      render :blank, status: 401
+    end
+  end
 end

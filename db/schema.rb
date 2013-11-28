@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20131128050406) do
     t.string   "phone"
     t.string   "business_name"
     t.text     "message"
-    t.text     "project_info"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "dev_team"
