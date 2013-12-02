@@ -13,39 +13,43 @@
     <li>A deployable `master`</li>
     <li>No fear of refactoring</li>
   </ul>
-  <%= form_for ContactRequest.new do |f| %>
+  <%= form_for ContactRequest.new, html: {class: 'contact-form devteam-contact'} do |f| %>
     <p>Interested? – Let us know how we can work with you!</p>
-    <input class="text" type="text" name="name" placeholder="your name"><div class="required"></div>
-    <input class="text" type="email" name="email" placeholder="your email"><div class="required"></div>
-    <input class="text" type="text" name="business_name" placeholder="your business name">
-    <p class="small">How large is your team?</p>
-    <input class="text" type="number" name="team_size" value="8">
+
+    <%= f.text_field :name, placeholder: "your name", class: 'text' %><div class="required"></div>
+    <%= f.email_field :email, placeholder: "your email", class: 'text' %><div class="required"></div>
+    <%= f.telephone_field :phone, placeholder: "your phone number", class: 'text' %>
+    <%= f.text_field :business_name, placeholder: "your business name", class: 'text' %><div class="required"></div>
+
     <p class="small">Please check all that apply:</p>
-    <input type="checkbox" id="c1" name="test_suit" />
-    <label for="c1"><span></span>We have a reliable test suite with good coverage.</label>
-    <input type="checkbox" id="c2" name="ci_server" />
-    <label for="c2"><span></span>We have a continues integration server.</label>
-    <input type="checkbox" id="c3" name="deploy_master" />
-    <label for="c3"><span></span>We keep master deployable.</label>
-    <input type="checkbox" id="c4" name="onestep_deploy" />
-    <label for="c4"><span></span>We have a one step deploy.</label>
-    <input type="checkbox" id="c5" name="bugs_not_issue" />
-    <label for="c5"><span></span>Bugs are not a problem.</label>
-    <input type="checkbox" id="c6" name="releases_not_issue" />
-    <label for="c6"><span></span>Releases are not a problem.</label>
-    <input type="checkbox" id="c7" name="infrastructure_not_issue" />
-    <label for="c7"><span></span>Infrastructure is not a problem.</label>
-    <input type="checkbox" id="c8" name="agile_product" />
-    <label for="c8"><span></span>We break down features into deployable testable units of work.</label>
-    <input type="checkbox" id="c9" name="week_sprints" />
-    <label for="c9"><span></span>We have one week sprints.</label>
-    <input type="checkbox" id="c10" name="weekly_retros" />
-    <label for="c10"><span></span>We have weekly retrospectives.</label>
-    <input type="checkbox" id="c11" name="analytics" />
-    <label for="c11"><span></span>We use analytics when planning new features.</label>
-    <label for="dev-message" class="small">What can we help you with?</p>
-      <textarea class="textarea" id="dev-message" name="message" rows="8" cols="40"></textarea>
-      <input class="submit" type="submit" placeholder="send your message">
-    </select>
+
+    <%
+    # should not be in view
+    check_list = [
+      [:test_suite, "We have a reliable test suite with good coverage"],
+      [:ci_server, "We have a continues integration server."],
+      [:deploy_master, "We keep master deployable."],
+      [:onestep_deploy, "We have a one step deploy."],
+      [:bugs_not_issue, "Bugs are not a problem."],
+      [:releases_not_issue, "Releases are not a problem."],
+      [:infrastructure_not_issue, "Infrastructure is not a problem."],
+      [:agile_product, "We break down features into deployable testable units of work."],
+      [:week_sprints, "We have one week sprints."],
+      [:weekly_retros, "We have weekly retrospectives."],
+      [:analytics, "We use analytics when planning new features."],
+    ]
+    %>
+
+    <% check_list.each do |item| %>
+      <%= f.check_box item[0] %>
+      <%= f.label item[0] do %>
+        <span></span><%= item[1] %>
+      <% end %>
+    <% end %>
+
+
+    <%= f.label :message, "What can we help you with?", class: "small" %>
+    <%= f.text_area :message, class: "textarea", rows: 8, cols: 40 %>
+    <%= f.submit "send your message", class:"submit" %>
   <% end %>
 </div>

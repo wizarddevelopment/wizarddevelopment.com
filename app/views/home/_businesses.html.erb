@@ -22,8 +22,8 @@
     <li>New Features or improvements to existing features.</li>
     <li>New tool or product. (eg. E-Commerce, CMS, integration of existing tools, etc.)</li>
   </ul>
-  <p>Interested? – Let us know how we can work with you!</p>
   <%= form_for ContactRequest.new, html: {class: 'contact-form business-contact'} do |f|%>
+    <p>Interested? – Let us know how we can work with you!</p>
     <%= f.text_field :name, placeholder: "your name", class: 'text' %><div class="required"></div>
     <%= f.email_field :email, placeholder: "your email", class: 'text' %><div class="required"></div>
     <%= f.telephone_field :phone, placeholder: "your phone number", class: 'text' %>

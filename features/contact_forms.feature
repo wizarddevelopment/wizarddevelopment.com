@@ -9,3 +9,10 @@ Feature: Contact WD for work
     When I submit a business contact request
     Then I get a message that my message has been recieved
     And the message should be saved in the database
+
+  Scenario: Submit a devteam contact request
+    Given I am a visitor
+    And I am on the dev team contact page
+    When I submit a dev team contact request
+    Then I get a message that my message has been recieved
+    And the message should be saved in the database
