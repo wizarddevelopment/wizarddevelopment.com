@@ -13,6 +13,7 @@ describe ContactRequestsController do
       }
       post :create, contact_request: contact_request
       expect(response).to be_redirect
+      expect(flash[:notice]).to match(/thank you/i)
     end
 
     it "rejects no data" do

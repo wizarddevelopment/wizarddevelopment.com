@@ -23,19 +23,19 @@
     <li>New tool or product. (eg. E-Commerce, CMS, integration of existing tools, etc.)</li>
   </ul>
   <p>Interested? – Let us know how we can work with you!</p>
-  <%= form_for ContactRequest.new do |f|%>
+  <%= form_for ContactRequest.new, html: {class: 'contact-form business-contact'} do |f|%>
     <%= f.text_field :name, placeholder: "your name", class: 'text' %><div class="required"></div>
     <%= f.email_field :email, placeholder: "your email", class: 'text' %><div class="required"></div>
     <%= f.telephone_field :phone, placeholder: "your phone number", class: 'text' %>
     <%= f.text_field :business_name, placeholder: "your business name", class: 'text' %><div class="required"></div>
     <div style="margin: 0px 0px 20px 0px; line-height: 0px;">&nbsp;</div>
-    <%= select_tag(:dev_team, options_for_select([
+    <%= f.select(:dev_team, options_for_select([
         'Not right now, I need some help.',
         'Yes I have my own team.',
         "I've hired teams or contractors in the past."
       ]), prompt: "Do you have a development team?" ) %>
 
-    <%= select_tag(:product_status, options_for_select([
+    <%= f.select(:product_status, options_for_select([
         'Inception (We have an idea, but we need to figure out how to make it a product.)',
         "MVP (We've started making our product, and have the begining launched.)",
         "Mid Stage (We've launched our proudct, and need help making sense of our data for new features.)",

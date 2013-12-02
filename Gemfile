@@ -11,6 +11,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'dalli'
 gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
+gem 'pry'
 
 # =>  Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
@@ -35,6 +36,7 @@ group :test do
   gem 'rake'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
 # Heroku

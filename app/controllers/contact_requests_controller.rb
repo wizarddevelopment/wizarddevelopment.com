@@ -13,7 +13,7 @@ class ContactRequestsController < ApplicationController
 
     @contact_request = ContactRequest.new(contact)
     if @contact_request.save
-      redirect_to root_path, notice: "thanks!"
+      redirect_to root_path, notice: "Thank you, we'll be contacting you shortly!"
     else
       render :blank, status: 401
     end
