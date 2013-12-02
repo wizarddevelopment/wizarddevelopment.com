@@ -13,14 +13,17 @@ $(function () {
 
     home: function() {
       this.nav.showHome();
+      window.mixpanel.track("Viewed Home");
     },
 
     business: function() {
       this.nav.transitionTo("business-services");
+      window.mixpanel.track("Viewed Business");
     },
 
     devteam: function() {
       this.nav.transitionTo("dev-teams");
+      window.mixpanel.track("Viewed Dev Team");
     }
 
   });
