@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-WizardcomputingCom::Application.load_tasks
+WizardDevelopment::Application.load_tasks

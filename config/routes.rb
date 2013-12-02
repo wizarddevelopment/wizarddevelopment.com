@@ -1,4 +1,4 @@
-WizardcomputingCom::Application.routes.draw do
+WizardDevelopment::Application.routes.draw do
   root 'home#index'
   get 'business' => 'home#index', format: false
   get 'devteam' => 'home#index', format: false

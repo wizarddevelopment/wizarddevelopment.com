@@ -1,4 +1,4 @@
-WizardcomputingCom::Application.configure do
+WizardDevelopment::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
