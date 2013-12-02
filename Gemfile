@@ -33,6 +33,8 @@ group :test do
   gem "factory_girl_rails"
   gem 'fuubar'
   gem 'rake'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
 
 # Heroku
