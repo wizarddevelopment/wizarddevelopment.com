@@ -1,6 +1,22 @@
 # Wizard Development
 
 
+#Wizard Development's Charter
+
+### Thesis
+Through education and diversity we build a stronger product, strong products allow people to be more impactful in the world around them. Increasing the amount of agency people have in the world leads to a better world.
+
+### Product
+
+### Structure
+Hiring a diverse staff in age, sex, race and background will lead to a stronger product team. 
+
+#### Sales
+#### Support
+#### Education
+
+
+
 ### Wizard Development makes Products and Development Teams strong. We're a team of product managers, developers, and designers. Our principle is teaching you how to get the most value from your work and your software. We have trained in the agile ways, forged ourselves in the fires of NYC startups, we deliver fast, we analyze everything.
 
 ## Businesses
