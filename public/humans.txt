@@ -1,6 +1,11 @@
+
 /* TEAM */
 
 Francis Gulotta
 Site: http://www.wizarddevelopment.com
 Location: NYC
 
+
+Hannah Nordgren
+site: hereshannahs.info
+Location: NYC
