@@ -37,7 +37,4 @@ Then(/^I get a message that my message has been recieved$/) do
   expect(page).to have_content(/thank you/i)
 end
 
-Then(/^the message should be saved in the database$/) do
-  expect(ContactRequest.count).to eq(1)
-end
 
