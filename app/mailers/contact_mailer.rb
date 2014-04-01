@@ -1,15 +1,12 @@
 class ContactMailer < ActionMailer::Base
 
-  def contact_request(info)
-    @name = info[:name]
-    @email = info[:email]
-    @reason = info[:reason]
-    @message = info[:message]
+  def contact_request(contact_request)
+    @contact_request = contact_request
 
     opts = {
-      to: 'francis@wizardcomputing.com',
+      to: 'francis@wizarddevelopment.com',
       subject: 'Someone wants to hear from you!',
-      from: @email || "unknown@wizardcomputing.com"
+      from: contact_request.email || "unknown@wizarddevelopment.com"
     }
 
     mail(opts)

@@ -1,5 +1,4 @@
-Contact request from: <%= @name %> <%= @email %>
+Contact request from: <%= @contact_request.name %> <%= @contact_request.email %>
+Business: <%= @contact_request.business_name %>
 
-Reason: <%= @reason %>
-
-<%= @message %>
+<%= @contact_request.message %>
