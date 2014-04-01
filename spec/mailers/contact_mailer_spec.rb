@@ -34,8 +34,9 @@ describe ContactMailer do
       expect(mailer.body).to match(form_data.message)
     end
 
+    #
     it "delivers" do
-      mailer.deliver
+      mailer
       expect(ActionMailer::Base.deliveries).to_not be_empty
     end
 
