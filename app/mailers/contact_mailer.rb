@@ -9,7 +9,7 @@ class ContactMailer < ActionMailer::Base
       from: contact_request.email || "unknown@wizarddevelopment.com"
     }
 
-    mail(opts)
+    mail(opts).deliver
   end
 
 end
