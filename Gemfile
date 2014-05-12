@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.1.0'
+gem 'unicorn', require: false # Use unicorn as the app server
 gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer'
@@ -12,11 +13,6 @@ gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.
 gem 'dalli'
 gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
 gem 'pry'
-
-# =>  Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
-
-gem 'unicorn', require: false # Use unicorn as the app server
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
