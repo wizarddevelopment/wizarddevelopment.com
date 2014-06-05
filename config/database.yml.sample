@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: wizarddevelopment_development
+  pool: 2
+  min_messages: warning
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: wizarddevelopment_test
+  pool: 2
+  min_messages: error
+
+cucumber:
+  <<: *test
