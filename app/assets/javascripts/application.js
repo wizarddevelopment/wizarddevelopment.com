@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require ./lib/jquery-2.0.3.js
-//= require ./lib/lodash.underscore.2.2.1
+//= require ./lib/handlebars.js
 //= require_tree ./lib
 //= require ./app/app.js
 //= require_tree ./app
