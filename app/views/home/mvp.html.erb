@@ -1,44 +1,179 @@
-<article id="mvp">
-  <header id="name" class="ctr">
-    <h1>Wizard Computing, LLC</h1>
-    <h3>Software development, Agile Consulting</h3>
-  </header>
+<% content_for :js do %>
+  <%= javascript_include_tag 'mvp' %>
+<% end %>
 
-  <% if flash[:contact_info] %>
-    <section>
-      <p class="ctr"><%= flash[:contact_info] %></p>
-    </section>
-  <% else %>
-    <section id="contact-form">
-      <p class="ctr">We enjoy talking about possible projects and new ideas. Drop us a line and we'd explore what's next.</p>
-      <% if flash[:contact_error] %>
-        <p class="ctr">Something went wrong, please try again.</p>
-      <% end %>
-      <%= form_for :info, url: {action: 'contact'} do |f| %>
-      <div>
-        <%= f.label :name, "Your Full Name" %><br>
-        <%= f.text_field :name %>
-      </div>
-      <div>
-        <%= f.label :email, "Your Email" %><br>
-        <%= f.text_field :email %>
-      </div>
-      <div>
-        <%= f.label :message, "Your Idea" %><br>
-        <%= f.text_area :message %>
-      </div>
-      <div>
-        <%= f.submit "Send Message" %>
-      </div>
-      <% end %>
+<script type="text/x-handlebars" data-template-name="application">
 
-    </section>
+    <header>
+      <div class="buttons">
+        {{#link-to 'index' class='top-nav'}}Home{{/link-to}}
+        {{#link-to 'team' class='top-nav'}}Team{{/link-to}}
+         {{#link-to 'contact' class='top-nav'}}Contact{{/link-to}}
+      </div>
 
-    <section id="contact-info" class="ctr">
-      Or send a message a conventional way.
-      <div><tel>(718) 360-8816</tel> <%= mail_to 'projects@wizarddevelopment.com' %></div>
-    </section>
 
+      <h1 class="logo home">Wizard Development</h1>
+      <h2 class="tagline">Software development and agile consulting</h2>
+
+      <div class="buttons">
+        {{#link-to 'business' class='business-services' }}<span>for</span>Business{{/link-to}}
+        {{#link-to 'development' class='dev-teams'}}<span>for</span>Development Teams{{/link-to}}
+      </div>
+    </header>
+
+
+  <div>{{ outlet }}</div>
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+
+    <p class="mission_statement">
+      Wizard Development makes Products and Development Teams strong. We&#49re a team of product managers, developers, and designers. Our philosophy is success through education. We teach you how to get the most value from your work and and from your software.
+    </p>
+</script>
+
+<script type="text/x-handlebars" data-template-name="team">
+<div class="description">
+{{#wizard-gus}}
+
+{{/wizard-gus}}
+</div>
+
+<div class="description">
+{{#wizard-amy}}
+
+{{/wizard-amy}}
+</div>
+
+<div class="description">
+{{#wizard-armando}}
+
+{{/wizard-armando}}
+</div>
+
+<div class="description">
+{{#wizard-hannah}}
+
+{{/wizard-hannah}}
+</div>
+
+<div class="description">
+{{#wizard-francis}}
+
+{{/wizard-francis}}
+</div>
+
+</script>
+
+
+<script type="text/x-handlebars" data-template-name="business">
+  <div id="business-services-content">
+  <p class="description heading">
+    Building great software is our business<br>so you can get the most out of yours.
+  </p>
+  <p class="description">
+    We build tools and products. Tools free your employees from having to do anything a computer can do, allowing them to work on more important things in your business. Products allow you to provide value to your customers, engaging them on multiple levels and allowing you to learn your markets. Both kinds of projects are very valuable to a heathly business.
+  </p>
+  <p class="description processes">
+    Our processes is designed to produce the highest value features first. This allows us to validate our designs, plans and assumptions before finishing the entire project instead of after. This saves time and money and  results in software that provides more of what need rather then what you thought you needed.
+  </p>
+  <h2>Sevices we provide</h2>
+  <ul class="services">
+    <li>Product Mangement - Someone to guide your project from inception into maturity.</li>
+    <li>Design and User Experiance (UX) - Someone to help set the tone, functionality, and experiace of your project.</li>
+    <li>Development - People to build your product, from a single developer to a full development team.</li>
+  </ul>
+  <h2>What you get</h2>
+  <ul class="sevices value">
+    <li>An understanding of how software is made.</li>
+    <li>An understanding of how people use your software.</li>
+    <li>An understanding of how it provides value to your business.</li>
+    <li>New Features or improvements to existing features.</li>
+    <li>New tool or product. (eg. E-Commerce, CMS, integration of existing tools, etc.)</li>
+  </ul>
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="development">
+  <div id="dev-teams-content">
+  <p class="description heading">
+    You know how to build your product<br>We know how to improve your flow
+  </p>
+  <p class="description processes">
+    However you work, there&#39s always room for improvement. We&#39ve worked with teams large and small in startups and big enterprises. Our goal is to improve your proccesses by putting pressure on it. We have an agile philosophy but recognize that what works best for the team works best for the product. We&#39ll work with your team to obtain a fast and reliable processes.
+  </p>
+  <h2>What we like to see</h2>
+  <ul class="services">
+    <li>A speedy reliable test suite.</li>
+    <li>continuous integration and deployment</li>
+    <li>Short lived feature branches</li>
+    <li>A deployable `master`</li>
+    <li>No fear of refactoring</li>
+  </ul>
+  </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="contact">
+ <%= form_for ContactRequest.new, html: {class: 'contact-form business-contact'} do |f|%>
+    <p>Interested? – Let us know how we can work with you!</p>
+    <%= f.text_field :name, placeholder: "your name", class: 'text' %><div class="required"></div>
+    <%= f.email_field :email, placeholder: "your email", class: 'text' %><div class="required"></div>
+    <%= f.telephone_field :phone, placeholder: "your phone number", class: 'text' %>
+    <%= f.text_field :business_name, placeholder: "your business name", class: 'text' %><div class="required"></div>
+    <div style="margin: 0px 0px 20px 0px; line-height: 0px;">&nbsp;</div>
+
+    <%= f.label :message, "Tell us about your product:", class: "small" %>
+    <%= f.text_area :message, class: "textarea", rows: 8, cols: 40 %>
+    <%= f.submit "send your message", class:"submit" %>
   <% end %>
 
-</article>
+</script>
+
+<!-- Components -->
+<script type="text/x-handlebars" data-template-name="components/wizard-gus">
+  <h1>{{name}}!</h1>
+
+  <h3>He is a lovely man.</h3>
+  <p>{{about}}</p>
+  <img {{bind-attr src='pic'}} width="500" />
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/wizard-amy">
+  <h1>{{name}}!</h1>
+
+  <h3>She is a lovely woman.</h3>
+  <p>{{about}}</p>
+  <img {{bind-attr src='pic'}} width="500" />
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/wizard-armando">
+  <h1>{{name}}!</h1>
+
+  <h3>She is a lovely woman.</h3>
+  <p>{{about}}</p>
+  <img {{bind-attr src='pic'}} width="500" />
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/wizard-hannah">
+  <h1>{{name}}!</h1>
+
+  <h3>She is a lovely woman.</h3>
+  <p>{{about}}</p>
+  <img {{bind-attr src='pic'}} width="500" />
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/wizard-francis">
+  <h1>{{name}}!</h1>
+
+  <h3>He is a lovely man.</h3>
+  <p>{{about}}</p>
+  <img {{bind-attr src='pic'}} width="500" />
+
+</script>
+
+
