@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html class="no-js">
-<head>
+<html>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=user-scalable=no, device-width, initial-scale=1, maximum-scale=1.0" /><!-- prevent zoom on iPad -->
+    <title>Wizard Development</title>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "shims/modernizr.custom" %>
+
+    <meta name="viewport" content="width=user-scalable=no, device-width, initial-scale=1, maximum-scale=1.0" />
     <meta name="HandheldFriendly" content="true" />
-    <meta name="format-detection" content="telephone=yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-    <title>Wizard Development</title>
-    <meta name="description" content="">
-
-    <%= stylesheet_link_tag "application", media: "all" %>
+    <meta name="ROBOTS" content="NOODP" />
     <%= csrf_meta_tags %>
-    <%= javascript_include_tag "shims/modernizr.custom" %>
-</head>
-<body>
-  <%= yield %>
-  <%= javascript_include_tag "application" %>
-  <%= yield :js %>
-  <%= render partial: 'shared/ga' %>
-  <%= render partial: 'shared/mixpanel' %>
-</body>
+  </head>
+  <body>
+    <%= render 'flashes' %>
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+    <%= yield :js %>
+    <%= render partial: 'ga' %>
+    <%= render partial: 'mixpanel' %>
+  </body>
 </html>

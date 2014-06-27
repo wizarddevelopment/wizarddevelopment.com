@@ -1,12 +1,8 @@
-web_concurrency = Integer(ENV["WEB_CONCURRENCY"] || 4)
-listen_port = Integer(ENV['PORT'] || 3000)
-backlog_length = Integer(ENV['UNICORN_BACKLOG'] || 64)
-
-timeout 30
+worker_processes (ENV["WEB_CONCURRENCY"] || 4).to_i
+listen (ENV['PORT'] || 3000).to_i
+timeout (ENV['WEB_TIMEOUT'] || 5).to_i
 preload_app true
 
-worker_processes web_concurrency
-listen listen_port, :backlog => backlog_length
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
@@ -18,11 +14,11 @@ before_fork do |server, worker|
 end
 
 after_fork do |server, worker|
+  puts "Child listener on #{set[:listeners].inspect}"
+
   Signal.trap 'TERM' do
     puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'
   end
 
   ActiveRecord::Base.establish_connection if defined?(ActiveRecord::Base)
-
-  puts "kid listener on #{set[:listeners].inspect}"
 end

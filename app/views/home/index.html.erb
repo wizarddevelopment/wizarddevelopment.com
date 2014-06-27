@@ -1,11 +1,6 @@
 <% content_for :js do %>
-  <%= javascript_include_tag 'home' %>
 <% end %>
 <div id="site_container">
-
-  <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, class: [name, :flash] %>
-  <% end %>
 
   <header>
     <h1 class="logo home">Wizard Development</h1>
@@ -18,7 +13,5 @@
       <a class="dev-teams"><span>for</span>Development Teams</a>
     </div>
   </header>
-  <%= render 'businesses' %>
-  <%= render 'dev_teams' %>
   <footer></footer>
 </div>

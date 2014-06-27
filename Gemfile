@@ -5,19 +5,12 @@ ruby '2.1.2'
 gem 'rails', '4.1.0'
 gem 'unicorn', require: false # Use unicorn as the app server
 gem 'pg'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 gem 'therubyracer'
-gem 'jquery-rails'
-gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'jbuilder', '~> 1.2' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'bcrypt-ruby'
 gem 'dalli'
-gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
+gem 'sass-rails'
 gem 'pry'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
 
 group :development do
   gem 'growl'
