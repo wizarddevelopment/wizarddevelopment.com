@@ -1,6 +1,6 @@
 WizardDevelopment::Application.routes.draw do
   root 'home#index'
-
+  get :pricing, to: 'home#pricing'
   resource :contact_requests, only: [:create], format: false
 
   # Example of regular route:
