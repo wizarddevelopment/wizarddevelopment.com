@@ -20,6 +20,12 @@
   }
 }
 
+.homepage-needs {
+  @include outer-container;
+  text-align: center;
+  padding-bottom: 15em;
+}
+
 .product-description-bullets {
   @include outer-container;
   $icon-bullet-size: 34px * 2;
