@@ -12,15 +12,20 @@ gem 'dalli'
 gem 'sass-rails'
 gem 'pry'
 
+gem 'bourbon'
+gem 'neat'
+gem 'font-awesome-sass'
+
 group :development do
   gem 'growl'
-  gem "guard"
-  gem "guard-rspec"
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'bitters'
 end
 
 group :test do
-  gem "rspec-rails", "~> 2.10"
-  gem "factory_girl_rails"
+  gem 'rspec-rails', '~> 2.10'
+  gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'rake'
   gem 'cucumber-rails', :require => false
