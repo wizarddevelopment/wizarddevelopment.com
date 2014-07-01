@@ -15,6 +15,8 @@ gem 'pry'
 gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-sass'
+gem 'jquery-rails'
+
 
 group :development do
   gem 'growl'

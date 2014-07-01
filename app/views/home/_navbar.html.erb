@@ -1,0 +1,15 @@
+<header class="navigation">
+  <div class="menu-wrapper">
+    <a href="javascript:void(0)" class="logo">
+
+    </a>
+    <p class="navigation-menu-button" id="js-mobile-menu"><i class="fa fa-2x fa-bars"></i></p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li class="nav-link"><%= link_to "Home", root_path %></li>
+        <li class="nav-link"><%= link_to "Services", root_path(anchor: "services") %></li>
+        <li class="nav-link"><%= link_to "Team", root_path(anchor: "team") %></li>
+        <li class="nav-link"><%= link_to "Case Studies", root_path(anchor: "case-studies") %></li>
+      </ul>
+    </div>
+</header>
