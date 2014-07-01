@@ -2,7 +2,7 @@
 .image-gradient-dynamic {
   $image-gradient-color-top: saturate($wizard-orange,40%);
   $transparency-top: .6;
-  $image-gradient-color-bottom: yellow;
+  $image-gradient-color-bottom: saturate(yellow, 60);
   $transparency-bottom: .7;
   $vertical-angle: 180deg;
 
@@ -15,7 +15,7 @@
   position: relative;
   line-height: 0;
   width: 100%;
-  margin-bottom: $base-line-height;
+  margin-bottom: 0;
   background-image: url("bg_grid.png");
   .hero {
    margin: 0;
@@ -76,32 +76,34 @@
   }
 }
 
-// .homepage-hero {
-//   text-align: center;
-//   text-transform: uppercase;
-//   // background-color: $wizard-orange;
-//   .name{
-//     font-size: 2.4em;
-//     @include media($large-screen) {
-//       font-size: 4em;
-//     }
-//   }
-//   .copy{
-//     margin: auto;
-//     font-weight: 200;
-//     @include media($large-screen) {
-//       font-size: 1.5em;
-//     }
-//   }
-// }
-
+.homepage-thesis {
+  border-top: 10px lighten($wizard-gray, 50) solid;
+  border-bottom: 10px lighten($wizard-gray, 50) solid;
+  color: $wizard-blue;
+  background: lighten($wizard-gray, 70);
+  padding: 4em 3em;
+  text-align: center;
+  h2 {
+    margin-bottom: 1em;
+  }
+  p {
+    max-width: 650px;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    margin: auto;
+  }
+}
 
 .product-description-bullets {
   @include outer-container;
   $icon-bullet-size: 34px * 2;
-
   overflow: auto;
-
+  .bullet {
+      padding-top: 1em;
+      @include media($large-screen) {
+      padding-top: 3em;
+    }
+  }
   .three-col-bullet {
     @include media($large-screen) {
       @include span-columns(4);
@@ -137,6 +139,7 @@
   .bullet-content {
     margin-left: $icon-bullet-size *1.4;
     margin-bottom: 2em;
+    padding-top: 1em;
   }
 
   h2 {
