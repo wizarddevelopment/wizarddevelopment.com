@@ -1,30 +1,100 @@
-.homepage-hero {
-  text-align: center;
-  text-transform: uppercase;
-  padding: 15em 1em;
-  // background-color: $wizard-orange;
-  .name{
-    font-size: 2.4em;
-    margin-bottom: .2em;
-    @include media($large-screen) {
-      font-size: 4em;
+
+.image-gradient-dynamic {
+  $image-gradient-color-top: saturate($wizard-orange,40%);
+  $transparency-top: .6;
+  $image-gradient-color-bottom: yellow;
+  $transparency-bottom: .7;
+  $vertical-angle: 180deg;
+
+  $image-gradient-color-left: $wizard-orange;
+  $transparency-left: .8;
+  $image-gradient-color-right: $wizard-orange;
+  $transparency-right: .5;
+  $horizontal-angle: 90deg;
+
+  position: relative;
+  line-height: 0;
+  width: 100%;
+  margin-bottom: $base-line-height;
+  background-image: url("bg_grid.png");
+  .hero {
+   margin: 0;
+
+   width: 100%;
+   max-height: 100%;
+   position: relative;
+   top: 0;
+   left: 0;
+  }
+
+  .copy {
+    position: relative;
+    margin: auto;
+    z-index: 999;
+    text-align: center;
+    text-shadow: 0px 0px 3px rgba(100, 0, 0, 1);
+    h1 {
+      text-transform: uppercase;
+      font-size: 2em;
+        @include media($medium-screen-up) {
+          font-size: 4em;
+        }
+      color: lighten($wizard-blue, 50%);
+      line-height: 1.5em;
+      padding-top: 25%;
+      @include media($medium-screen-up) {
+        padding-top: 15%;
+      }
+    }
+    p {
+      line-height: 1.5em;
+      padding: 1em 2em;
+      position: relative;
+      color: white;
+      font-weight: 800;
+      padding-bottom: 45%;
+      @include media($medium-screen-up) {
+       padding-bottom: 35%;
+      }
+
     }
   }
-  .copy{
-    margin: auto;
-    margin-bottom: 3em;
-    font-weight: 200;
-    @include media($large-screen) {
-      font-size: 1.5em;
+
+  .overlay {
+    @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
+      transparentize($image-gradient-color-bottom, $transparency-bottom));
+    display: block;
+    @include position(absolute, 0px 0px 0px 0px);
+
+    &:after {
+      content: '';
+      @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
+        transparentize($image-gradient-color-right, $transparency-right));
+      display: block;
+      @include position(absolute, 0px 0px 0px 0px);
     }
   }
 }
 
-.homepage-needs {
-  @include outer-container;
-  text-align: center;
-  padding-bottom: 15em;
-}
+// .homepage-hero {
+//   text-align: center;
+//   text-transform: uppercase;
+//   // background-color: $wizard-orange;
+//   .name{
+//     font-size: 2.4em;
+//     @include media($large-screen) {
+//       font-size: 4em;
+//     }
+//   }
+//   .copy{
+//     margin: auto;
+//     font-weight: 200;
+//     @include media($large-screen) {
+//       font-size: 1.5em;
+//     }
+//   }
+// }
+
 
 .product-description-bullets {
   @include outer-container;
@@ -77,3 +147,4 @@
     display: inline-block;
   }
 }
+
