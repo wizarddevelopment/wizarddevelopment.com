@@ -13,5 +13,4 @@
 //= require jquery
 //= require_tree ./lib
 //= require ./app/app.js
-//= require ./app/navbar.js
 //= require_tree ./app
