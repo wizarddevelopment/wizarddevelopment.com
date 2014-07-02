@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131202155235) do
+ActiveRecord::Schema.define(version: 20140702212029) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,18 @@ ActiveRecord::Schema.define(version: 20131202155235) do
     t.boolean  "week_sprints"
     t.boolean  "weekly_retros"
     t.boolean  "analytics"
+  end
+
+  create_table "employees", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "github"
+    t.string   "blog"
+    t.text     "bio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo"
+    t.string   "twitter"
   end
 
 end

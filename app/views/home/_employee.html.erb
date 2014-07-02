@@ -1,0 +1,53 @@
+<div class="col-4">
+  <div class="bio-box">
+    <%= image_tag employee.photo, alt: "employee.name", class: 'bio-image' %>
+    <h1 class="bio-name"><%= employee.name %></h1>
+    <div class="bio-paragraph">
+      <p><%= employee.bio %></p>
+    </div>
+    <div class="bio-button-bar">
+      <ul>
+        <li class="horizontal-nav">
+        <% if employee.email != "team@wizarddevelopment.com" %>
+          <%= mail_to employee.email, class: "bio-link", subject: "hello!" do %>
+            <i class="fa fa-envelope-o fa-2x"></i>
+          <% end %>
+        <% else %>
+          <%= mail_to employee.email, class: "bio-link", subject: "hello!" do %>
+            <i class="fa fa-envelope-o fa-2x"></i><p class="bio-inline-display">CONTACT US!</p>
+          <% end %>
+        <% end %>
+
+        </li>
+        <li class="horizontal-nav">
+        <% if employee.twitter.present? %>
+          <%= link_to employee.twitter, class: "bio-link", target: "_blank" do %>
+            <i class="fa fa-twitter fa-2x"></i>
+          <% end %>
+        <% end %>
+        </li>
+        <li class="horizontal-nav">
+        <% if employee.github.present? %>
+          <%= link_to employee.github, class: "bio-link", target: "_blank" do %>
+            <i class="fa fa-github fa-2x"></i>
+          <% end %>
+        <% end %>
+        </li>
+        <li class="horizontal-nav">
+        <% if employee.blog.present? %>
+          <%= link_to employee.blog, class: "bio-link", target: "_blank" do %>
+            <i class="fa fa-desktop fa-2x"></i>
+          <% end %>
+        <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
