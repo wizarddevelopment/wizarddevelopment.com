@@ -14,6 +14,8 @@ GEM
       activesupport (= 4.1.0)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_model_serializers (0.8.1)
+      activemodel (>= 3.0)
     activemodel (4.1.0)
       activesupport (= 4.1.0)
       builder (~> 3.1)
@@ -66,6 +68,8 @@ GEM
     dalli (2.7.1)
     database_cleaner (1.2.0)
     diff-lcs (1.2.5)
+    email_validator (1.4.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.4.0)
@@ -186,6 +190,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    shoulda-matchers (2.6.2)
+      activesupport (>= 3.0.0)
     slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -223,12 +229,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   bcrypt-ruby
   bitters
   bourbon
   cucumber-rails
   dalli
   database_cleaner
+  email_validator
   factory_girl_rails
   font-awesome-sass
   fuubar
@@ -246,6 +254,7 @@ DEPENDENCIES
   rspec-rails (~> 2.10)
   sass-rails
   selenium-webdriver
+  shoulda-matchers
   therubyracer
   uglifier
   unicorn

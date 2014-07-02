@@ -16,7 +16,8 @@ gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
-
+gem 'active_model_serializers'
+gem "email_validator"
 
 group :development do
   gem 'growl'
@@ -33,6 +34,7 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers', require: false
 end
 
 # Heroku
