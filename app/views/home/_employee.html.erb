@@ -2,7 +2,7 @@
   <%= image_tag employee.photo, alt: "employee.name", class: 'bio-image' %>
   <h1 class="bio-name"><%= employee.name %></h1>
   <div class="bio-paragraph">
-    <p><%= employee.bio.html_safe %></p>
+    <p><%= employee.bio.html_safe if employee.bio %></p>
   </div>
   <div class="bio-button-bar">
     <ul>
