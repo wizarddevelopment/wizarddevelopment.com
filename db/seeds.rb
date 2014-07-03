@@ -25,7 +25,8 @@ Employee.create(
   email: "armando@wizarddevelopment.com",
   github: "ArmandoAmador",
   blog: "http://wizard.codes/",
-  photo: "armando.jpg"
+  photo: "armando.jpg",
+  bio: "Armando is a hybrid designer/developer with a precision and attention to detail that reflect his love for effective and engaging design. When he is not thinking of himself you can find him reading Japanese manga, wikipedia surfing and learning how to use the Internet."
 )
 
 Employee.create(
@@ -45,5 +46,5 @@ Employee.create(
   github: "gustavoguimaraes",
   blog: "http://wizard.codes/",
   photo: "gus.jpeg",
-  bio: "Joie-de-vivre practitioner and lifelong learner, Gustavo enjoys finding solutions for real-world problems.  He has solved problems in a array of industries such as Education, Publishing, Entertainment and the Arts. When he is not coding he either creating new dance moves or  spending quality time with his family and friends."
+  bio: "Joie-de-vivre practitioner and lifelong learner, Gustavo enjoys finding solutions for real-world problems.  He has solved problems in a array of industries such as Education, Publishing, Entertainment and the Arts. When he is not coding, he is either creating new dance moves or  spending quality time with his family and friends."
 )
