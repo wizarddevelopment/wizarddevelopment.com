@@ -1,3 +1,5 @@
+Employee.delete_all
+
 Employee.create(
   name: "Francis Gulotta",
   email: "francis@wizarddevelopment.com",
@@ -42,5 +44,6 @@ Employee.create(
   email: "gustavo@wizarddevelopment.com",
   github: "gustavoguimaraes",
   blog: "http://wizard.codes/",
-  photo: "gus.jpeg"
+  photo: "gus.jpeg",
+  bio: "Joie-de-vivre practitioner and lifelong learner, Gustavo enjoys finding solutions for real-world problems.  He has solved problems in a array of industries such as Education, Publishing, Entertainment and the Arts. When he is not coding he either creating new dance moves or  spending quality time with his family and friends."
 )
