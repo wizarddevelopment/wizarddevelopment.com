@@ -1,53 +1,43 @@
-<div class="col-4">
-  <div class="bio-box">
-    <%= image_tag employee.photo, alt: "employee.name", class: 'bio-image' %>
-    <h1 class="bio-name"><%= employee.name %></h1>
-    <div class="bio-paragraph">
-      <p><%= employee.bio %></p>
-    </div>
-    <div class="bio-button-bar">
-      <ul>
-        <li class="horizontal-nav">
-        <% if employee.email != "team@wizarddevelopment.com" %>
-          <%= mail_to employee.email, class: "bio-link", subject: "hello!" do %>
-            <i class="fa fa-envelope-o fa-2x"></i>
-          <% end %>
-        <% else %>
-          <%= mail_to employee.email, class: "bio-link", subject: "hello!" do %>
-            <i class="fa fa-envelope-o fa-2x"></i><p class="bio-inline-display">CONTACT US!</p>
-          <% end %>
+<div class="bio-box">
+  <%= image_tag employee.photo, alt: "employee.name", class: 'bio-image' %>
+  <h1 class="bio-name"><%= employee.name %></h1>
+  <div class="bio-paragraph">
+    <p><%= employee.bio.html_safe %></p>
+  </div>
+  <div class="bio-button-bar">
+    <ul>
+      <% if employee.email %>
+        <li class="bio-button">
+        <%= mail_to employee.email, class: "bio-link", subject: "hello!", title: "Email #{employee.name}" do %>
+          <i class="fa fa-envelope-o fa-2x"></i>
         <% end %>
+        </li>
+      <% end %>
 
-        </li>
-        <li class="horizontal-nav">
-        <% if employee.twitter.present? %>
-          <%= link_to employee.twitter, class: "bio-link", target: "_blank" do %>
-            <i class="fa fa-twitter fa-2x"></i>
-          <% end %>
+      <% if employee.twitter %>
+      <li class="bio-button">
+        <%= link_to 'https://twitter.com/' + employee.twitter, class: "bio-link", target: "_blank", title: "twitter" do %>
+          <i class="fa fa-twitter fa-2x"></i>
         <% end %>
-        </li>
-        <li class="horizontal-nav">
-        <% if employee.github.present? %>
-          <%= link_to employee.github, class: "bio-link", target: "_blank" do %>
-            <i class="fa fa-github fa-2x"></i>
-          <% end %>
+      </li>
+      <% end %>
+
+      <% if employee.github %>
+      <li class="bio-button">
+        <%= link_to 'https://github.com/' + employee.github, class: "bio-link", target: "_blank", title: 'github' do %>
+          <i class="fa fa-github fa-2x"></i>
         <% end %>
-        </li>
-        <li class="horizontal-nav">
-        <% if employee.blog.present? %>
-          <%= link_to employee.blog, class: "bio-link", target: "_blank" do %>
-            <i class="fa fa-desktop fa-2x"></i>
-          <% end %>
+      </li>
+      <% end %>
+
+      <% if employee.blog %>
+      <li class="bio-button">
+        <%= link_to employee.blog, class: "bio-link", target: "_blank", title: "blog" do %>
+          <i class="fa fa-desktop fa-2x"></i>
         <% end %>
-        </li>
-      </ul>
-    </div>
+      </li>
+      <% end %>
+
+    </ul>
   </div>
 </div>
-
-
-
-
-
-
-
