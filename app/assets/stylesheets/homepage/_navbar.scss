@@ -1,4 +1,6 @@
-header.navigation {
+.navigation {
+  position: absolute;
+  top: 0;
   $navigation-padding: 1em;
   $navigation-background: transparentize($wizard-orange, 1);
   $navigation-color: transparentize(white, 0.2);
