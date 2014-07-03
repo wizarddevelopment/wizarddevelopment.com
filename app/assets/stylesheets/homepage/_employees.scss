@@ -1,0 +1,57 @@
+.team {
+  padding-top: 3em;
+  @include outer-container;
+
+  .bio-box{
+    margin: 1em auto 3em auto;
+    text-align: center;
+    color: $wizard-gray;
+
+    @include media($large-screen){
+      margin-bottom: 1em;
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }
+
+  .bio-image{
+    $image-size: 150px;
+    width: $image-size;
+    height: $image-size;
+    border-radius: $image-size / 2;
+    border: 1px solid $wizard-pale-gray;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .bio-name{
+    font-size: 2em;
+    font-weight: 900;
+  }
+
+  .bio-paragraph {
+    min-height: 125px;
+    max-width: 275px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.2em;
+  }
+
+  .bio-button-bar {
+    list-style-type: none;
+    margin: 5px 0;
+
+    .bio-button {
+      display: inline;
+      margin: 0 5px;
+    }
+
+    .bio-link {
+      color: $wizard-blue;
+      outline : none;
+      &:hover, &:visited {
+        outline : none;
+      }
+    }
+  }
+}

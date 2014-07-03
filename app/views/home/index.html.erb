@@ -14,7 +14,7 @@
   <p>We work with project managers and dev teams to eliminate the difficulties that come with launching new projects and features. Our approach delivers changes quickly and incrementally, allowing for changes throughout the process. Tested code ensures that launches are seamless and anxiety free. This not only creates great websites, but a healthy environment for innovation.</p>
 </section>
 
-<%=render 'products' %>
+<%= render 'products' %>
 
 <section class="homepage-thesis">
   <h3>Are your developers working on the most important thing?</h3>
@@ -23,4 +23,8 @@
   <h3>When will your next feature be really finished?</h3>
   <h3>Who knows what changed this week?</h3>
   <h3>Are you developers working without fear of stepping on eachothers toes?</h3>
+</section>
+
+<section class="team">
+  <%= render partial: 'home/employee', collection: @employees  %>
 </section>

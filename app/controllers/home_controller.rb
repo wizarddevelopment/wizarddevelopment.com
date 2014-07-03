@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
 
-  def index; end
+  def index
+    @employees = Employee.all
+  end
+
   def pricing; end
+
 
 end
