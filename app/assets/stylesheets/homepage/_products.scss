@@ -1,87 +1,65 @@
-.product-description-bullets {
-  padding-top: 3em;
-  @include outer-container;
-  $icon-bullet-size: 3.5em;
+.homepage-products {
+  $icon-bullet-size: 4em;
 
-  overflow: auto;
-  margin-bottom: $base-line-height;
+  .product-container {
+    padding-top: 3em;
+    @include outer-container;
+    margin-bottom: $base-line-height;
 
-  .bullet {
-    padding: 5em;
-    margin-bottom: 1em;
-    text-align: center;
-    @include media($large-screen-up) {
-      padding: 0;
-      margin-bottom: 0;
-    }
   }
 
-  .three-col-bullet {
+  .product {
+    padding: 20px;
+    @include clearfix;
+    // margin-bottom: 1em;
+    // text-align: center;
+
     @include media($large-screen) {
-      @include span-columns(4);
-      @include omega(3n);
+      @include span-columns(6);
+      @include omega(2n);
     }
   }
 
   .bullet-icon {
-    width: $icon-bullet-size * 4;
-    height: $icon-bullet-size * 4;
+    margin: 5px 20px;
+    width: $icon-bullet-size;
+    height: $icon-bullet-size;
     border-radius: 50%;
-    margin: 0 auto;
-    text-align: center;
     background: $base-accent-color;
+    position: relative;
     color: white;
-    padding: $icon-bullet-size; /* 3.5em */
-    &:hover {
-        @include animation(spin 1s infinite linear)
-      }
-    @include media($large-screen){
-      float: left;
-      background: $base-accent-color;
-      padding: $icon-bullet-size /4;
-      width: $icon-bullet-size;
-      height: $icon-bullet-size;
-    }
+    float: left;
     i {
-      font-size: ($icon-bullet-size * 4) / 2; /* 8em */
-      @include media($large-screen){
-        font-size: $icon-bullet-size / 2; /*1.75em*/
-      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      font-size: $icon-bullet-size / 2.3;
+    }
+
+    &:hover {
+      @include animation(spin 1s infinite linear)
+    }
+
+  }
+
+  .bullet-content {
+    h2 {
+      text-transform: uppercase;
+      border-bottom: 1px solid transparentize($base-font-color, .8);
+      display: inline-block;
     }
   }
 
   .bullet-icon-1 {
-    background: $base-accent-color;
+    background: $wizard-blue;
   }
 
   .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50);
+    background: $wizard-orange;
   }
 
   .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140);
-  }
-
-  .bullet-content {
-    text-align: center;
-    @include media($large-screen){
-      margin-left: $icon-bullet-size *1.4;
-      margin-bottom: 2em;
-      text-align: left;
-    }
-
-    h2 {
-      text-align: center;
-      text-transform: uppercase;
-      border-bottom: 1px solid transparentize($base-font-color, .8);
-      display: inline-block;
-      font-size: 2.5em;
-      padding-top: $icon-bullet-size /7;
-      margin-bottom: $icon-bullet-size /6;
-      @include media($large-screen){
-        font-size: $icon-bullet-size /2.5;
-        margin-bottom: $icon-bullet-size /6;
-      }
-    }
+    background: $wizard-gray;
   }
 }

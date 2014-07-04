@@ -13,10 +13,9 @@ Employee.create(
 Employee.create(
   name: "Hannah Nordgren",
   email: "hannah@wizarddevelopment.com",
-  twitter: "hnsayshello",
   github: "ninjaofawesome",
   blog: "http://wizard.codes/",
-  bio: "Hannah loves making beautiful products for interesting people.  She enjoys aesthetics both in front of the screen as a designer and behind it as a developer.  She also likes bikes (a lot.)",
+  bio: "Hannah loves making beautiful products for interesting people.  Prior to becoming a developer, Hannah had careers both in the fashion and beauty industries, which is reflected in her appreciation of design and aesthetics in her work.  When not working on projects, you can oftentimes find her riding around Brooklyn on her single speed bike (slowly).",
   photo: "hannah.jpg"
 )
 

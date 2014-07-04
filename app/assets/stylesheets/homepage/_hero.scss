@@ -1,0 +1,30 @@
+.homepage-hero {
+  color: $wizard-pale-gray;
+  background: $wizard-orange;
+  background-image: image-url("bg_grid.png");
+  text-align: center;
+  position: relative;
+
+  height: 400px;
+  @include media($medium-screen) {
+    height: 800px;
+  }
+
+  .copy {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    @include transform(translateY(-50%));
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 4em;
+    @include media($medium-screen) {
+      font-size: 5em;
+    }
+  }
+  .sub-title {
+    font-size: 1.5em;
+  }
+}
