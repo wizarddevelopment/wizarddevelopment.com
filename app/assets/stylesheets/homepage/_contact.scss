@@ -1,0 +1,49 @@
+.contact-us {
+  @include fill-parent;
+  border-top: 10px solid $wizard-pale-gray;
+  background: $wizard-orange;
+  background-image: image-url("bg_grid.png");
+  height: 600px;
+  text-align: center;
+
+  .contact-form-box {
+    @include span-columns(8);
+    @include shift(2);
+    margin-top: 5%;
+    min-height: 300px;
+    background-color: white;
+    border: 2px solid $wizard-pale-gray;
+    border-radius: 12px;
+
+    .words-box{
+      margin: 2%;
+      .title {
+        color: $wizard-blue;
+        font-weight: 900;
+        font-size: 3em;
+      }
+      .subtitle {
+        color: $wizard-gray;
+      }
+
+      .coffee {
+        font-weight: 500;
+        color: $wizard-gray;
+      }
+
+      .input-type {
+        color: $wizard-gray;
+        border: 1px solid $wizard-pale-gray;
+        &.message {
+          color: $wizard-gray;
+          border: 1px solid $wizard-pale-gray;
+          height: 150px;
+        }
+      }
+
+    }
+  }
+
+
+
+  } //this closes contact-us

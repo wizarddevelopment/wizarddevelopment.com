@@ -1,0 +1,15 @@
+.footer {
+  @include fill-parent;
+  border-top: 10px solid $wizard-pale-gray;
+
+  .footer-content{
+    height: 50px;
+    padding: .5% 0;
+    text-align: center;
+  }
+
+  p {
+    color: $wizard-gray;
+  }
+
+  } //this closes footer
