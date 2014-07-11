@@ -1,3 +1,12 @@
+//#flash_notice shouldn't probably be used, but it works.
+  #flash_notice {
+   background-color: $wizard-orange;
+    background-image: image-url("bg_grid.png");
+   color: white;
+   text-align: center;
+   font-weight: 700;
+  }
+
 .homepage-hero {
   background: $wizard-orange;
   background-image: image-url("bg_grid.png");

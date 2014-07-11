@@ -1,0 +1,15 @@
+<div class="contact-back">
+  <div class="contact-form-box">
+    <div class="words-box">
+      <h1 class="title">Need A Hand?</h1>
+      <h4 class="subtitle">Lets Get Coffee.</h4>
+      <p class="coffee">Get in touch with us, we'll help figure out what's up over a cup.</p>
+      <%= form_for :contact_request, url: contact_requests_path do |f| %>
+        <%= f.text_field :name, class: "input-type", placeholder: "Hi, I'm..." %>
+        <%= f.email_field :email, class: "input-type", placeholder: "And my email address is..." %>
+        <%= f.text_area :message, class: "input-type message", placeholder: "I'd like to figure out how to...." %>
+        <%= f.submit "CAFFINATE." %>
+      <% end %>
+    </div>
+  <div>
+</div>
