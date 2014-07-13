@@ -1,12 +1,14 @@
 @charset 'utf-8';
 
 @import 'bourbon';
-@import 'base/grid-settings';
+@import 'base/base';
 @import 'neat';
 @import 'font-awesome';
-@import 'base/base';
-@import 'homepage/homepage';
+
+@import 'homepage/hero';
+@import 'homepage/thesis';
 @import 'homepage/navbar';
 @import 'homepage/products';
-@import 'pricing';
 @import 'homepage/employees';
+
+@import 'pricing';

@@ -5,7 +5,6 @@
   .bio-box{
     margin: 1em auto 3em auto;
     text-align: center;
-    color: $wizard-gray;
 
     @include media($large-screen){
       margin-bottom: 1em;
@@ -31,10 +30,9 @@
 
   .bio-paragraph {
     min-height: 125px;
-    max-width: 275px;
+    padding: 0 20px;
     margin: 0 auto;
-    text-align: justify;
-    line-height: 1.2em;
+    text-align: left;
   }
 
   .bio-button-bar {
