@@ -1,0 +1,56 @@
+.contact-footer {
+  background: $base-accent-color;
+
+  .contact-container {
+    @include outer-container;
+    padding: $base-line-height 0;
+  }
+
+  .two-col {
+    padding: 1em;
+    @include media($large-screen) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+  }
+
+  .coffee {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    @include media($large-screen) {
+      padding-top: 5em;
+      font-size: 2em;
+    }
+  }
+
+  .new_contact_request {
+    label {
+      color: white;
+      font-size: 1.3em;
+      line-height: 2.0em;
+    }
+
+    input, textarea {
+      @include appearance(none);
+      margin: auto;
+      padding: .5em .8em;
+      font-size: 1.2em;
+      border-radius: $base-border-radius * 2;
+    }
+
+    .contact-button {
+      text-align: center;
+      padding: 1em 0;
+      input {
+        @include button(simple, lighten($wizard-blue, 30));
+        outline: none;
+      }
+    }
+
+    .error {
+      color: red;
+    }
+  }
+
+}

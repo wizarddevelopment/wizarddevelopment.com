@@ -1,12 +1,13 @@
 class ContactRequestsController < ApplicationController
+  respond_to :json
 
   def create
     @contact_request = ContactRequest.new(contact_params)
     if @contact_request.save
       ContactMailer.contact_request(@contact_request)
-      redirect_to root_path, notice: "Thank you, we'll be contacting you shortly!"
+      render json: @contact_request, status: :created
     else
-      render :blank, status: 401
+      render json: @contact_request.errors, status: :unprocessable_entity
     end
   end
 
@@ -17,10 +18,7 @@ class ContactRequestsController < ApplicationController
       :name,
       :email,
       :phone,
-      :business_name,
-      :message,
-      :dev_team,
-      :product_status
+      :message
     )
   end
 end
