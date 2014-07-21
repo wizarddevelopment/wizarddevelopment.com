@@ -1,0 +1,20 @@
+.homepage-footer {
+  color: $wizard-pale-gray;
+  background: $wizard-gray;
+  background-image: image-url("bg_grid.png");
+  text-align: center;
+  position: relative;
+  overflow:hidden;
+
+  p {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+  }
+  a {
+    color: #FFFFFF;
+  }
+
+  @include media($medium-screen) {
+  }
+}
