@@ -19,8 +19,14 @@
     font-size: 2em;
     text-align: center;
     @include media($large-screen) {
-      padding-top: 5em;
       font-size: 2em;
+    }
+  }
+
+  .coffee-cup {
+    width: 60%;
+    @include media($large-screen) {
+      width: 70%;
     }
   }
 
