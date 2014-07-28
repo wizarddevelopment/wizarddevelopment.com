@@ -1,12 +1,38 @@
 .homepage-thesis {
-  padding: 4em 3em;
-  text-align: center;
+  background-color: #f2f2f2;
 
-  h2 {
-    margin-bottom: 1em;
-  }
-  p {
-    max-width: 650px;
+  .homepage-thesis-inner {
+    @include outer-container;
+    @include clearfix;
+    padding: 4em;
     margin: auto;
+    text-align: center;
+
+    .homepage-thesis-copy {
+      text-align: center;
+
+      h2 {
+        color: $wizard-orange;
+        font-size: 1.6em;
+        margin-bottom: .75em;
+
+        @include media($large-screen) {
+          font-size: 2.5em;
+        }
+      }
+
+      p {
+        font-family: $serif;
+        margin: auto;
+        font-weight: 200;
+        line-height: 1.5em;
+        color: #555;
+
+        @include media($large-screen) {
+          font-size: 1.125em;
+          max-width: 50%;
+        }
+      }
+    }
   }
 }
