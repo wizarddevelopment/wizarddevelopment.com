@@ -1,64 +1,79 @@
 .team-section {
-  text-align: center;
-}
-
-.team-title {
-  // background: $wizard-orange;
-  // color: $wizard-pale-gray;
-  // border-bottom: $wizard-pale-gray 1px solid;
-}
-
-.team {
-  padding-top: 3em;
-  @include outer-container;
-
-  .bio-box{
-    margin: 1em auto 3em auto;
+  background-color: #f2f2f2;
+  .team-section-inner {
+    @include outer-container;
+    @include clearfix;
+    padding: 4em;
     text-align: center;
+    h2 {
+      color: $wizard-orange;
+      font-size: 1.6em;
+      margin-bottom: .75em;
 
-    @include media($large-screen){
-      margin-bottom: 1em;
-      @include span-columns(4);
-      @include omega(3n);
+      @include media($large-screen) {
+        font-size: 2.5em;
+      }
     }
-  }
+    .team {
+      .bio-box{
+        margin: 1em auto 3em auto;
+        text-align: center;
 
-  .bio-image{
-    $image-size: 150px;
-    width: $image-size;
-    height: $image-size;
-    border-radius: $image-size / 2;
-    border: 1px solid $wizard-pale-gray;
-    display: block;
-    margin: 20px auto;
-  }
+        @include media($large-screen){
+          margin-bottom: 1em;
+          @include span-columns(4);
+          @include omega(3n);
+        }
+        h3 {
+          color: #555;
+          font-size: 1.6em;
+          margin-bottom: .75em;
 
-  .bio-name{
-    font-size: 2em;
-    font-weight: 900;
-  }
+          @include media($large-screen) {
+            font-size: 2em;
+            margin-bottom: .4em;
+          }
+        }
+        p {
+          font-family: $serif;
+          font-weight: 200;
+          line-height: 1.5em;
+          color: #555;
 
-  .bio-paragraph {
-    min-height: 125px;
-    padding: 0 20px;
-    margin: 0 auto;
-    text-align: left;
-  }
 
-  .bio-button-bar {
-    list-style-type: none;
-    margin: 5px 0;
 
-    .bio-button {
-      display: inline;
-      margin: 0 5px;
-    }
+          @include media($large-screen) {
+            font-size: 1.125em;
+            text-align: center;
+            width: 90%;
+            margin: auto;
+          }
+        }
+      }
+      .bio-image{
+        $image-size: 150px;
+        width: $image-size;
+        height: $image-size;
+        border-radius: $image-size / 2;
+        border: 1px solid $wizard-pale-gray;
+        display: block;
+        margin: 20px auto;
+      }
+      .bio-button-bar {
+        list-style-type: none;
+        margin: 5px 0;
 
-    .bio-link {
-      color: $wizard-blue;
-      outline : none;
-      &:hover, &:visited {
-        outline : none;
+        .bio-button {
+          display: inline;
+          margin: 0 5px;
+        }
+        .bio-link {
+          color: $wizard-blue;
+          outline : none;
+          &:hover, &:visited {
+            outline : none;
+          }
+        }
       }
     }
   }
