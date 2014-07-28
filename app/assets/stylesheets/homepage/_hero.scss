@@ -5,27 +5,41 @@
   text-align: center;
   position: relative;
   overflow:hidden;
-
   height: 400px;
+
   @include media($medium-screen) {
     height: 800px;
   }
 
-  .copy {
+  .homepage-hero-copy {
     position: absolute;
     top: 50%;
     width: 100%;
     @include transform(translateY(-50%));
-  }
 
-  .title {
-    text-transform: uppercase;
-    font-size: 3em;
-    @include media($medium-screen) {
-      font-size: 5em;
+    h1 {
+      text-transform: uppercase;
+      font-size: 2.5em;
+      margin-bottom: .3em;
+
+      @include media($large-screen) {
+        font-size: 5em;
+      }
     }
-  }
-  .sub-title {
-    font-size: 1.5em;
+
+    p {
+      font-family: $serif;
+      font-size: 1.1em;
+      margin: auto;
+      margin-bottom: 3em;
+      font-weight: 200;
+      line-height: 1.3em;
+      width: 80%;
+
+      @include media($large-screen) {
+        font-size: 1.7em;
+        width: 100%;
+      }
+    }
   }
 }

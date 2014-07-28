@@ -25,7 +25,7 @@ Employee.create(
   github: "ArmandoAmador",
   blog: "http://wizard.codes/",
   photo: "armando.jpg",
-  bio: "Armando is a hybrid designer/developer with a precision and attention to detail that reflect his love for effective and engaging design. Before becoming a developer, he worked for the iconic Ebony Magazine as a Web Producer and at VIBE Magazine as a Marketing designer. When not designing or developing, you can find him reading Japanese manga, wikipedia surfing and exchanging knowledge with new people."
+  bio: "Armando is a hybrid designer/developer with a precision and attention to detail that reflect his love for effective and engaging design. Before becoming a developer, he worked for the iconic Ebony Magazine as a Web Producer and at VIBE Magazine as a Marketing designer. When not designing or developing, you can find him reading Japanese manga, wikipedia surfing or playing basketball."
 )
 
 Employee.create(
