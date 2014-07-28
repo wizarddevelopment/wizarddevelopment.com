@@ -1,6 +1,6 @@
 <div class="bio-box">
   <%= image_tag employee.photo, alt: "employee.name", class: 'bio-image' %>
-  <h1 class="bio-name"><%= employee.name %></h1>
+  <h3 class="bio-name"><%= employee.name %></h3>
   <div class="bio-paragraph">
     <p><%= employee.bio.html_safe if employee.bio %></p>
   </div>

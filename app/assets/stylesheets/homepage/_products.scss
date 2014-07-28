@@ -1,65 +1,68 @@
 .homepage-products {
-  $icon-bullet-size: 4em;
-
-  .product-container {
-    padding-top: 3em;
+  .homepage-products-inner{
     @include outer-container;
-    margin-bottom: $base-line-height;
-
-  }
-
-  .product {
-    padding: 20px;
     @include clearfix;
-    // margin-bottom: 1em;
-    // text-align: center;
+    padding: 5em 3em;
 
-    @include media($large-screen) {
-      @include span-columns(6);
-      @include omega(2n);
+    .product {
+      margin-bottom: 3em;
+      @include media($large-screen) {
+        @include span-columns(6);
+        @include omega(2n);
+      }
+
+      .product-logo {
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        border-radius: 50%;
+        margin-bottom: 20px;
+
+        &.logo-1 {
+          background-color: $wizard-blue;
+
+        }
+
+        &.logo-2{
+          background-color: $wizard-orange;
+        }
+
+        i {
+          font-size: 100px;
+          position: relative;
+          top: 50%;
+          width: 100%;
+          color: white;
+          @include transform(translateY(-50%));
+        }
+      }
+
+      .product-content {
+        text-align: center;
+        h2 {
+          color: #555;
+          font-size: 1.6em;
+          margin-bottom: .75em;
+
+          @include media($large-screen) {
+            font-size: 2em;
+            margin-bottom: .4em;
+          }
+        }
+        p {
+          font-family: $serif;
+          margin: auto;
+          font-weight: 200;
+          line-height: 1.5em;
+          color: #555;
+
+          @include media($large-screen) {
+            font-size: 1.125em;
+            max-width: 80%;
+          }
+        }
+      }
     }
-  }
-
-  .bullet-icon {
-    margin: 5px 20px;
-    width: $icon-bullet-size;
-    height: $icon-bullet-size;
-    border-radius: 50%;
-    background: $base-accent-color;
-    position: relative;
-    color: white;
-    float: left;
-    i {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      @include transform(translate(-50%, -50%));
-      font-size: $icon-bullet-size / 2.3;
-    }
-
-    &:hover {
-      @include animation(spin 1s infinite linear)
-    }
-
-  }
-
-  .bullet-content {
-    h2 {
-      text-transform: uppercase;
-      border-bottom: 1px solid transparentize($base-font-color, .8);
-      display: inline-block;
-    }
-  }
-
-  .bullet-icon-1 {
-    background: $wizard-blue;
-  }
-
-  .bullet-icon-2 {
-    background: $wizard-orange;
-  }
-
-  .bullet-icon-3 {
-    background: $wizard-gray;
   }
 }
