@@ -11,12 +11,13 @@ Employee.create(
 )
 
 Employee.create(
-  name: "Hannah Nordgren",
-  email: "hannah@wizarddevelopment.com",
-  github: "ninjaofawesome",
+  name: "Amy Gimma",
+  email: "amy@wizarddevelopment.com",
+  twitter: "amyg225",
+  github: "amyg225",
   blog: "http://wizard.codes/",
-  bio: "Hannah loves making beautiful products for interesting people.  Prior to becoming a developer, Hannah had careers both in the fashion and beauty industries, which is reflected in her appreciation of design and aesthetics in her work.  When not working on projects, you can oftentimes find her riding around Brooklyn on her single speed bike (slowly).",
-  photo: "hannah.jpg"
+  photo: "amy.jpg",
+  bio: "Amy is a web developer with a variety of experiences in other industries, including healthcare, recreation, and public services. She likes to use technology to help businesses connect with their customers. In her spare time you'll find her developing her programming skills, riding her bike, or enjoying rock climbing."
 )
 
 Employee.create(
@@ -29,16 +30,6 @@ Employee.create(
 )
 
 Employee.create(
-  name: "Amy Gimma",
-  email: "amy@wizarddevelopment.com",
-  twitter: "amyg225",
-  github: "amyg225",
-  blog: "http://wizard.codes/",
-  photo: "amy.jpg",
-  bio: "Amy is a web developer with a variety of experiences in other industries, including healthcare, recreation, and public services. She likes to use technology to help businesses connect with their customers. In her spare time you'll find her developing her programming skills, riding her bike, or enjoying rock climbing."
-)
-
-Employee.create(
   name: "Gustavo Guimares",
   twitter: "gus_tavo_guim",
   email: "gustavo@wizarddevelopment.com",
@@ -46,4 +37,13 @@ Employee.create(
   blog: "http://wizard.codes/",
   photo: "gus.jpeg",
   bio: "Joie-de-vivre practitioner and lifelong learner, Gustavo enjoys finding solutions for real-world problems.  He has solved problems in a array of industries such as Education, Publishing, Entertainment and the Arts. When he is not coding, he is either creating new dance moves or  spending quality time with his family and friends."
+)
+
+Employee.create(
+  name: "Hannah Nordgren",
+  email: "hannah@wizarddevelopment.com",
+  github: "ninjaofawesome",
+  blog: "http://wizard.codes/",
+  bio: "Hannah loves making beautiful products for interesting people.  Prior to becoming a developer, Hannah had careers both in the fashion and beauty industries, which is reflected in her appreciation of design and aesthetics in her work.  When not working on projects, you can oftentimes find her riding around Brooklyn on her single speed bike (slowly).",
+  photo: "hannah.jpg"
 )
