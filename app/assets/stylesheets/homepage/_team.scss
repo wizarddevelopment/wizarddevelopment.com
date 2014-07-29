@@ -5,7 +5,7 @@
     @include clearfix;
     padding: 4em;
     text-align: center;
-    h2 {
+    .team-title {
       color: $wizard-orange;
       font-size: 1.6em;
       margin-bottom: .75em;
@@ -14,8 +14,8 @@
         font-size: 2.5em;
       }
     }
-    .team {
-      .bio-box{
+    .team-members {
+      .bio-box {
         margin: 1em auto 3em auto;
         text-align: center;
 
@@ -24,7 +24,7 @@
           @include span-columns(4);
           @include omega(3n);
         }
-        h3 {
+        .bio-name {
           color: #555;
           font-size: 1.6em;
           margin-bottom: .75em;
@@ -34,13 +34,11 @@
             margin-bottom: .4em;
           }
         }
-        p {
+        .bio-paragraph {
           font-family: $serif;
           font-weight: 200;
           line-height: 1.5em;
           color: #555;
-
-
 
           @include media($large-screen) {
             font-size: 1.125em;
@@ -49,29 +47,29 @@
             margin: auto;
           }
         }
-      }
-      .bio-image{
-        $image-size: 150px;
-        width: $image-size;
-        height: $image-size;
-        border-radius: $image-size / 2;
-        border: 1px solid $wizard-pale-gray;
-        display: block;
-        margin: 20px auto;
-      }
-      .bio-button-bar {
-        list-style-type: none;
-        margin: 5px 0;
-
-        .bio-button {
-          display: inline;
-          margin: 0 5px;
+        .bio-image {
+          $image-size: 150px;
+          width: $image-size;
+          height: $image-size;
+          border-radius: $image-size / 2;
+          border: 1px solid $wizard-pale-gray;
+          display: block;
+          margin: 20px auto;
         }
-        .bio-link {
-          color: $wizard-blue;
-          outline : none;
-          &:hover, &:visited {
+        .bio-button-bar {
+          list-style-type: none;
+          margin: 5px 0;
+
+          .bio-button {
+            display: inline;
+            margin: 0 5px;
+          }
+          .bio-link {
+            color: $wizard-blue;
             outline : none;
+            &:hover, &:visited {
+            outline : none;
+            }
           }
         }
       }
