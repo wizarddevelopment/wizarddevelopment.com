@@ -23,6 +23,7 @@ Employee.create(
 Employee.create(
   name: "Armando Amador",
   email: "armando@wizarddevelopment.com",
+  twitter: "mando_amador",
   github: "ArmandoAmador",
   blog: "http://wizard.codes/",
   photo: "armando.jpg",
