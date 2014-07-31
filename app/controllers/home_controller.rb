@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @employees = Employee.all
+    @employees = Employee.order(:id)
   end
 
   def pricing; end
