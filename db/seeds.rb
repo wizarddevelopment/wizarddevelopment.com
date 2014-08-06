@@ -6,7 +6,7 @@ Employee.create(
   twitter: "reconbot",
   github: "reconbot",
   blog: "http://wizard.codes/",
-  bio: 'Francis is a long time developer and technologist. He\'s run development teams for Hedge Funds, Tech Startups, and Private Education. He loves teaching, javascript and robots. And has recently spoken at <a href="http://2014.jsconfbr.org/">JSConf Brazil</a>, <a href="http://jqueryuk.com/">jQuery Conf UK</a> and <a href="http://2014.jsconf.us/">JS Conf US</a>.',
+  bio: 'Francis is a long time developer and technologist. He\'s run development teams for hedge funds, tech startups, and private education. He loves teaching, javascript and robots. And has recently spoken at <a href="http://2014.jsconfbr.org/">JSConf Brazil</a>, <a href="http://jqueryuk.com/">jQuery Conf UK</a> and <a href="http://2014.jsconf.us/">JS Conf US</a>.',
   photo: "francis_gulotta.jpg"
 )
 
