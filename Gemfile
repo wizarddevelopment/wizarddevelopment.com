@@ -11,6 +11,7 @@ gem 'bcrypt-ruby'
 gem 'dalli'
 gem 'sass-rails'
 gem 'pry'
+gem 'delayed_job_active_record'
 
 gem 'bourbon'
 gem 'neat'
