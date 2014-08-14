@@ -11,14 +11,16 @@ gem 'bcrypt-ruby'
 gem 'dalli'
 gem 'sass-rails'
 gem 'pry'
-gem 'delayed_job_active_record'
-
 gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
 gem 'active_model_serializers'
 gem "email_validator"
+gem 'recipient_interceptor'
+gem 'delayed_job_active_record'
+
+
 
 group :development do
   gem 'growl'
