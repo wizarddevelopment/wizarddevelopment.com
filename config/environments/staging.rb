@@ -89,6 +89,8 @@ WizardDevelopment::Application.configure do
     :enable_starttls_auto => true
   }
 
+  Mail.register_interceptor RecipientInterceptor.new(ENV['EMAIL_RECIPIENTS'])
+
   config.cache_store = :dalli_store
 
 end

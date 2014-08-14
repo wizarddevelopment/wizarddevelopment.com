@@ -165,6 +165,8 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.4)
       ffi (>= 0.5.0)
+    recipient_interceptor (0.1.2)
+      mail
     ref (1.0.5)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -257,6 +259,7 @@ DEPENDENCIES
   rails (= 4.1.0)
   rails_12factor
   rake
+  recipient_interceptor
   rspec-rails (~> 2.10)
   sass-rails
   selenium-webdriver
