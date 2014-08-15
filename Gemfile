@@ -16,11 +16,9 @@ gem 'neat'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
 gem 'active_model_serializers'
-gem "email_validator"
+gem 'email_validator'
 gem 'recipient_interceptor'
 gem 'delayed_job_active_record'
-
-
 
 group :development do
   gem 'growl'
@@ -34,10 +32,14 @@ group :test do
   gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'rake'
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', require: false
+end
+
+group :development, :test do
+  gem 'rubocop'
 end
 
 # Heroku

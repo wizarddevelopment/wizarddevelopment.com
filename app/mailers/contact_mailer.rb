@@ -1,5 +1,4 @@
 class ContactMailer < ActionMailer::Base
-
   def contact_request(contact_request)
     @contact_request = contact_request
 
@@ -11,5 +10,4 @@ class ContactMailer < ActionMailer::Base
 
     mail(opts).deliver
   end
-
 end

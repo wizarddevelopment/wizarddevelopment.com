@@ -10,3 +10,6 @@ deployment:
 notify:
   webhooks:
     - url: http://wizarddev-statusbot.herokuapp.com/circle
+test:
+  post:
+    - bundle exec rubocop -c .rubocop.yml

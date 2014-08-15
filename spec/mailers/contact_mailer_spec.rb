@@ -4,12 +4,12 @@ describe ContactMailer do
 
   describe "#contact_request" do
     let(:form_data) do
-      ContactRequest.new({
+      ContactRequest.new(
         name: 'Francis Gulotta',
         email: 'whatever@email.org',
         message: 'do you do things?',
         business_name: "Dunkin Donuts"
-      })
+      )
     end
 
     let(:mailer) { ContactMailer.contact_request(form_data) }

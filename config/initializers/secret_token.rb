@@ -9,4 +9,9 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-WizardDevelopment::Application.config.secret_key_base = 'b7db1590482c580a043dac0f70a4e4bebcd392d78936b283b030451bf52d320542547659b598f3efdb8de57f34233139c44615ced714416c9dad67fdf38b4975'
+
+if Rails.env.development? || Rails.env.test?
+  ENV['SECRET_KEY_BASE'] ||= 'e3fb36eb59e620973aad6'
+end
+
+WizardDevelopment::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']

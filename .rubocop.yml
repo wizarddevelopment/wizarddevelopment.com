@@ -1,0 +1,29 @@
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'lib/tasks/cucumber.rake'
+    - 'config/unicorn.rb'
+    - 'db/**/*'
+    - 'Guardfile'
+    - 'vendor/bundle/**/*'
+
+# Offense count: 94
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/StringLiterals:
+  Enabled: false
+
+# Offense count: 57
+# Configuration parameters: AllowURI.
+Metrics/LineLength:
+  Max: 120
+
+# We don't use this often but sometimes it improves readability
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+# Offense count: 8
+Style/Documentation:
+  Enabled: false
+
