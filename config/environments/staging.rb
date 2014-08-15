@@ -16,7 +16,8 @@ WizardDevelopment::Application.configure do
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
-  # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
+  # For large-scale production use, consider using a caching reverse proxy like
+  # nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
@@ -80,13 +81,13 @@ WizardDevelopment::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-    :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
-    # :domain         => 'heroku.com',
-    :enable_starttls_auto => true
+    address:        'smtp.sendgrid.net',
+    port:           '587',
+    authentication: :plain,
+    user_name:      ENV['SENDGRID_USERNAME'],
+    password:       ENV['SENDGRID_PASSWORD'],
+    # domain:         'heroku.com',
+    enable_starttls_auto: true
   }
 
   Mail.register_interceptor RecipientInterceptor.new(ENV['EMAIL_RECIPIENTS'])

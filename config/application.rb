@@ -8,7 +8,6 @@ Bundler.require(:default, Rails.env)
 
 module WizardDevelopment
   class Application < Rails::Application
-
     config.generators do |g|
       g.test_framework :rspec
     end

@@ -1,5 +1,6 @@
 class ContactRequest < ActiveRecord::Base
-  validates_presence_of :name, :message
+  validates :name, presence: true
+  validates :message, presence: true
   validates :email, presence: true, email: true
 
   def self.send_notification_email(contact_request_id)
