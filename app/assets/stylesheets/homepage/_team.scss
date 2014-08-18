@@ -25,7 +25,6 @@
           @include omega(3n);
         }
         .bio-name {
-          color: #555;
           font-size: 1.6em;
           margin-bottom: .75em;
 
@@ -39,7 +38,6 @@
           font-weight: 200;
           font-size: 16px;
           line-height: 1.5em;
-          color: #555;
 
           @include media($large-screen) {
             text-align: center;

@@ -1,34 +1,53 @@
 .casestudy-container {
-  @include clearfix;
+  @include outer-container;
+  padding: 4em 2em;
   background-color: #f9f9f9;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
-  .casestudy-inner {
-    @include outer-container;
-    padding: 4em 2em;
+  .casestudy-title {
+    text-align: center;
+    color: $wizard-orange;
+    font-size: 1.6em;
+    margin-bottom: 2em;
 
-    .casestudy-title {
-      text-align: center;
-      color: $wizard-orange;
-      font-size: 1.6em;
-      margin-bottom: 2em;
-
-      @include media($large-screen) {
-        font-size: 2.5em;
-      }
+    @include media($large-screen) {
+      font-size: 2.5em;
     }
   }
 }
 
+.casestudy-box {
+  @include clearfix;
+  button {
+    background-color: $wizard-orange;
+    &:hover{
+      background-color: darken($wizard-orange, 10);
+    }
+  }
+  .quote {
+    font-family: "Times", serif;
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: 800;
+    line-height: 1.6em;
+    margin-bottom: .9em;
+  }
+  .text {
+    margin-bottom: 1em;
+  }
+  .logo {
+    margin-bottom: .5em;
+    text-align: center;
+  }
+}
+
 .casestudy-onemonth {
+
   .images-wrapper {
     background-image: url("one-month-screenshot.png");
     min-height: 200px;
-    display: block;
-    vertical-align: middle;
     background-size: 100%;
     background-repeat: no-repeat;
-
     @include media($medium-screen) {
       display: none;
     }
@@ -44,28 +63,6 @@
     @include media($large-screen){
       @include span-columns(8);
       @include omega();
-    }
-    h3 {
-      font-family: "Times", serif;
-      font-style: italic;
-      font-size: 1.2em;
-      font-weight: 800;
-      line-height: 1.6em;
-      margin-bottom: .9em;
-    }
-    p {
-      color: #555;
-      margin-bottom: 1em;
-    }
-    .logo {
-      margin-bottom: .5em;
-      text-align: center;
-    }
-    button {
-      background-color: $wizard-orange;
-      &:hover{
-        background-color: darken($wizard-orange, 10);
-      }
     }
   }
 }
