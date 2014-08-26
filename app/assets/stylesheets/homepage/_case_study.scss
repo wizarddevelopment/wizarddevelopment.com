@@ -44,7 +44,7 @@
 .casestudy-onemonth {
 
   .images-wrapper {
-    background-image: url("one-month-screenshot.png");
+    background-image: image-url("one-month-screenshot.png");
     min-height: 200px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@
     }
     @include media($large-screen) {
       @include span-columns(4);
-      background-image: url("one-month-screenshot-desktop.png");
+      background-image: image-url("one-month-screenshot-desktop.png");
       min-height: 400px;
 
     }
