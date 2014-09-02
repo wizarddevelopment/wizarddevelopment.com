@@ -1,5 +1,4 @@
 .casestudy-container {
-  @include outer-container;
   padding: 4em 2em;
   background-color: #f9f9f9;
   border-bottom: 1px solid black;
@@ -17,6 +16,7 @@
 }
 
 .casestudy-box {
+  @include outer-container;
   @include clearfix;
   button {
     background-color: $wizard-orange;
@@ -41,10 +41,15 @@
   }
 }
 
-.casestudy-onemonth {
+.casestudy-box {
 
   .images-wrapper {
-    background-image: image-url("one-month-screenshot.png");
+    &.one-month {
+      background-image: image-url("one-month-screenshot.png");
+    }
+    &.the-winnower {
+      background-image: image-url("winnower_screenshot.png");
+    }
     min-height: 200px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -53,7 +58,12 @@
     }
     @include media($large-screen) {
       @include span-columns(4);
-      background-image: image-url("one-month-screenshot-desktop.png");
+      &.one-month {
+        background-image: image-url("one-month-screenshot-desktop.png");
+      }
+      &.the-winnower {
+        background-image: image-url("winnower_screenshot.png");
+      }
       min-height: 400px;
 
     }
