@@ -18,12 +18,8 @@
 .casestudy-box {
   @include outer-container;
   @include clearfix;
-  button {
-    background-color: $wizard-orange;
-    &:hover{
-      background-color: darken($wizard-orange, 10);
-    }
-  }
+  position: relative;
+
   .quote {
     font-family: "Times", serif;
     font-style: italic;
@@ -39,20 +35,22 @@
     margin-bottom: .5em;
     text-align: center;
   }
-}
-
-.casestudy-box {
 
   .images-wrapper {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    right: 0;
+    min-height: 200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
     &.one-month {
       background-image: image-url("one-month-screenshot.png");
     }
     &.the-winnower {
       background-image: image-url("winnower_screenshot.png");
     }
-    min-height: 200px;
-    background-size: 100%;
-    background-repeat: no-repeat;
     @include media($medium-screen) {
       display: none;
     }
