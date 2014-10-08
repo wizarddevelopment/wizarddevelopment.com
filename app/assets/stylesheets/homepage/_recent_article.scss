@@ -1,0 +1,48 @@
+.recent-articles-container {
+  @include outer-container;
+  @include clearfix;
+  padding: 3em;
+
+  .recent-articles-title {
+    text-align: center;
+    color: $wizard-orange;
+    font-size: 1.6em;
+    margin-bottom: .75em;
+
+    @include media($large-screen) {
+      font-size: 2.5em;
+    }
+
+  }
+
+  .article-entries {
+
+    .article {
+      @include media($large-screen) {
+         @include span-columns(4);
+         @include omega(3n);
+       }
+       margin-bottom: 60px;
+
+      .article-image {
+        height: 150px;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-weight: bold;
+        padding-bottom: 5px;
+        font-size: 24px;
+        height: 70px;
+
+        @include media($large-screen) {
+          font-size: 18px;
+        }
+      }
+
+      .summary {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+    }
+  }
+}

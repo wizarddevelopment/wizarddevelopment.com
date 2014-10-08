@@ -1,0 +1,13 @@
+<div id="recent-articles" class="recent-articles-container">
+  <h2 class="recent-articles-title">Recent Articles</h2>
+  <div class="article-entries">
+    <% @latest_articles.each do |article| %>
+      <div class="article">
+        <div class="article-image" style= "background-image: url('<%= article.image_url %>'); background-size: cover; background-position: center center;">
+        </div>
+        <div class="title"><%= link_to(article.name, article.url, target: "_blank")%></div>
+        <p class="summary"><%= truncate(strip_tags(article.summary), length: 300) %><span> <%= link_to("Read More", article.url, target: "_blank")%></span></p>
+      </div>
+    <% end %>
+  </div>
+</div>
