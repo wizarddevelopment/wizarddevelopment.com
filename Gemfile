@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
+ruby '2.1.3'
 
 gem 'rails', '4.1.0'
 gem 'unicorn', require: false # Use unicorn as the app server
@@ -19,6 +19,9 @@ gem 'active_model_serializers'
 gem 'email_validator'
 gem 'recipient_interceptor'
 gem 'delayed_job_active_record'
+gem 'feedjira'
+gem 'nokogiri'
+gem 'figaro'
 
 group :development do
   gem 'growl'
