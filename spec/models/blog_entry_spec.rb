@@ -39,7 +39,6 @@ describe BlogEntry do
       expect(BlogEntry.count).to eq(1)
       expect(BlogEntry.first.name).to eq('hello')
     end
-
   end
 
   describe ".image" do

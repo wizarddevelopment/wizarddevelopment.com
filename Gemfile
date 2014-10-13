@@ -22,6 +22,8 @@ gem 'delayed_job_active_record'
 gem 'feedjira'
 gem 'nokogiri'
 gem 'figaro'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :development do
   gem 'growl'

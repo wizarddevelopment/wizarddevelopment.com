@@ -1,4 +1,10 @@
 class BlogEntry < ActiveRecord::Base
+  has_attached_file :blog_image, styles: {
+    medium: '300x300>'
+  }
+
+  validates_attachment_content_type :blog_image, content_type: /\Aimage\/.*\Z/
+
   def self.update_from_blog(blog_rss_url)
     blog = Feedjira::Feed.fetch_and_parse(blog_rss_url)
     create_or_update_blog(blog.entries)
@@ -11,7 +17,7 @@ class BlogEntry < ActiveRecord::Base
           name:         entry.title,
           summary:      entry.summary,
           url:          entry.url,
-          image_url:    image(entry.summary),
+          blog_image:   image(entry.summary),
           published_at: entry.published
         )
     end
