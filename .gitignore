@@ -19,3 +19,6 @@ config/database.yml
 .env
 # Ignore application configuration
 /config/application.yml
+
+# Ignore files that paperclip creates
+/public/system
