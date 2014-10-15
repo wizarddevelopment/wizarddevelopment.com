@@ -1,2 +1,4 @@
-<div class="article-image" style="background-image: url('<%= asset_path article.blog_image(:medium) %>');">
-</div>
+<%= link_to(article.url, target: '_blank') do %>
+  <div class="article-image" style="background-image: url('<%= asset_path article.blog_image(:medium) %>');">
+  </div>
+<% end %>
