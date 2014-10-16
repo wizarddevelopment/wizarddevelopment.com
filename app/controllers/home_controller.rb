@@ -4,6 +4,6 @@ class HomeController < ApplicationController
     @latest_articles = BlogEntry.latest_blog_post(3)
   end
 
-  def pricing
+  def bien_cuit
   end
 end
