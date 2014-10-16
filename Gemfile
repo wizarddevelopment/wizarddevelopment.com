@@ -24,6 +24,7 @@ gem 'nokogiri'
 gem 'figaro'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'redcarpet'
 
 group :development do
   gem 'growl'

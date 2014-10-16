@@ -1,0 +1,38 @@
+.markdown-format {
+  margin: 20px;
+  color: #353535;
+
+  h1 {
+
+  }
+  h2 {
+    font-size:2em;
+  }
+  h3 {
+    font-size: 1.75em;
+  }
+
+  ul, ol {
+    padding-left: 40px;
+    margin-bottom: 0.825em;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol > li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30px;
+    padding: 0 10px 0 0;
+    color: #999;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: right;
+    border-right: 1px solid #ddd;
+  }
+}

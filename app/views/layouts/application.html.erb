@@ -15,7 +15,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render "navbar" %>
+    <%= render "navbar" unless @_hide_nav%>
     <%= render 'flashes' %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
