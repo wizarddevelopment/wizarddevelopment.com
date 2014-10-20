@@ -27,3 +27,7 @@ Style/BracesAroundHashParameters:
 Style/Documentation:
   Enabled: false
 
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/IndentHash:
+  Enabled: false
+

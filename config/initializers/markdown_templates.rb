@@ -2,7 +2,7 @@ require 'redcarpet'
 
 module MarkdownTemplates
   def self.erb
-    # @erb ||= ActionView::Template.registered_template_handler(:erb)
+    @erb ||= ActionView::Template.registered_template_handler(:erb)
   end
 
   def self.markdown
@@ -16,9 +16,9 @@ module MarkdownTemplates
   end
 
   def self.call(template)
-    # compiled_source = erb.call(template)
-    "#{markdown.render(template.source).inspect}.html_safe"
+    compiled_source = erb.call(template)
+    "MarkdownTemplates.markdown.render(begin;#{compiled_source};end).html_safe"
   end
 end
 
-ActionView::Template.register_template_handler :md, MarkdownTemplates
+ActionView::Template.register_template_handler :md, :markdown, MarkdownTemplates
