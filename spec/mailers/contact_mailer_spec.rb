@@ -35,7 +35,7 @@ describe ContactMailer do
 
     #
     it "delivers" do
-      mailer
+      mailer.deliver!
       expect(ActionMailer::Base.deliveries).to_not be_empty
     end
   end

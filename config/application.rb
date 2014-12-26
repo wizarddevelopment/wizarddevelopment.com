@@ -26,5 +26,8 @@ module WizardDevelopment
     config.assets.precompile += [
       /modernizr.custom.js/
     ]
+
+    config.active_record.raise_in_transactional_callbacks = true # rails 5 behavior
+    config.serve_static_files = true
   end
 end

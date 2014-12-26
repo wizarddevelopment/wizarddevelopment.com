@@ -20,9 +20,6 @@ WizardDevelopment::Application.configure do
   # nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
-  # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = true
-
   # Compress JavaScripts and CSS.
   # turning this off until vico gets his rails setup
   # config.assets.js_compressor = :uglifier
