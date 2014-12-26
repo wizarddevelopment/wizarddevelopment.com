@@ -91,5 +91,4 @@ WizardDevelopment::Application.configure do
   }
 
   config.cache_store = :dalli_store
-
 end

@@ -1,45 +1,45 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
+ruby '2.2.0'
 
-gem 'rails', '4.1.0'
-gem 'unicorn', require: false # Use unicorn as the app server
-gem 'pg'
-gem 'uglifier'
-gem 'therubyracer'
-gem 'bcrypt-ruby'
-gem 'dalli'
-gem 'sass-rails'
-gem 'pry'
+gem 'active_model_serializers'
+gem 'aws-sdk'
+gem 'bcrypt'
 gem 'bourbon'
-gem 'neat'
+gem 'dalli'
+gem 'delayed_job_active_record'
+gem 'email_validator'
+gem 'feedjira'
+gem 'figaro'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
-gem 'active_model_serializers'
-gem 'email_validator'
-gem 'recipient_interceptor'
-gem 'delayed_job_active_record'
-gem 'feedjira'
+gem 'neat'
 gem 'nokogiri'
-gem 'figaro'
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'pg'
+gem 'pry'
+gem 'rails', '4.1.0'
+gem 'recipient_interceptor'
 gem 'redcarpet'
+gem 'sass-rails'
+gem 'therubyracer'
+gem 'uglifier'
+gem 'unicorn', require: false # Use unicorn as the app server
 
 group :development do
+  gem 'bitters'
   gem 'growl'
   gem 'guard'
   gem 'guard-rspec'
-  gem 'bitters'
 end
 
 group :test do
-  gem 'rspec-rails', '~> 2.10'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'rake'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', require: false
 end
@@ -49,7 +49,7 @@ group :development, :test do
 end
 
 # Heroku
-group :production do
-  gem 'rails_12factor'
+group :production, :stagins do
   gem 'memcachier'
+  gem 'rails_12factor'
 end

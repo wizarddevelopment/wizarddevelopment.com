@@ -1,7 +1,6 @@
 require "spec_helper"
 
 describe ContactMailer do
-
   describe "#contact_request" do
     let(:form_data) do
       ContactRequest.new(
@@ -39,7 +38,5 @@ describe ContactMailer do
       mailer
       expect(ActionMailer::Base.deliveries).to_not be_empty
     end
-
   end
-
 end

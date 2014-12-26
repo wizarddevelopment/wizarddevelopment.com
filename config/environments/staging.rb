@@ -93,5 +93,4 @@ WizardDevelopment::Application.configure do
   Mail.register_interceptor RecipientInterceptor.new(ENV['EMAIL_RECIPIENTS'])
 
   config.cache_store = :dalli_store
-
 end

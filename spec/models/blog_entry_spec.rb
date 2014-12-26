@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe BlogEntry do
-
   describe ".create_or_update_blog" do
-
     it "creates new blog entries" do
       entries = [
         OpenStruct.new(
@@ -42,7 +40,6 @@ describe BlogEntry do
   end
 
   describe ".image" do
-
     it "parses html returns first image with alt attriute of cover" do
       html = '<img src="/image-not-cover.png">
               <img alt="cover"><img alt="cover" src="/image.png">
@@ -54,16 +51,12 @@ describe BlogEntry do
       html = '<img src="/image-not-cover.png">'
       expect(BlogEntry.image(html)).to eq(nil)
     end
-
   end
 
   describe ".latest_blog_post" do
-
     it "should show three latest articles" do
       FactoryGirl.create_list(:blog_entry, 6)
       expect(BlogEntry.latest_blog_post(3).size).to eq(3)
     end
-
   end
-
 end
