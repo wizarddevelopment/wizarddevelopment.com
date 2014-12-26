@@ -1,5 +1,4 @@
-$(function(){
-
+window.APP.ContactForm = function(){
   var form = $('#new_contact_request');
 
   form.on('ajax:error', function(e, xhr){
@@ -16,4 +15,6 @@ $(function(){
     form.hide();
   });
 
-});
+};
+
+$(window.APP.ContactForm);

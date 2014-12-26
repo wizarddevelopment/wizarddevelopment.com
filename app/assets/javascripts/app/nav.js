@@ -1,14 +1,9 @@
-$(document).ready(function() {
-  var menu = $('#navigation-menu');
-  var menuToggle = $('#js-mobile-menu');
-  var signUp = $('.sign-up');
-
-  $(menuToggle).on('click', function(e) {
+window.APP.ToggleNav = function() {
+  var menu = $('.js-nav-menu');
+  $('.js-mobile-menu').on('click', function(e) {
     e.preventDefault();
-    menu.slideToggle(function(){
-      if(menu.is(':hidden')) {
-        menu.removeAttr('style');
-      }
-    });
+    menu.slideToggle();
   });
-});
+};
+
+$(window.APP.ToggleNav);

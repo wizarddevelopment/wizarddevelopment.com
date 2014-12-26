@@ -57,7 +57,7 @@ $horizontal-bar-mode: $large-screen;
     }
   }
 
-  ul#navigation-menu {
+  .navigation-menu {
     background: transparentize($wizard-orange, 0.11);
     @include media ($horizontal-bar-mode) {
       background: none;
