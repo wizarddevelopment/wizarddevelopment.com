@@ -45,7 +45,7 @@ group :test do
 end
 
 group :development, :test do
-  gem 'rubocop'
+  gem 'rubocop', require: false
 end
 
 # Heroku
