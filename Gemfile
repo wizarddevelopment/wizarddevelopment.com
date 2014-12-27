@@ -17,7 +17,6 @@ gem 'neat'
 gem 'nokogiri'
 gem 'paperclip'
 gem 'pg'
-gem 'pry'
 gem 'rails', '4.2.0'
 gem 'recipient_interceptor'
 gem 'redcarpet'
@@ -25,6 +24,7 @@ gem 'sass-rails'
 gem 'therubyracer'
 gem 'uglifier'
 gem 'unicorn', require: false # Use unicorn as the app server
+gem 'ruby-freshbooks'
 
 group :development do
   gem 'bitters'
@@ -36,15 +36,18 @@ end
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'rake'
   gem 'rspec-rails'
-  gem 'selenium-webdriver'
+  gem 'capybara-webkit'
   gem 'shoulda-matchers', require: false
+  gem 'webmock'
 end
 
 group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'pry'
+  gem 'pry-byebug'
   gem 'rubocop', require: false
 end
 

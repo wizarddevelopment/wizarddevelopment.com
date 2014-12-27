@@ -1,4 +1,6 @@
-BLOG_RSS_URL:
+BLOG_RSS_URL: http://www.wizard.codes/rss/
 S3_BUCKET_NAME:
 AWS_ACCESS_KEY_ID:
 AWS_SECRET_ACCESS_KEY:
+FRESHBOOKS_API_URL: wizarddevelopment.freshbooks.com
+FRESHBOOKS_AUTH_TOKEN:
