@@ -29,3 +29,13 @@ Employee.create(
   photo: "armando.jpg",
   bio: "Armando is a hybrid designer/developer with a precision and attention to detail that reflect his love for effective and engaging design. Before becoming a developer, he worked for the iconic Ebony Magazine as a Web Producer and at VIBE Magazine as a Marketing designer. When not designing or developing, you can find him reading Japanese manga, wikipedia surfing or playing basketball."
 )
+
+Employee.create(
+  name: "Vico Zabel",
+  email: "vico@wizarddevelopment.com",
+  twitter: "vicozabel",
+  github: "LonesomeRider",
+  blog: "http://vicozabel.com/",
+  photo: "vico_winter_526x.jpg",
+  bio: "Vico is Wizard's Design Director, specialized in interactive design and branding. He has been working for multiple startups and agencies where he had the opportunity to work on Converse, Nike, and MPDI projects. He founded his own consulting business in 2010. When not designing he is out and about with his black Lab Maggie."
+)
