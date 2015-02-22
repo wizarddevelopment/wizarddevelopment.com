@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 describe ContactMailer do
   describe "#contact_request" do
@@ -13,11 +13,8 @@ describe ContactMailer do
 
     let(:mailer) { ContactMailer.contact_request(form_data) }
 
-    it "sends a message to me" do
+    it "sends a message to me from the requester" do
       expect(mailer.to).to eq(['francis@wizarddevelopment.com'])
-    end
-
-    it "sends a message from the requester" do
       expect(mailer.from).to eq([form_data.email])
     end
 
@@ -27,13 +24,12 @@ describe ContactMailer do
     end
 
     it "includes form data" do
-      expect(mailer.body).to match(form_data.name)
-      expect(mailer.body).to match(form_data.email)
-      expect(mailer.body).to match(form_data.business_name)
-      expect(mailer.body).to match(form_data.message)
+      expect(mailer.body).to include(form_data.name)
+      expect(mailer.body).to include(form_data.email)
+      expect(mailer.body).to include(form_data.business_name)
+      expect(mailer.body).to include(form_data.message)
     end
 
-    #
     it "delivers" do
       mailer.deliver_now!
       expect(ActionMailer::Base.deliveries).to_not be_empty

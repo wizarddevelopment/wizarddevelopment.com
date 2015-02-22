@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe BlogEntry do
   describe ".create_or_update_blog" do
@@ -18,20 +18,16 @@ describe BlogEntry do
 
     it "updates blog entries with the same guid" do
       entries = [
-        OpenStruct.new(
-          {
-            title: "title",
-            summary: "summary",
-            id: "XXXX"
-          }
-        ),
-        OpenStruct.new(
-          {
-            title: "hello",
-            summary: "stuff",
-            id: "XXXX"
-          }
-        )
+        OpenStruct.new({
+          title: "title",
+          summary: "summary",
+          id: "XXXX"
+        }),
+        OpenStruct.new({
+          title: "hello",
+          summary: "stuff",
+          id: "XXXX"
+        })
       ]
       BlogEntry.create_or_update_blog(entries)
       expect(BlogEntry.count).to eq(1)

@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013144859) do
+ActiveRecord::Schema.define(version: 20141227200724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "blog_entries", force: true do |t|
+  create_table "blog_entries", force: :cascade do |t|
     t.string   "name"
     t.text     "summary"
     t.string   "url"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20141013144859) do
     t.datetime "blog_image_updated_at"
   end
 
-  create_table "contact_requests", force: true do |t|
+  create_table "contact_requests", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "phone"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20141013144859) do
     t.boolean  "analytics"
   end
 
-  create_table "delayed_jobs", force: true do |t|
+  create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
     t.integer  "attempts",   default: 0, null: false
     t.text     "handler",                null: false
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 20141013144859) do
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
-  create_table "employees", force: true do |t|
+  create_table "employees", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "github"
@@ -79,6 +79,40 @@ ActiveRecord::Schema.define(version: 20141013144859) do
     t.datetime "updated_at"
     t.string   "photo"
     t.string   "twitter"
+  end
+
+  create_table "freshbooks_invoices", force: :cascade do |t|
+    t.string   "invoice_id",         null: false
+    t.string   "number",             null: false
+    t.string   "organization",       null: false
+    t.string   "client_id",          null: false
+    t.string   "status",             null: false
+    t.decimal  "amount",             null: false
+    t.decimal  "amount_outstanding", null: false
+    t.decimal  "paid",               null: false
+    t.string   "public_url",         null: false
+    t.date     "date",               null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "freshbooks_invoices", ["invoice_id"], name: "index_freshbooks_invoices_on_invoice_id", unique: true, using: :btree
+
+  create_table "freshbooks_payments", force: :cascade do |t|
+    t.string   "payment_id",           null: false
+    t.string   "invoice_id",           null: false
+    t.string   "client_id",            null: false
+    t.string   "payment_type",         null: false
+    t.string   "currency_code",        null: false
+    t.string   "gateway_reference_id"
+    t.string   "gateway_name"
+    t.text     "notes"
+    t.decimal  "amount",               null: false
+    t.decimal  "from_credit",          null: false
+    t.date     "date",                 null: false
+    t.date     "updated",              null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
 end
