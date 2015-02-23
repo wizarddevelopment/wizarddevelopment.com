@@ -45,6 +45,8 @@ group :test do
 end
 
 group :development, :test do
+  gem 'brakeman', require: false
+  gem 'bundler-audit', require: false
   gem 'factory_girl_rails'
   gem 'pry'
   gem 'pry-byebug'
