@@ -12,4 +12,6 @@ notify:
     - url: http://wizarddev-statusbot.herokuapp.com/circle
 test:
   pre:
+    - bundle exec brakeman -z
+    - bundle exec 'bundle-audit update && bundle-audit check'
     - bundle exec rubocop -D -c .rubocop.yml
