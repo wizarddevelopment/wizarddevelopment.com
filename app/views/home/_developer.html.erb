@@ -1,0 +1,43 @@
+<div class="bio-box">
+  <%= image_tag developer.photo, alt: developer.name, class: 'bio-image' %>
+  <h3 class="bio-name"><%= developer.name %></h3>
+  <div class="bio-paragraph">
+    <p><%= developer.bio.html_safe %></p>
+  </div>
+  <div class="bio-button-bar">
+    <ul>
+      <% if developer.email.present? %>
+        <li class="bio-button">
+          <%= mail_to developer.email, class: "bio-link", subject: "hello!", title: "Email #{developer.name}" do %>
+            <i class="fa fa-envelope-o fa-2x"></i>
+          <% end %>
+        </li>
+      <% end %>
+
+      <% if developer.twitter.present? %>
+      <li class="bio-button">
+        <%= link_to 'https://twitter.com/' + developer.twitter, class: "bio-link", target: "_blank", title: "twitter" do %>
+          <i class="fa fa-twitter fa-2x"></i>
+        <% end %>
+      </li>
+      <% end %>
+
+      <% if developer.github.present? %>
+      <li class="bio-button">
+        <%= link_to 'https://github.com/' + developer.github, class: "bio-link", target: "_blank", title: 'github' do %>
+          <i class="fa fa-github fa-2x"></i>
+        <% end %>
+      </li>
+      <% end %>
+
+      <% if developer.blog.present? %>
+        <li class="bio-button">
+          <%= link_to developer.blog, class: "bio-link", target: "_blank", title: "blog" do %>
+            <i class="fa fa-desktop fa-2x"></i>
+          <% end %>
+        </li>
+      <% end %>
+
+    </ul>
+  </div>
+</div>
