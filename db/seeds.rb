@@ -39,3 +39,13 @@ Employee.create(
   photo: "vico_winter_526x.jpg",
   bio: "Vico is Wizard's Design Director, specialized in interactive design and branding. He has been working for multiple startups and agencies where he had the opportunity to work on Converse, Nike, and MPDI projects. He founded his own consulting business in 2010. When not designing he is out and about with his black Lab Maggie."
 )
+
+Employee.create(
+  name: "Elijah Kim",
+  email: "elijah@wizarddevelopment.com",
+  twitter: "monkeypatchr",
+  github: "elijahkim",
+  blog: "http://www.elijah.kim/blog",
+  photo: "eli.jpg",
+  bio: "Elijah is a soft spoken developer with a large passion for clean code. After studying math at college, web development was a natural transition aided by Metis. When he's not discovering crazy methods on Enums, he is either lost on the Rift or binging on a newly discovered sitcom."
+)
