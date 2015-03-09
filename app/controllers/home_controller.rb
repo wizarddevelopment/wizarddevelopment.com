@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @employees = Employee.order(:id)
+    @developers = Developer.order(:id)
     @latest_articles = BlogEntry.latest_blog_post(3)
   end
 end
