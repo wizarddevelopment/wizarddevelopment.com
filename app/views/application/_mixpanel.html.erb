@@ -5,8 +5,9 @@ b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
 mixpanel.init("8127ff79010ff6c07753e949e512423f");
 mixpanel.track("Page View");
 <% else %>
-window.mixpanel = {
-  track: function(){}
+window.mixpanel = [];
+window.mixpanel.track = function(){
+  this.push(arguments);
 };
 <% end %>
 </script>
