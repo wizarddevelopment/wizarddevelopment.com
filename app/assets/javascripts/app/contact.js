@@ -8,11 +8,13 @@ window.APP.ContactForm = function(){
       var value = response[key].join(' and ');
       $('label[for="contact_request_' + key + '"]').append('<span class="error"> ' + value + '</span>');
     });
+    mixpanel.track("Contact Form Error", response);
   });
 
   form.on('ajax:success', function(e, response){
     form.after('<h1 class="coffee">We got the message. We\'ll get back to you soon!</h1>');
     form.hide();
+    mixpanel.track("Contact Form Success");
   });
 
 };
