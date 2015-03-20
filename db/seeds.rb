@@ -1,6 +1,6 @@
-Employee.delete_all
+Developer.delete_all
 
-Employee.create(
+Developer.create(
   name: "Francis Gulotta",
   email: "francis@wizarddevelopment.com",
   twitter: "reconbot",
@@ -10,7 +10,7 @@ Employee.create(
   photo: "francis_gulotta.jpg"
 )
 
-Employee.create(
+Developer.create(
   name: "Amy Gimma",
   email: "amy@wizarddevelopment.com",
   twitter: "amyg225",
@@ -20,7 +20,7 @@ Employee.create(
   bio: "Amy is a web developer with a variety of experiences in other industries, including healthcare, recreation, and public services. She likes to use technology to help businesses connect with their customers. In her spare time you'll find her developing her programming skills, riding her bike, or enjoying rock climbing."
 )
 
-Employee.create(
+Developer.create(
   name: "Armando Amador",
   email: "armando@wizarddevelopment.com",
   twitter: "mando_amador",
@@ -30,7 +30,7 @@ Employee.create(
   bio: "Armando is a hybrid designer/developer with a precision and attention to detail that reflect his love for effective and engaging design. Before becoming a developer, he worked for the iconic Ebony Magazine as a Web Producer and at VIBE Magazine as a Marketing designer. When not designing or developing, you can find him reading Japanese manga, wikipedia surfing or playing basketball."
 )
 
-Employee.create(
+Developer.create(
   name: "Vico Zabel",
   email: "vico@wizarddevelopment.com",
   twitter: "vicozabel",
@@ -40,7 +40,7 @@ Employee.create(
   bio: "Vico is Wizard's Design Director, specialized in interactive design and branding. He has been working for multiple startups and agencies where he had the opportunity to work on Converse, Nike, and MPDI projects. He founded his own consulting business in 2010. When not designing he is out and about with his black Lab Maggie."
 )
 
-Employee.create(
+Developer.create(
   name: "Elijah Kim",
   email: "elijah@wizarddevelopment.com",
   twitter: "monkeypatchr",
