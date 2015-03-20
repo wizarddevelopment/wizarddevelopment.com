@@ -3,6 +3,6 @@ namespace :wizarddev do
   task fetch_blog: :environment do
     fail "BLOG_RSS_URL ENV is not set" unless ENV['BLOG_RSS_URL']
     puts "Fetching Blog"
-    BlogEntry.update_from_blog(ENV['BLOG_RSS_URL'])
+    BlogEntry.fetch_blog
   end
 end
