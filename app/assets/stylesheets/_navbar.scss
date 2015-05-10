@@ -58,23 +58,22 @@ $horizontal-bar-mode: $large-screen;
   }
 
   .navigation-menu {
-    background: transparentize($wizard-orange, 0.11);
-    @include media ($horizontal-bar-mode) {
-      background: none;
-    }
-    clear: both;
-    float: none;
-    -webkit-transform-style: preserve-3d; // stop webkit flicker
-    display: none;
-    margin: 0 auto;
-    overflow: visible;
-    padding: 0;
+    $dark-orange: shade($wizard-orange, 10%);
+    background: transparentize($dark-orange, 0.11);
+
     width: 100%;
+    height: 0;
+    overflow: hidden;
+    @include transition(all 0.5s ease-in-out);
+
+    &.show{
+      display: block;
+      height: 300px;
+    }
 
     @include media ($horizontal-bar-mode) {
+      background: none;
       display: inline;
-      margin: 0;
-      padding: 0;
     }
   }
 
@@ -87,25 +86,30 @@ $horizontal-bar-mode: $large-screen;
     text-align: center;
     width: 100%;
 
-    @include media ($horizontal-bar-mode) {
-      background: transparent;
-      display: inline;
-      line-height: $navigation-height;
-      text-decoration: none;
-      width: auto;
+    &:hover {
+      background: shade($navigation-background, 20%);
+      a {
+        color: $navigation-color-hover;
+      }
     }
 
     a {
       font-weight: 400;
       display: inline-block;
       color: $navigation-color;
+      text-decoration: none;
+    }
 
-      @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
-      }
-
+    @include media ($horizontal-bar-mode) {
+      background: transparent;
       &:hover {
-        color: $navigation-color-hover;
+        background: transparent;
+      }
+      display: inline;
+      line-height: $navigation-height;
+      width: auto;
+      a {
+        padding-right: 1em;
       }
     }
   }
