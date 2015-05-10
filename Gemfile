@@ -20,11 +20,11 @@ gem 'pg'
 gem 'rails', '4.2.0'
 gem 'recipient_interceptor'
 gem 'redcarpet'
+gem 'ruby-freshbooks'
 gem 'sass-rails'
 gem 'therubyracer'
 gem 'uglifier'
 gem 'unicorn', require: false # Use unicorn as the app server
-gem 'ruby-freshbooks'
 
 group :development do
   gem 'bitters'
