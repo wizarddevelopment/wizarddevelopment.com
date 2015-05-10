@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.0'
 
+gem "browserify-rails", "~> 0.9"
 gem 'active_model_serializers'
 gem 'aws-sdk'
 gem 'bcrypt'
@@ -18,6 +19,7 @@ gem 'nokogiri'
 gem 'paperclip'
 gem 'pg'
 gem 'rails', '4.2.0'
+gem 'react-rails', '~> 1.0'
 gem 'recipient_interceptor'
 gem 'redcarpet'
 gem 'ruby-freshbooks'

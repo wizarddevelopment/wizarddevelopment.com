@@ -12,5 +12,5 @@
 //
 //= require_tree ./lib
 //= require jquery_ujs
-//= require ./app/app.js
-//= require_tree ./app
+//= require react_ujs
+//= require app

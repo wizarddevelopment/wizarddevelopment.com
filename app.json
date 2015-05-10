@@ -1,12 +1,12 @@
 {
-  "name": "WizardDevelopment.com",
+  "name": "wizard-development.com",
   "description": "Our wonderful webapp",
   "website": "http://www.wizarddevelopment.com",
   "heroku-environments": {
     "staging": {
       "app-name": "wizarddevelopment-staging",
-      "tag-name": false,
       "force-push": true,
+      "tag-name": false,
       "scripts": [
         { "cmd": "rake db:migrate", "restart": true }
       ]
@@ -21,5 +21,5 @@
       ]
     }
   },
-  "source-repo": "git@github.com:wizarddevelopment/ourcoolapp.git"
+  "source-repo": "git@github.com:wizarddevelopment/wizarddevelopment.com.git"
 }

@@ -27,7 +27,14 @@ module WizardDevelopment
       /modernizr.custom.js/
     ]
 
+    config.browserify_rails.commandline_options = '-t [ reactify --harmony ] --extension=".js.jsx"'
+
     config.active_record.raise_in_transactional_callbacks = true # rails 5 behavior
     config.serve_static_files = true
+
+    config.react.jsx_transform_options = {
+      harmony: true
+      # strip_types: true, # for removing Flow type annotations
+    }
   end
 end
