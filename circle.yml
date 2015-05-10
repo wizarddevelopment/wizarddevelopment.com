@@ -2,11 +2,7 @@ deployment:
   staging:
     branch: master
     commands:
-      - heroku maintenance:on --app wizarddevelopment-staging
-      - git push -f git@heroku.com:wizarddevelopment-staging.git $CIRCLE_SHA1:refs/heads/master
-      - heroku run rake db:migrate --app wizarddevelopment-staging
-      - heroku restart web --app wizarddevelopment-staging
-      - heroku maintenance:off --app wizarddevelopment-staging
+      - bundle exec rake wizarddev:deploy:staging
 notify:
   webhooks:
     - url: http://wizarddev-statusbot.herokuapp.com/circle

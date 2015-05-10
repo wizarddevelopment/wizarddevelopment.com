@@ -25,6 +25,7 @@ gem 'sass-rails'
 gem 'therubyracer'
 gem 'uglifier'
 gem 'unicorn', require: false # Use unicorn as the app server
+gem 'wizarddev-heroku'
 
 group :development do
   gem 'bitters'
