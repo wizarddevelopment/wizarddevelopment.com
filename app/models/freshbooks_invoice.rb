@@ -25,8 +25,8 @@ class FreshbooksInvoice < ActiveRecord::Base
   def self.import(invoice)
     attributes = invoice.slice(*FIELDS_TO_IMPORT)
     attributes["public_url"] = invoice["links"]["client_view"]
-    record = first_or_initialize(attributes.slice("invoice_id"))
-    record.update!(attributes)
-    record
+    where(attributes.slice("invoice_id"))
+      .first_or_initialize
+      .tap { |record| record.update!(attributes) }
   end
 end

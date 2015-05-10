@@ -31,8 +31,8 @@ class FreshbooksPayment < ActiveRecord::Base
       attributes["gateway_name"] = gateway["gateway_name"]
     end
 
-    record = first_or_initialize(attributes.slice("payment_id"))
-    record.update!(attributes)
-    record
+    where(attributes.slice("payment_id"))
+      .first_or_initialize
+      .tap { |record| record.update!(attributes) }
   end
 end
