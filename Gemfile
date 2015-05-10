@@ -42,7 +42,7 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara-webkit'
   gem 'shoulda-matchers', require: false
-  gem 'webmock'
+  gem 'webmock', require: false
 end
 
 group :development, :test do
