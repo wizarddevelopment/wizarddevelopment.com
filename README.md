@@ -1,49 +1,11 @@
-# Wizard Development
+# Wizard Development.com
 
+This is primarily a rails app, but now uses react too!
 
-#Wizard Development's Charter
+## Deployment
 
-### Thesis
-Through education and diversity we build a stronger product, strong products allow people to be more impactful in the world around them. Increasing the amount of agency people have in the world leads to a better world.
+Because of react we now need to have 2 buildpacks! "What the what!?" you say? We need ruby of course but we also need nodejs to build the react stuff and do a `npm install` during the build phase. This is easy
 
-### Product
+ - First we switch to use the [`heroku-buildpack-multi`](https://github.com/heroku/heroku-buildpack-multi) buildpack by running `heroku buildpacks:set https://github.com/heroku/heroku-buildpack-multi.git`
+ - Then we create a `.buildpacks` file with both the node and ruby buildpacks in it.
 
-### Structure
-Hiring a diverse staff in age, sex, race and background will lead to a stronger product team.
-
-#### Sales
-#### Support
-#### Education
-
-### Wizard Development makes Products and Development Teams strong. We're a team of product managers, developers, and designers. Our principle is teaching you how to get the most value from your work and your software. We have trained in the agile ways, forged ourselves in the fires of NYC startups, we deliver fast, we analyze everything.
-
-## Businesses
- - bulletpoints listing each service you do for these two audiences - if you have an introductory paragraph for each audience which comes before the bullet points
-
-## Development Teams
- - bulletpoints listing each service you do for these two audiences - if you have an introductory paragraph for each audience which comes before the bullet points
-
-## What We do
-###Product Management
-  Understanding the busines goals and the value of what's being built
-  Identifying risks both technical and operational
-  Priortizing work that provides the most value with the most instant feedback
-  Breaking down the work into small stories that can be delivered indepentently of eachother
-
-###Software Development
-  Internal tools
-  Desktop and Mobile Web Applications
-  Speed up your existing development efforts
-  Documentation
-
-###Scaling and Infrastructure
-  Continuous Integration and Deployment
-  Deployments of your software
-  Keeping your software running Monitoring / Alerting
-
-##Inspiration
- - http://www.freshthrills.com/
- - http://pivotallabs.com/agile-inception_knowing-what-to-build-and-where-to-start/
- - http://pivotallabs.com/about/
- - http://consulting.bocoup.com/
- - http://www.godynamo.com/en/story

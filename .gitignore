@@ -22,3 +22,4 @@ config/database.yml
 
 # Ignore files that paperclip creates
 /public/system
+node_modules

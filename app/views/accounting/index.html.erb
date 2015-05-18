@@ -1,0 +1,23 @@
+<div class="body">
+  <%= react_component('AccountDetails', @accounts.to_h) %>
+
+<div><pre style="clear:both;">
+
+Stacked
+  Baseline
+    running total of payments
+  above (baseline +)
+    running total of invoices - payments
+  below (baseline - )
+    running total of bills - payments
+
+Not Stacked
+  Baseline
+    sum of income
+  Above
+    sum of invoices - payments
+  Below
+    sum of bills - payments
+</pre>
+</div>
+</div>

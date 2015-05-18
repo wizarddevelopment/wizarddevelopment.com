@@ -1,6 +1,5 @@
-window.APP.ContactForm = function(){
+module.exports = function bindContactForm(){
   var form = $('#new_contact_request');
-
   form.on('ajax:error', function(e, xhr){
     var response = xhr.responseJSON;
     form.find('.error').remove();
@@ -16,7 +15,4 @@ window.APP.ContactForm = function(){
     form.hide();
     mixpanel.track("Contact Form Success");
   });
-
 };
-
-$(window.APP.ContactForm);
