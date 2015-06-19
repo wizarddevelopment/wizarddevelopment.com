@@ -4,7 +4,7 @@
   .homepage-thesis-inner {
     @include outer-container;
     @include clearfix;
-    padding: 4em;
+    padding: 3em;
     margin: auto;
     text-align: center;
 
@@ -29,7 +29,7 @@
 
         @include media($large-screen) {
           font-size: 1.125em;
-          max-width: 50%;
+          max-width: 75%;
         }
       }
     }

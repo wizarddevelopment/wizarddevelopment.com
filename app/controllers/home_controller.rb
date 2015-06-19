@@ -3,4 +3,10 @@ class HomeController < ApplicationController
     @developers = Developer.order(:id)
     @latest_articles = BlogEntry.latest_blog_post(6)
   end
+
+  def bakecycle
+  end
+
+  def winnower
+  end
 end

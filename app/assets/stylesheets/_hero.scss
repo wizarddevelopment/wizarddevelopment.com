@@ -1,14 +1,14 @@
 .homepage-hero {
   color: $wizard-pale-gray;
   background: $wizard-orange;
-  background-image: image-url("bg_grid.png");
+  // background-image: image-url("bg_grid.png");
   text-align: center;
   position: relative;
   overflow:hidden;
   height: 400px;
 
   @include media($medium-screen) {
-    height: 800px;
+    height: 600px;
   }
 
   .homepage-hero-copy {

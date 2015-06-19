@@ -1,6 +1,8 @@
 WizardDevelopment::Application.routes.draw do
   root 'home#index'
   resource :contact_requests, only: [:create], format: false
+  get :bakecycle, to: 'home#bakecycle'
+  get :winnower, to: 'home#winnower'
 
   # what do we do with these?
   if Rails.env.development?
