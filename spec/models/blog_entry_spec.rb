@@ -35,23 +35,20 @@ describe BlogEntry do
     end
   end
 
-  describe '#fetch_image' do
+  describe '.extract_image' do
     it "parses html returns first image with alt attribute of cover" do
-      stub_request(:get, "http://placekitty.com/image.png")
-        .to_return(status: 200, body: "")
-      html = '<img src="/image-not-cover.png">
-              <img alt="cover">
-              <img alt="cover" src="http://placekitty.com/image.png">
-              <img src="/image2.png" alt="cover">'
-      blog_entry = create(:blog_entry, summary: html)
-      blog_entry.fetch_image
-      expect(blog_entry.blog_image.path).to include("/image.png")
+      html = <<-html
+        <img src="/image-not-cover.png">
+        <img alt="cover">
+        <img alt="cover" src="http://placekitty.com/image.png">
+        <img src="/image2.png" alt="cover">
+      html
+      expect(BlogEntry.extract_image(html)).to eq("http://placekitty.com/image.png")
     end
 
     it "returns nil if it can't find the image" do
       html = '<img src="/image-not-cover.png">'
-      blog_entry = create(:blog_entry, summary: html)
-      expect(blog_entry.blog_image.present?).to eq(false)
+      expect(BlogEntry.extract_image(html)).to be_nil
     end
   end
 
