@@ -14,7 +14,7 @@ describe ContactMailer do
     let(:mailer) { ContactMailer.contact_request(form_data) }
 
     it "sends a message to me from the requester" do
-      expect(mailer.to).to eq(['francis@wizarddevelopment.com'])
+      expect(mailer.to).to eq(['hello@wizarddevelopment.com'])
       expect(mailer.from).to eq([form_data.email])
     end
 

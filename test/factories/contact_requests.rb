@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :contact_request do
     name "Francis Gulotta"
-    email "francis@wizarddevelopment.com"
+    email "hello@wizarddevelopment.com"
     phone "9175551212"
     business_name "Wizard Development"
     message "I need a website to sell my stuff"

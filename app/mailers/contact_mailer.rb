@@ -3,8 +3,8 @@ class ContactMailer < ActionMailer::Base
     @contact_request = contact_request
 
     opts = {
-      to: 'francis@wizarddevelopment.com',
-      subject: 'Someone wants to hear from you!',
+      to: 'hello@wizarddevelopment.com',
+      subject: 'Project inquiry',
       from: contact_request.email || "unknown@wizarddevelopment.com"
     }
 
