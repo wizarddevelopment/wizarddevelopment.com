@@ -15,9 +15,11 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render "navbar" unless @_hide_nav%>
+    <%= render "navbar" %>
     <%= render 'flashes' %>
-    <%= yield %>
+    <div class='main-content'>
+        <%= yield %>
+    </div>
     <%= javascript_include_tag "application" %>
     <%= yield :js %>
     <%= render partial: 'ga' %>

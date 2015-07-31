@@ -1,11 +1,17 @@
-<article id="bakecycle" class="casestudy">
-  <h1 class="logo">BakeCycle</h1>
-  <p>
-    BakeCycle started in the basement of Bien Cuit a French Bakery based in Brooklyn. It helped them grow to be one of the most successful bakeries in New York and landed owner Kate Wheatcroft in Forbe's 30 under 30. Learn how Kate worked with Wizard Development to take BakeCycle from their basement to the world.
-  </p>
+<article class="casestudy">
 
-  <blockquote>
-    "It's not centuries old technique that needs to change it's centuries old technology"<br>- Kate Wheatcroft, Co-Founder
-  </blockquote>
-  <%= link_to "Read BakeCycle's Story", bakecycle_path %>
+  <div class="content right">
+    <%= image_tag 'bakecycle-logo.png', class: 'logo bakecycle' %>
+    <p>
+      BakeCycle started in the basement of Bien Cuit a French Bakery based in Brooklyn. It helped them grow to be one of the most successful bakeries in New York and landed owner Kate Wheatcroft in Forbe's 30 under 30. Learn how Kate worked with Wizard Development to take BakeCycle from their basement to the world.
+    </p>
+    <%= link_to "Read BakeCycle's Story", bakecycle_path, class: "right" %>
+  </div>
+
+  <div class="quote-card left">
+    <%= image_tag 'kate-2.png', class: 'case-image', alt: 'Kate at Bien Cuit', title: 'Kate at Bien Cuit' %>
+    <blockquote>
+      "It's not centuries old technique that needs to change it's centuries old technology"<br>- Kate Wheatcroft, Co-Founder
+    </blockquote>
+  </div>
 </article>

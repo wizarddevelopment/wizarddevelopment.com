@@ -1,14 +1,19 @@
 <article id="winnower" class="casestudy">
-  <div class="logo">
-    <%= image_tag 'winnower_logo.png'%>
+
+
+  <div class="content left">
+    <%= image_tag 'winnower_logo.png', class: 'logo winnower' %>
+    <p>
+      Josh Nicholson was researching cancer at one of the more notable labs in Virginia and he had a problem. It wasn't the research itself that was giving him issues, it was publishing processes he needed to follow to get his research reviewed by his fellow scientists. Peer review can be a lengthy and expensive process, and there is no guarantee of publishing in the end. Research is hard enough and these aren't issues scientists should have to deal with. Josh decided to do something about it.
+    </p>
+
+    <%= link_to 'Learn How The Winnower got off the ground.', winnower_path, class: 'learn-more' %>
   </div>
-  <p>
-    Josh Nicholson was researching cancer at one of the more notable labs in Virginia and he had a problem. It wasn't the research itself that was giving him issues, it was publishing processes he needed to follow to get his research reviewed by his fellow scientists. His thesis would see the light of day but none of the other work he was doing would be published. In order to publish he would need grants to pay for them, months of back and forth and the people who would be reviewing his work before publication he already knew and could reach out to on his own. Research is hard enough and these weren't issues scientists should have to deal with. Josh decided to do something about it.
-  </p>
-  <blockquote>
-    In order to cure cancer, we first need to cure cancer research.<br>- Joshua Nicholson, Founder
-  </blockquote>
 
-  <%= link_to 'Learn How The Winnower got off the ground.', winnower_path %>
-
+  <div class="quote-card right">
+    <%= image_tag 'josh.png', class: 'case-image', alt: 'Josh and his business partner, Pete', title: 'Josh and his business partner, Pete' %>
+    <blockquote>
+      In order to cure cancer, we first need to cure cancer research.<br>- Joshua Nicholson, Founder
+    </blockquote>
+  </div>
 </article>

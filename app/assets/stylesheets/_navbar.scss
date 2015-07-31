@@ -1,9 +1,11 @@
 $navigation-padding: 1em;
-$navigation-background: transparentize($wizard-orange, 1);
+$navigation-background: transparentize($wizard-orange, 0.2);
 $navigation-color: transparentize(white, 0.2);
-$navigation-color-hover: white;
+$navigation-background: white;
+$navigation-color: $wizard-gray;
+$navigation-color-hover: $wizard-gray;
 $navigation-height: 60px;
-$navigation-active-link-color: transparentize(white, 0.5);
+$navigation-active-link-color: $wizard-gray;
 $navigation-submenu-padding: 1em;
 $horizontal-bar-mode: $large-screen;
 
@@ -94,7 +96,8 @@ $horizontal-bar-mode: $large-screen;
     }
 
     a {
-      font-weight: 400;
+      font-weight: 600;
+      text-transform: uppercase;
       display: inline-block;
       color: $navigation-color;
       text-decoration: none;

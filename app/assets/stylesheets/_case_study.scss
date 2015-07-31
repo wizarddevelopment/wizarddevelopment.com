@@ -1,10 +1,29 @@
 $visual-grid: true !global;
+.right {
+  float: right;
+}
+
+.left {
+  float: left
+}
 
 .casestudies-container {
   @include outer-container;
   background-color: white;
   padding-top: 2em;
   padding-bottom: 2em;
+
+
+  h2 {
+    text-align: center;
+    color: $wizard-orange;
+    font-size: 1.6em;
+    margin-bottom: 1em;
+
+    @include media($large-screen) {
+      font-size: 2.5em;
+    }
+  }
 }
 
 .casestudy {
@@ -19,13 +38,47 @@ $visual-grid: true !global;
   @include pad();
   padding-bottom: 4em;
 
-  .logo {
-    margin-bottom: 1em;
-    text-align: center;
+  .quote-card {
+      width: 300px;
+      margin: auto;
+      display: block;
+      margin-bottom: 1em;
+      padding-top: 10px;
+
+      .case-image {
+        $image-size: 200px;
+        width: $image-size;
+        height: $image-size;
+        border-radius: $image-size / 2;
+        border: 1px solid $wizard-pale-gray;
+        display: block;
+        margin: 20px auto;
+      }
+
+      blockquote {
+        margin-left: 10px;
+      }
+    }
+
+  .content {
+    width: 600px;
+    .logo {
+      height: 66px;
+      margin: auto;
+      display: block;
+      margin-bottom: 40px;
+      &.bakecycle {
+        height: 45px;
+      }
+    }
   }
 
   .ordered-list {
     @extend %default-ol;
   }
 
+  .learn-more {
+    clear: both;
+    display: block;
+  }
 }
