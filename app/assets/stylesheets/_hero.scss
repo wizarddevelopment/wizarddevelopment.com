@@ -1,4 +1,4 @@
-.homepage-hero {
+.hero {
   color: $wizard-blue;
   // background: $wizard-orange;
   // background-image: image-url("brooklyn_sunset.jpg");
@@ -7,13 +7,10 @@
   text-align: center;
   position: relative;
   overflow:hidden;
-  height: 400px;
+  height: 100vh;
+  top: -60px;
 
-  @include media($medium-screen) {
-    height: 600px;
-  }
-
-  .homepage-hero-copy {
+  .hero-copy {
     position: absolute;
     top: 50%;
     width: 100%;

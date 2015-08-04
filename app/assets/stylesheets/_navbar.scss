@@ -10,7 +10,7 @@ $navigation-submenu-padding: 1em;
 $horizontal-bar-mode: $large-screen;
 
 .navigation {
-  position: absolute;
+  position: fixed;
   top: 0;
 
   background-color: $navigation-background;

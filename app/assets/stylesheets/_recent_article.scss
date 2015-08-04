@@ -1,11 +1,9 @@
 .recent-articles-container {
   @include outer-container;
-  @include clearfix;
-  padding: 3em;
+  padding: 5em 3em;
 
   .recent-articles-title {
     text-align: center;
-    color: $wizard-orange;
     font-size: 1.6em;
     margin-bottom: .75em;
 

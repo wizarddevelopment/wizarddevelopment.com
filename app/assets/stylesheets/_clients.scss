@@ -17,43 +17,47 @@
 }
 
 .casestudy {
+  $client-break: new-breakpoint(max-width 1050px 4);
   @include media($large-screen) {
-    @include span-columns(10);
-    @include shift(1);
+    @include span-columns(12);
 
     blockquote {
       margin-left: 4em;
     }
   }
-  @include pad();
-  padding-bottom: 4em;
+  padding: 4em 0;
 
   .quote-card {
-      @include span-columns(4);
-      width: 300px;
-      margin: auto;
+    @include span-columns(4 of 12);
+    @include media($client-break) {
+      @include span-columns(12 of 12);
+    }
+    width: 300px;
+    margin: auto;
+    display: block;
+    margin-bottom: 1em;
+    padding-top: 10px;
+
+    .case-image {
+      $image-size: 250px;
+      width: $image-size;
+      height: $image-size;
+      border-radius: $image-size / 2;
+      border: 1px solid $wizard-pale-gray;
       display: block;
-      margin-bottom: 1em;
-      padding-top: 10px;
-
-      .case-image {
-        $image-size: 200px;
-        width: $image-size;
-        height: $image-size;
-        border-radius: $image-size / 2;
-        border: 1px solid $wizard-pale-gray;
-        display: block;
-        margin: 20px auto;
-      }
-
-      blockquote {
-        margin-left: 10px;
-      }
+      margin: 20px auto;
     }
 
+    blockquote {
+      margin-left: 10px;
+    }
+  }
+
   .content {
-    @include span-columns(4);
-    width: 600px;
+    @include span-columns(8 of 12);
+    @include media($client-break) {
+      @include span-columns(12 of 12);
+    }
     .logo {
       height: 66px;
       margin: auto;
@@ -75,15 +79,13 @@
   }
 }
 
-.logos-container {
-  @include clearfix;
-  padding: 60px;
-  border-bottom: $wizard-pale-gray 5px solid;
-  margin-bottom: 50px;
+.clients-container {
+  @include outer-container;
+  padding: 5em 3em;
+
   .featured-client {
+    @include span-columns(12);
     background: white;
-    max-width: 1200px;
-    margin: auto;
   }
   .button.orange {
     display: block;
@@ -102,8 +104,6 @@
 }
 
 .client-logos {
-  max-width: 1500px;
-  margin: auto;
   list-style: none;
   text-align: center;
   li {
