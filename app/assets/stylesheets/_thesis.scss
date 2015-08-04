@@ -1,14 +1,12 @@
-.homepage-thesis {
-  background-color: $wizard-pale-gray;
-
-  .homepage-thesis-inner {
+.thesis {
+  .thesis-inner {
     @include outer-container;
     @include clearfix;
-    padding: 3em;
+    padding: 10em 3em;
     margin: auto;
     text-align: center;
 
-    .homepage-thesis-copy {
+    .thesis-copy {
       text-align: center;
 
       h2 {

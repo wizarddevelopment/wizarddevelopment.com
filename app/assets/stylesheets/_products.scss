@@ -1,67 +1,63 @@
-.homepage-products {
-  border-bottom: $wizard-pale-gray 5px solid;
-  .homepage-products-inner{
-    @include outer-container;
-    @include clearfix;
-    padding: 5em 3em;
+.products-container {
+  @include outer-container;
+  padding: 10em 3em;
 
-    .product {
-      margin-bottom: 3em;
-      @include media($large-screen) {
-        @include span-columns(6);
-        @include omega(2n);
+  .product {
+    margin-bottom: 3em;
+    @include media($large-screen) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    .product-logo {
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      &:hover {
+        @include animation(spin 1s infinite linear);
       }
 
-      .product-logo {
-        text-align: center;
-        width: 100px;
-        height: 100px;
+      &.logo-1 {
+        background-color: $wizard-blue;
+      }
+
+      &.logo-2{
+        background-color: $wizard-orange;
+      }
+
+      i {
+        font-size: 50px;
+        position: relative;
+        top: 50%;
+        width: 100%;
+        color: white;
+        @include transform(translateY(-50%));
+      }
+    }
+
+    .product-content {
+      text-align: center;
+      h2 {
+        font-size: 1.6em;
+        margin-bottom: .75em;
+
+        @include media($large-screen) {
+          font-size: 2em;
+          margin-bottom: .4em;
+        }
+      }
+      p {
+        font-family: $serif;
         margin: auto;
-        border-radius: 50%;
-        margin-bottom: 20px;
-        &:hover {
-          @include animation(spin 1s infinite linear);
-        }
+        font-weight: 200;
+        line-height: 1.5em;
 
-        &.logo-1 {
-          background-color: $wizard-blue;
-        }
-
-        &.logo-2{
-          background-color: $wizard-orange;
-        }
-
-        i {
-          font-size: 50px;
-          position: relative;
-          top: 50%;
-          width: 100%;
-          color: white;
-          @include transform(translateY(-50%));
-        }
-      }
-
-      .product-content {
-        text-align: center;
-        h2 {
-          font-size: 1.6em;
-          margin-bottom: .75em;
-
-          @include media($large-screen) {
-            font-size: 2em;
-            margin-bottom: .4em;
-          }
-        }
-        p {
-          font-family: $serif;
-          margin: auto;
-          font-weight: 200;
-          line-height: 1.5em;
-
-          @include media($large-screen) {
-            font-size: 1.125em;
-            max-width: 80%;
-          }
+        @include media($large-screen) {
+          font-size: 1.125em;
+          max-width: 80%;
         }
       }
     }

@@ -1,0 +1,69 @@
+.casestudy-container {
+  padding: 4em 2em;
+  .casestudy-title {
+    text-align: center;
+    color: $wizard-orange;
+    font-size: 1.6em;
+    margin-bottom: 2em;
+
+    @include media($large-screen) {
+      font-size: 2.5em;
+    }
+  }
+}
+
+.casestudy-box {
+  @include outer-container;
+  @include clearfix;
+
+  .quote {
+    font-family: "Times", serif;
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: 800;
+    line-height: 1.6em;
+    margin-bottom: .9em;
+  }
+  .text {
+    margin-bottom: 1em;
+  }
+  .logo {
+    margin-bottom: .5em;
+    text-align: center;
+  }
+
+  .images-wrapper {
+    margin-top: 100px;
+    min-height: 200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    &.one-month {
+      background-image: image-url("one-month-screenshot.png");
+    }
+    &.the-winnower {
+      background-image: image-url("winnower_screenshot.png");
+    }
+    @include media($medium-screen) {
+      display: none;
+    }
+    @include media($large-screen) {
+      @include span-columns(4);
+      &.one-month {
+        background-image: image-url("one-month-screenshot-desktop.png");
+      }
+      &.the-winnower {
+        background-image: image-url("winnower_screenshot.png");
+      }
+      min-height: 400px;
+
+    }
+  }
+  .content {
+    padding: 1em 1em 4em 1em;
+    @include media($large-screen) {
+      @include span-columns(8);
+      @include omega();
+    }
+  }
+}

@@ -10,3 +10,6 @@
 $mobile-screen: em(480);
 $medium-screen: em(640);
 $large-screen: em(860);
+
+$mobile: new-breakpoint(max-width $mobile-screen);
+$medium: new-breakpoint(max-width $medium-screen);

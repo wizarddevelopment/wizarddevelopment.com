@@ -1,12 +1,14 @@
-<div id="recent-articles" class="recent-articles-container">
-  <h2 class="recent-articles-title">Recent Articles</h2>
-  <div class="article-entries">
-    <% @latest_articles.each do |article| %>
-      <div class="article">
-        <%= render partial: "article_image", locals: { article: article } %>
-        <div class="title"><%= link_to(article.name, article.url, target: "_blank")%></div>
-        <p class="summary"><%= truncate(strip_tags(article.summary), length: 300) %><span> <%= link_to("Read More", article.url, target: "_blank")%></span></p>
-      </div>
-    <% end %>
+<section class="light">
+  <div id="recent-articles" class="recent-articles-container">
+    <h2 class="recent-articles-title">Recent Articles</h2>
+    <div class="article-entries">
+      <% @latest_articles.each do |article| %>
+        <div class="article">
+          <%= render partial: "article_image", locals: { article: article } %>
+          <div class="title"><%= link_to(article.name, article.url, target: "_blank")%></div>
+          <p class="summary"><%= truncate(strip_tags(article.summary), length: 300) %><span> <%= link_to("Read More", article.url, target: "_blank")%></span></p>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
+</section>
