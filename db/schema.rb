@@ -31,15 +31,15 @@ ActiveRecord::Schema.define(version: 20150307164908) do
   end
 
   create_table "contact_requests", force: :cascade do |t|
-    t.string   "name",                     limit: 255
-    t.string   "email",                    limit: 255
-    t.string   "phone",                    limit: 255
-    t.string   "business_name",            limit: 255
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "business_name"
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "dev_team",                 limit: 255
-    t.string   "product_status",           limit: 255
+    t.string   "dev_team"
+    t.string   "product_status"
     t.boolean  "test_suite"
     t.boolean  "ci_server"
     t.boolean  "deploy_master"
@@ -54,15 +54,15 @@ ActiveRecord::Schema.define(version: 20150307164908) do
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
-    t.integer  "priority",               default: 0, null: false
-    t.integer  "attempts",               default: 0, null: false
-    t.text     "handler",                            null: false
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
     t.text     "last_error"
     t.datetime "run_at"
     t.datetime "locked_at"
     t.datetime "failed_at"
-    t.string   "locked_by",  limit: 255
-    t.string   "queue",      limit: 255
+    t.string   "locked_by"
+    t.string   "queue"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -70,15 +70,15 @@ ActiveRecord::Schema.define(version: 20150307164908) do
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "developers", force: :cascade do |t|
-    t.string   "name",                   null: false
-    t.string   "email",      limit: 255
-    t.string   "github",     limit: 255
-    t.string   "blog",       limit: 255
-    t.text     "bio",                    null: false
+    t.string   "name",       null: false
+    t.string   "email"
+    t.string   "github"
+    t.string   "blog"
+    t.text     "bio",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "photo",      limit: 255
-    t.string   "twitter",    limit: 255
+    t.string   "photo"
+    t.string   "twitter"
   end
 
   create_table "freshbooks_invoices", force: :cascade do |t|

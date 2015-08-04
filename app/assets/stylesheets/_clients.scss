@@ -1,29 +1,10 @@
 $visual-grid: true !global;
-.right {
-  float: right;
-}
-
-.left {
-  float: left
-}
 
 .casestudies-container {
   @include outer-container;
   background-color: white;
   padding-top: 2em;
   padding-bottom: 2em;
-
-
-  h2 {
-    text-align: center;
-    color: $wizard-orange;
-    font-size: 1.6em;
-    margin-bottom: 1em;
-
-    @include media($large-screen) {
-      font-size: 2.5em;
-    }
-  }
   p {
     font-size: 18px;
     &.tagline {
@@ -96,18 +77,39 @@ $visual-grid: true !global;
 }
 
 .logos-container {
-  background-color: $light-gray;
+  @include clearfix;
+  padding: 60px;
+  border-bottom: $wizard-pale-gray 5px solid;
+  margin-bottom: 50px;
+  .featured-client {
+    background: white;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .button.orange {
+    display: block;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    background-color: $wizard-orange;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 2px;
+  }
 }
 
 .client-logos {
   max-width: 1500px;
   margin: auto;
   list-style: none;
-  height: 500px;
   text-align: center;
   li {
     display: inline-block;
-    margin: 120px 40px;
+    margin: 60px 40px;
     img {
       height: 50px;
       display: block;
@@ -115,14 +117,5 @@ $visual-grid: true !global;
         height: 66px;
       }
     }
-  }
-  .button.orange {
-    padding: 30px;
-    color: white;
-    background-color: $wizard-orange;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 4px;
-    letter-spacing: 2px;
   }
 }
