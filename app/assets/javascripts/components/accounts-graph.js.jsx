@@ -21,7 +21,7 @@ var AccountsGraph = module.exports = React.createClass({
           pointStrokeColor: "#fff",
           pointHighlightFill: "#fff",
           pointHighlightStroke: "rgba(220,220,220,1)",
-          data: this.props.invoices.map(function(i){return i.amount;})
+          data: this.props.invoices.map(i => i.amount)
         },
         {
           label: "Payments",

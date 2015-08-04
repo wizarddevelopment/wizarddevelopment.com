@@ -1,0 +1,120 @@
+.casestudies-container {
+  @include outer-container;
+  background-color: white;
+  padding: 2em 0;
+  p {
+    font-size: 18px;
+    &.tagline {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+      color: $wizard-blue;
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.casestudy {
+  @include media($large-screen) {
+    @include span-columns(10);
+    @include shift(1);
+
+    blockquote {
+      margin-left: 4em;
+    }
+  }
+  @include pad();
+  padding-bottom: 4em;
+
+  .quote-card {
+      @include span-columns(4);
+      width: 300px;
+      margin: auto;
+      display: block;
+      margin-bottom: 1em;
+      padding-top: 10px;
+
+      .case-image {
+        $image-size: 200px;
+        width: $image-size;
+        height: $image-size;
+        border-radius: $image-size / 2;
+        border: 1px solid $wizard-pale-gray;
+        display: block;
+        margin: 20px auto;
+      }
+
+      blockquote {
+        margin-left: 10px;
+      }
+    }
+
+  .content {
+    @include span-columns(4);
+    width: 600px;
+    .logo {
+      height: 66px;
+      margin: auto;
+      display: block;
+      margin-bottom: 40px;
+      &.bakecycle {
+        height: 45px;
+      }
+    }
+  }
+
+  .ordered-list {
+    @extend %default-ol;
+  }
+
+  .learn-more {
+    clear: both;
+    display: block;
+  }
+}
+
+.logos-container {
+  @include clearfix;
+  padding: 60px;
+  border-bottom: $wizard-pale-gray 5px solid;
+  margin-bottom: 50px;
+  .featured-client {
+    background: white;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .button.orange {
+    display: block;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    background-color: $wizard-orange;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 2px;
+  }
+}
+
+.client-logos {
+  max-width: 1500px;
+  margin: auto;
+  list-style: none;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 60px 40px;
+    img {
+      height: 50px;
+      display: block;
+      &.winnower {
+        height: 66px;
+      }
+    }
+  }
+}

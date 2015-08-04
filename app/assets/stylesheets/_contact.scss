@@ -21,6 +21,9 @@
     @include media($large-screen) {
       font-size: 2em;
     }
+    h2 {
+      color: white;
+    }
   }
 
   .coffee-cup {

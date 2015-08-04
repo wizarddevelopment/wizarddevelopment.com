@@ -17,7 +17,9 @@
   <body>
     <%= render "navbar" unless @_hide_nav%>
     <%= render 'flashes' %>
-    <%= yield %>
+    <div class='main-content'>
+        <%= yield %>
+    </div>
     <%= javascript_include_tag "application" %>
     <%= yield :js %>
     <%= render partial: 'ga' %>

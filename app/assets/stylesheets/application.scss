@@ -1,18 +1,19 @@
 @charset "utf-8";
 
 @import "bourbon";
-@import "base/base";
 @import "neat";
+@import "base/base";
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "navbar";
 @import "hero";
 @import "thesis";
 @import "products";
-@import "case_study";
+@import "clients";
 @import "recent_article";
 @import "team";
 @import "contact";
 @import "footer";
-
+@import "stories";
 @import "markdown";
