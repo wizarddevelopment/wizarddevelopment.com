@@ -4,6 +4,9 @@ class HomeController < ApplicationController
     @latest_articles = BlogEntry.latest_blog_post(6)
   end
 
+  def clients
+  end
+
   def bakecycle
   end
 

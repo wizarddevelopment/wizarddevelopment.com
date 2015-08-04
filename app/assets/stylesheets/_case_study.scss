@@ -24,6 +24,18 @@ $visual-grid: true !global;
       font-size: 2.5em;
     }
   }
+  p {
+    font-size: 18px;
+    &.tagline {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+      color: $wizard-blue;
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
 }
 
 .casestudy {
@@ -80,5 +92,37 @@ $visual-grid: true !global;
   .learn-more {
     clear: both;
     display: block;
+  }
+}
+
+.logos-container {
+  background-color: $light-gray;
+}
+
+.client-logos {
+  max-width: 1500px;
+  margin: auto;
+  list-style: none;
+  height: 500px;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 120px 40px;
+    img {
+      height: 50px;
+      display: block;
+      &.winnower {
+        height: 66px;
+      }
+    }
+  }
+  .button.orange {
+    padding: 30px;
+    color: white;
+    background-color: $wizard-orange;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 2px;
   }
 }
