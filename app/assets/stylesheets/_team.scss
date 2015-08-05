@@ -1,9 +1,8 @@
 .team-section {
-  padding: 5em 3em;
   .team-section-inner {
     @include outer-container;
     @include clearfix;
-    padding: 4em;
+    padding: 1em;
     text-align: center;
     .team-title {
       color: $wizard-orange;

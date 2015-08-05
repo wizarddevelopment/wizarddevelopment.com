@@ -12,8 +12,7 @@ $horizontal-bar-mode: $large-screen;
 .navigation {
   position: fixed;
   top: 0;
-
-  background-color: $navigation-background;
+  background-color: white;
   font-family: $sans-serif;
   height: $navigation-height;
   width: 100%;
@@ -32,7 +31,7 @@ $horizontal-bar-mode: $large-screen;
   }
 
   .navigation-menu-button {
-    color: $navigation-color;
+    color: $wizard-blue;
     cursor: pointer;
     display: block;
     float: right;
@@ -99,7 +98,7 @@ $horizontal-bar-mode: $large-screen;
       font-weight: 600;
       text-transform: uppercase;
       display: inline-block;
-      color: $navigation-color;
+      color: $wizard-blue;
       text-decoration: none;
     }
 
