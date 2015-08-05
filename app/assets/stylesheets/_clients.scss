@@ -25,14 +25,15 @@
       margin-left: 4em;
     }
   }
-  padding: 4em 0;
+  padding: 3em 0 1em;
 
   .quote-card {
     @include span-columns(4 of 12);
     @include media($client-break) {
       @include span-columns(12 of 12);
+      margin: auto;
+      text-align: center;
     }
-    width: 300px;
     margin: auto;
     display: block;
     margin-bottom: 1em;
@@ -50,6 +51,9 @@
 
     blockquote {
       margin-left: 10px;
+      @include media($client-break) {
+        border-left: none;
+      }
     }
   }
 

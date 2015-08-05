@@ -1,13 +1,17 @@
-<header class="navigation">
+<header class="navigation <%= nav_class %>">
   <div class="menu-wrapper">
     <p class="navigation-menu-button js-mobile-menu"><i class="fa fa-2x fa-bars"></i></p>
-    <div class="nav">
+    <div class="left-nav">
+      <h1><%= link_to "WD", root_path %></h1>
+    </div>
+    <div class="right-nav">
       <ul class="js-nav-menu navigation-menu">
-        <li class="nav-link"><%= link_to "Services", root_path(anchor: "services") %></li>
-        <li class="nav-link"><%= link_to "Clients", root_path(anchor: "clients") %></li>
-        <li class="nav-link"><%= link_to "Team", root_path(anchor: "team") %></li>
-        <li class="nav-link"><%= link_to "Contact", root_path(anchor: "contact") %></li>
-        <li class="nav-link"><%= link_to "Blog", root_path(anchor: "recent-articles") %></li>
+        <li><%= link_to "Services", root_path(anchor: "services") %></li>
+        <li><%= link_to "Clients", root_path(anchor: "clients") %></li>
+        <li><%= link_to "Team", root_path(anchor: "team") %></li>
+        <li><%= link_to "Contact", root_path(anchor: "contact") %></li>
+        <li><%= link_to "Blog", root_path(anchor: "recent-articles") %></li>
       </ul>
     </div>
+  </div>
 </header>
