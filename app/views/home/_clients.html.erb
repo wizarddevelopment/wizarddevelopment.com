@@ -4,12 +4,8 @@
       <h2>Featured Client</h2>
       <%= render "winnower" %>
     </div>
-    <ul class="client-logos">
-      <li><%= image_tag 'winnower_logo.png', class: 'logo winnower' %></li>
-      <li><%= image_tag 'bakecycle-logo.png', class: 'logo bakecycle' %></li>
-      <li><%= image_tag 'OM-BLK-LOGO-01.svg', class: 'logo' %></li>
-    </ul>
-
-    <%= link_to "Client Profiles", clients_path, class: 'button orange' %>
+    <div class="featured-client">
+      <%= link_to "Client Profiles", clients_path, class: 'button orange' %>
+    </div>
   </div>
 </section>

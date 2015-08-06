@@ -1,4 +1,4 @@
-module.exports = function colorNav() {
+module.exports = function stickyNav() {
   var $nav = $(".navigation");
   var $selector = $(".thesis");
   if (!$selector.get(0)){
@@ -20,4 +20,5 @@ module.exports = function colorNav() {
     }
   };
   $(window).on("scroll", toggleNavClass);
+  toggleNavClass();
 };
