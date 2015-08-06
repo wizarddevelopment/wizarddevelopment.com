@@ -1,5 +1,4 @@
 $navigation-padding: 1em;
-$navigation-background: transparentize($wizard-orange, 0.2);
 $navigation-color: transparentize(white, 0.2);
 $navigation-background: white;
 $navigation-color: $wizard-gray;
@@ -9,6 +8,13 @@ $navigation-active-link-color: $wizard-gray;
 $navigation-submenu-padding: 1em;
 $horizontal-bar-mode: $large-screen;
 
+.jumptarget:before {
+  content: "";
+  display: block;
+  height: 60px;
+  margin: -60px 0 0;
+}
+
 .navigation {
   position: fixed;
   top: 0;
@@ -17,18 +23,7 @@ $horizontal-bar-mode: $large-screen;
   height: $navigation-height;
   width: 100%;
   z-index: 2;
-
-  .menu-wrapper {
-    // @include outer-container;
-    @include clearfix;
-  }
-
-  .logo {
-    float: left;
-    max-height: $navigation-height;
-    padding-left: $navigation-padding;
-    padding-right: 2em;
-  }
+  @include transition(all .3s ease-in-out);
 
   .navigation-menu-button {
     color: $wizard-blue;
@@ -45,13 +40,21 @@ $horizontal-bar-mode: $large-screen;
     @include media ($horizontal-bar-mode) {
       display: none;
     }
+  }
 
-    &:hover {
-      color: $navigation-color-hover;
+  .left-nav {
+    display: inline-block;
+    float: left;
+    padding: 10px 0 0 16px;
+
+    h1 {
+      color: $wizard-blue;
+      font-size: 26px;
     }
   }
 
-  .nav {
+  .right-nav {
+    display: block;
     float: none;
     @include media ($horizontal-bar-mode) {
       float: right;
@@ -59,9 +62,6 @@ $horizontal-bar-mode: $large-screen;
   }
 
   .navigation-menu {
-    $dark-orange: shade($wizard-orange, 10%);
-    background: transparentize($dark-orange, 0.11);
-
     width: 100%;
     height: 0;
     overflow: hidden;
@@ -87,36 +87,84 @@ $horizontal-bar-mode: $large-screen;
     text-align: center;
     width: 100%;
 
-    &:hover {
-      background: shade($navigation-background, 20%);
-      a {
-        color: $navigation-color-hover;
+    a {
+      color: $navigation-color-hover;
+      &:hover {
+        background-color: shade($navigation-background, 20%);
+        @include media ($horizontal-bar-mode) {
+          background-color: transparent;
+        }
       }
     }
 
     a {
       font-weight: 600;
       text-transform: uppercase;
-      display: inline-block;
+      display: block;
       color: $wizard-blue;
       text-decoration: none;
     }
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
-      &:hover {
-        background: transparent;
-      }
       display: inline;
       line-height: $navigation-height;
       width: auto;
       a {
+        display: inline;
         padding-right: 1em;
       }
     }
   }
+}
 
-  .active-nav-item a {
-    padding-bottom: 3px;
+.active-nav-item a {
+  padding-bottom: 3px;
+}
+
+.dark-nav {
+  background-color: black;
+  @include transition(all .3s ease-in-out);
+
+  a {
+    color: white;
+    &:hover {
+      color: $wizard-orange;
+    }
+  }
+
+
+  .navigation-menu-button {
+    color: white;
+
+    &:hover {
+      color: $navigation-color-hover;
+    }
+  }
+
+  ul li {
+    background: black;
+
+    &:hover {
+      background: shade(white, 20%);
+      a {
+        color: $wizard-orange;
+      }
+    }
+
+    a {
+      color: white;
+    }
+
+    @include media ($horizontal-bar-mode) {
+      background: none;
+      display: inline;
+    }
+    @include media ($horizontal-bar-mode) {
+      background: transparent;
+      &:hover {
+        background: transparent;
+      }
+    }
   }
 }

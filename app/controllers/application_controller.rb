@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
   def hide_nav
     @_hide_nav = true
   end
+
+  def black_nav
+    @_black_nav = true
+  end
 end

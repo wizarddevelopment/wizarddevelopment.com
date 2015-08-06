@@ -5,11 +5,14 @@ class HomeController < ApplicationController
   end
 
   def clients
+    black_nav
   end
 
   def bakecycle
+    black_nav
   end
 
   def winnower
+    black_nav
   end
 end
