@@ -1,11 +1,11 @@
 var bindContactForm = require('./app/contact');
 var bindToggleNav = require('./app/nav');
-var bindColorNav = require('./app/color_nav');
+var bindStickyNav = require('./app/sticky-nav');
 
 $(function(){
   bindToggleNav();
   bindContactForm();
-  bindColorNav();
+  bindStickyNav();
 });
 
 // global react components
