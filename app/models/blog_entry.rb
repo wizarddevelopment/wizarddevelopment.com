@@ -3,7 +3,7 @@ class BlogEntry < ActiveRecord::Base
     medium: '300x300>'
   }
 
-  validates_attachment_content_type :blog_image, content_type: /\Aimage\/.*\Z/
+  validates_attachment_content_type :blog_image, content_type: %r{\Aimage/.*\Z}
 
   def self.update_blog(blog_rss_url = ENV['BLOG_RSS_URL'])
     blog = Feedjira::Feed.fetch_and_parse(blog_rss_url)
@@ -15,15 +15,17 @@ class BlogEntry < ActiveRecord::Base
   end
 
   def self.create_or_update_entry(entry)
-    blog_entry = where(guid: entry.id).first_or_initialize
-    blog_entry.assign_attributes(
+    find_entry(entry).update!(
       name:         entry.title,
       summary:      entry.summary,
       url:          entry.url,
       published_at: entry.published,
       blog_image:   entry.image || extract_image(entry.content)
     )
-    blog_entry.save!
+  end
+
+  def self.find_entry(entry)
+    where(guid: entry.id).first_or_initialize
   end
 
   def self.extract_image(content)

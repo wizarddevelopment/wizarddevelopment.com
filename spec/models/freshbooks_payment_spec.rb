@@ -17,12 +17,10 @@ describe FreshbooksPayment do
   end
 
   let(:gateway_payment) do
-    payment.merge({
-      "gateway_transaction" => {
+    payment.merge("gateway_transaction" => {
         "reference_id" => "ch_5MCG3t4L1VHqP9",
         "gateway_name" => "Stripe"
-      }
-    })
+      })
   end
 
   describe "#import" do

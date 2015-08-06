@@ -5,11 +5,9 @@ describe BlogEntry do
     it "creates new blog entries" do
       entries = [
         OpenStruct.new(
-          {
-            title: "title",
-            summary: "summary",
-            id: "XXXX"
-          }
+                      title: "title",
+                      summary: "summary",
+                      id: "XXXX"
         )
       ]
       BlogEntry.create_or_update_entries(entries)
@@ -18,16 +16,12 @@ describe BlogEntry do
 
     it "updates blog entries with the same guid" do
       entries = [
-        OpenStruct.new({
-          title: "title",
-          summary: "summary",
-          id: "XXXX"
-        }),
-        OpenStruct.new({
-          title: "hello",
-          summary: "stuff",
-          id: "XXXX"
-        })
+        OpenStruct.new(title: "title",
+                       summary: "summary",
+                       id: "XXXX"),
+        OpenStruct.new(title: "hello",
+                       summary: "stuff",
+                       id: "XXXX")
       ]
       BlogEntry.create_or_update_entries(entries)
       expect(BlogEntry.count).to eq(1)
