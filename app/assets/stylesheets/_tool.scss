@@ -25,4 +25,16 @@
     margin: 0 auto;
     height: 150px;
   }
+  p {
+    color: $wizard-gray;
+  }
+  a:hover {
+    h4 {
+      color: shade($wizard-orange, 10%);
+    }
+
+    p {
+      color: lighten($wizard-gray, 10%);
+    }
+  }
 }

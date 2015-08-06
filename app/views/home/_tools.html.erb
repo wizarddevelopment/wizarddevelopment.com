@@ -2,25 +2,28 @@
   <div class="tools-container">
     <div class="tools-header">
       <h2>Our Tools</h2>
-      <p class="center">Although we have preferences to what we use, we are always open to using the right tool for the job.</p>
+      <p class="center">We choose the right tool for the right job.</p>
     </div>
     <div class="tool-content">
-      <h4>Ruby on Rails</h4>
-      <%= image_tag("https://upload.wikimedia.org/wikipedia/commons/1/16/Ruby_on_Rails-logo.png") %>
-      <br />
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <%= link_to "http://rubyonrails.org/", target: "_blank" do %>
+        <h4>Ruby on Rails</h4>
+        <%= image_tag("rails-logo.png") %>
+        <p>Gives us the power to build features that are reliable, testable, and able to grow.</p>
+      <% end %>
     </div>
     <div class="tool-content">
-      <h4>React</h4>
-      <%= image_tag("https://www.codementor.io/assets/tutorial_icon/reactjs.png") %>
-      <br />
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <%= link_to "http://facebook.github.io/react/", target: "_blank" do %>
+        <h4>React</h4>
+        <%= image_tag("reactjs-logo.png") %>
+        <p>Allows to build performant interactive client side interfaces that engage users.</p>
+      <% end %>
     </div>
     <div class="tool-content">
-      <h4>Angular JS</h4>
-      <%= image_tag("http://res.cloudinary.com/buddahbelly/image/upload/v1423072364/brilliantbritz/angular-js.png") %>
-      <br />
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <%= link_to "https://www.heroku.com/", target: "_blank" do %>
+        <h4>Heroku</h4>
+        <%= image_tag("heroku-logo.png") %>
+        <p>A powerful platform for keeping our apps online, fast, and scalable with mimumum invetment. Wizard's open source heroku tools allow us to keep complex operations simple.</p>
+      <% end %>
     </div>
   </div>
 </section>
