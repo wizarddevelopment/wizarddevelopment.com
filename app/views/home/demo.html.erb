@@ -1,0 +1,35 @@
+<article class="demo">
+  <h2>Industry Specific Publishing and Membership Sites</h2>
+  <p>We have worked with publishing leaders like <%= link_to "One Month", "http://www.onemonth.com", target: "_blank" %> and <%= link_to "The Winnower", "http://www.thewinnower.com", target: "_blank" %> to build and expand upon publishing platforms that fit their specific needs. When there is an API available - like Blogger, Stripe, or Reddit, we can use them to customize your users' experience, otherwise we can build our own. On top of that, we can build or use intuitive analytics and performance monitoring tools, and customize your devops to make sure you know how your app is performing.</p>
+  <ul class="tech">
+    <li><%= image_tag 'embedly.png', alt: 'embedly' %></li>
+    <li><%= image_tag 'blogger.png', alt: 'blogger' %></li>
+    <li><%= image_tag 'reddit.png', alt: 'reddit' %></li>
+    <li><%= image_tag 'vimeo.png', alt: 'vimeo' %></li>
+    <li><%= image_tag 'stripe.png', alt: 'stripe' %></li>
+    <li><%= image_tag 'braintree.png', alt: 'braintree' %></li>
+  </ul>
+
+  <section>
+    <h2>Try it out!</h2>
+    <p>Try out our Embedly importer to get content from news websites and blogs to customize their look and feel to give your users a unique experience. You might notice that some content gets changed by Embedly, but remember we have many tools at our disposal, and can customize and style content based on your specific needs.</p>
+
+    <%= field_set_tag do %>
+      <p>Enter a url or use ours, hit 'Get Content', then customize the viewing experience!</p>
+      <p><%= text_field_tag "url", "http://www.wizard.codes/the-winnower-api/" %></p>
+      <p class="hint">*make sure to enter a full URL! (Like this: "http://www.wizard.codes/the-winnower-api/"!)</p>
+      <%= link_to 'Get Content', '#preview-content', class: 'button embedly-button' %>
+    <% end %>
+
+    <div class="jumptarget" id="preview-content"></div>
+
+    <div class="style-buttons hide">
+      <%= link_to 'Blog', '#', class: 'button add-style' %>
+      <%= link_to 'Newspaper', '#', class: 'button add-style' %>
+    </div>
+
+    <div class="preview-content">
+      <div class="spinner"></div>
+    </div>
+  </section>
+</article>

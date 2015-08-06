@@ -20,3 +20,11 @@ h2 {
 .main-content {
   margin-top: 60px;
 }
+
+.button {
+  @extend button;
+}
+
+.loading-circle {
+  @include loading-animation-circle($size: 30, $speed: 2.1, $color: $wizard-gray, $border-size: 20);
+}

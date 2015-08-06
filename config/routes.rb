@@ -4,6 +4,7 @@ WizardDevelopment::Application.routes.draw do
   get :bakecycle, to: 'home#bakecycle'
   get :clients, to: 'home#clients'
   get :winnower, to: 'home#winnower'
+  get :demo, to: 'home#demo'
 
   # what do we do with these?
   if Rails.env.development?

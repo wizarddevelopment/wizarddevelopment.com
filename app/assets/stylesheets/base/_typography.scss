@@ -56,6 +56,13 @@ a {
     color: $hover-link-color;
     outline: none;
   }
+
+  &.button {
+    color: white;
+      &:hover {
+      color: white;
+    }
+  }
 }
 
 hr {
