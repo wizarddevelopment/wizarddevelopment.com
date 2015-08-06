@@ -1,29 +1,58 @@
 AllCops:
   RunRailsCops: true
   Exclude:
-    - 'lib/tasks/cucumber.rake'
-    - 'config/unicorn.rb'
-    - 'db/**/*'
     - 'Guardfile'
+    - 'bin/**/*'
+    - 'db/**/*'
     - 'vendor/bundle/**/*'
 
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/StringLiterals:
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 10
+
+Metrics/AbcSize:
+  Max: 14
+
+Metrics/ClassLength:
+  Max: 100
+
+Rails/Output:
   Enabled: false
 
-# Offense count: 45
-# Configuration parameters: AllowURI.
-Metrics/LineLength:
-  Max: 112
-
-# We don't use this often but sometimes it improves readability
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-Style/BracesAroundHashParameters:
+Style/BlockDelimiters:
   Enabled: false
 
 Style/Documentation:
   Enabled: false
 
-# Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/IndentHash:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/SignalException:
+  Enabled: false
+
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+# Style/StringLiterals:
+  # EnforcedStyle: double_quotes
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/AlignParameters:
+  Enabled: false
+
+Style/FirstParameterIndentation:
   Enabled: false
