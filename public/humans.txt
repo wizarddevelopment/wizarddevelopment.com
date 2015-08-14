@@ -4,8 +4,8 @@ Francis Gulotta
 Site: http://www.wizarddevelopment.com
 Location: NYC
 
-Hannah Nordgren
-site: hereshannahs.info
+Elijah Kim
+site: http://www.elijah.kim/blog/
 Location: NYC
 
 Gustavo Guimaraes
@@ -13,7 +13,7 @@ Site: http://www.wizarddevelopment.com
 Location: NYC
 
 Amy Gimma
-Email: amyg225@gmail.com 
+Email: amy@wizarddevelopment.com
 Location: NYC
 
 Armando Amador
