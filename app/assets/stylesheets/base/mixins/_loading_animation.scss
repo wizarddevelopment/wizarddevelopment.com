@@ -1,0 +1,32 @@
+@mixin loading-animation-circle($size: 50, $border-size: 5, $speed: 1.0, $color: gray) {
+  height: #{$size}px;
+  width: #{$size}px;
+  margin: 0 auto;
+  position: relative;
+  @include animation(loading-animation-rotation #{$speed}s infinite linear);
+  border: #{$border-size}px solid tint($color, 70%);
+  border-radius: 100%;
+  &:before {
+   content: "";
+   display: block;
+   position: absolute;
+   left: -#{$border-size}px;
+   top: -#{$border-size}px;
+   height: 100%;
+   width: 100%;
+   border-top: #{$border-size}px solid $color;
+   border-left: #{$border-size}px solid transparent;
+   border-bottom: #{$border-size}px solid transparent;
+   border-right: #{$border-size}px solid transparent;
+   border-radius: 100%;
+  }
+}
+
+@include keyframes(loading-animation-rotation) {
+  from {
+    @include transform(rotate(0deg));
+  }
+  to {
+    @include transform(rotate(359deg));
+  }
+}

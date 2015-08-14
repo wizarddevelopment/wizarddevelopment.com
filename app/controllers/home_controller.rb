@@ -15,4 +15,8 @@ class HomeController < ApplicationController
   def winnower
     black_nav
   end
+
+  def demo
+    black_nav
+  end
 end
