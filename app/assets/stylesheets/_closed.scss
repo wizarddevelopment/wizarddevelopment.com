@@ -1,0 +1,37 @@
+.closed {
+  color: white;
+  background: $base-accent-color;
+
+  .closed-container {
+    @include outer-container;
+    padding: $base-line-height 0;
+  }
+
+  .goodbye {
+    font-size: 1.3em;
+    text-align: center;
+    @include media($large-screen) {
+      @include shift(2);
+      @include span-columns(8);
+    }
+  }
+
+  .coffee {
+    text-align: center;
+    @include media($large-screen) {
+      @include shift(4);
+      @include span-columns(4);
+    }
+    h2 {
+      color: white;
+    }
+  }
+
+  .coffee-cup {
+    width: 40%;
+    @include media($large-screen) {
+      width: 60%;
+    }
+  }
+
+}
