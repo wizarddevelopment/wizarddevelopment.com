@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+ruby '2.2.2'
 
 gem "browserify-rails", "~> 0.9"
 gem 'active_model_serializers'
@@ -18,7 +18,7 @@ gem 'neat'
 gem 'nokogiri'
 gem 'paperclip'
 gem 'pg'
-gem 'rails', '4.2.2'
+gem 'rails', '4.2.6'
 gem 'react-rails', '~> 1.0'
 gem 'recipient_interceptor'
 gem 'redcarpet'
