@@ -1,6 +1,6 @@
 module.exports = function stickyNav() {
   var $nav = $(".navigation");
-  var $selector = $(".thesis");
+  var $selector = $(".closed");
   if (!$selector.get(0)){
     return;
   }
