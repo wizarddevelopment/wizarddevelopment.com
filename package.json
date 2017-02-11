@@ -1,11 +1,11 @@
 {
   "name": "wizard-development.com",
   "dependencies": {
-    "browserify": "~> 6.3",
-    "browserify-incremental": "^1.4.0",
-    "chart.js": "^1.0.2",
-    "react": "^0.13.3",
-    "react-chartjs": "^0.6.0",
+    "browserify": "~14.0.0",
+    "browserify-incremental": "^3.1.1",
+    "chart.js": "^2.5.0",
+    "react": "^15.4.2",
+    "react-chartjs": "^0.8.0",
     "reactify": "^1.1.0"
   },
   "license": "MIT",
