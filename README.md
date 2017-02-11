@@ -1,5 +1,7 @@
 # Wizard Development.com
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wizarddevelopment/wizarddevelopment.com.svg?token=1b7050eec6dad9a1a007beb57efedd6bfecdc13491f5832ec6ea02af67ec72ec)](https://greenkeeper.io/)
+
 This is primarily a rails app, but now uses react too!
 
 ## Deployment
